@@ -2,72 +2,84 @@ import React from 'react';
 import styled from 'styled-components';
 
 import base from '../../data/baseInfo.json';
-import { Col, Row, Table } from 'reactstrap';
+import { Col, Row, Container } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookSquare, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { FOOTER_BACKGROUND_COLOR_PRIMARY, FOOTER_TEXT_1, FOOTER_TEXT_2, FOOTER_TEXT_3 } from '../../theme/colors.js';
 
 
 const FooterWrapper = styled.footer`
+    background: ${FOOTER_BACKGROUND_COLOR_PRIMARY};
 `;
 
 const AuthorPane = styled.div`
+    color: ${FOOTER_TEXT_3};
+`;
+
+const FooterHeader = styled.h1`
+    color: ${FOOTER_TEXT_1};
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 2;
+`;
+
+const InfoRow = styled.p`
+    text-align: justify;
+    font-weight: bolder;
+    line-height: 1;
+
+`;
+
+const LinkCustom = styled.a`
+    color: ${FOOTER_TEXT_1};
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: all 0.5s;
+    &&:hover {
+        transition: all 0.5s;
+        color: ${FOOTER_TEXT_2};
+    }
 `;
 
 
 const Footer = (props) => {
 
     const author = base['DEVELOPER'];
+    const company = base['COMPANY'];
 
     return (
-        <FooterWrapper className="dark">
-            <hr />
-            <Row>
-                <Col md={4}>
-                    <Table borderless>
-                        <tbody>
-                            <tr>
-                                <th>Společnost:</th>
-                                <td>2P Stavební</td>
-                            </tr>
-                        </tbody>
-                    </Table>
-                </Col>
-                <Col md={4}>
-                    <Table borderless>
-                        <tbody className="d-block">
-                            <tr>
-                                <th rowSpan={3}>Kontakty:</th>
-                                <td>+420 123 456 789</td>
-                            </tr>
-                            <tr>
-                                <td>+420 987 654 321</td>
-                            </tr>
-                            <tr>
-                                <td>pavel@pinkas.cz</td>
-                            </tr>
-                        </tbody>
-                    </Table>
-                </Col>
-                <Col md={4}>
-                    <Table borderless>
-                        <tbody className="d-block">
-                            <tr >
-                                <th rowSpan={3}>Adresa:</th>
-                                <td>Ulice, čp</td>
-                            </tr>
-                            <tr>
-                                <td>Město, PSČ</td>
-                            </tr>
-                            <tr>
-                                <td>Dodatek</td>
-                            </tr>
-                        </tbody>
-                    </Table></Col>
-            </Row>
+        <FooterWrapper>
+            <Container>
+                <Row className="pt-4">
+                    <Col md={4} className="">
+                        <FooterHeader>{company.name}</FooterHeader>
+                        <InfoRow className="" style={{ fontSize: '4em' }}>
+                            <LinkCustom href={company.links.facebook}><FontAwesomeIcon icon={faFacebookSquare} /></LinkCustom>
+                            <LinkCustom href={company.links.linkedin}><FontAwesomeIcon icon={faLinkedin} /></LinkCustom>
+                            <LinkCustom href={company.links.instagram}><FontAwesomeIcon icon={faInstagram} /></LinkCustom>
+                        </InfoRow>
+                    </Col>
+                    <Col md={4}>
+                        <FooterHeader>Sídlo firmy</FooterHeader>
+                        <InfoRow>{company.address.street}, {company.address.number}</InfoRow>
+                        <InfoRow>{company.address.city}, {company.address.zip}</InfoRow>
+                    </Col>
+                    <Col md={4}>
+                        <FooterHeader>Kontaktní osoba</FooterHeader>
+                        <InfoRow>{company.contact.name}</InfoRow>
+                        <InfoRow>Tel: {company.contact.tel1}</InfoRow>
+                        <InfoRow>Tel: {company.contact.tel2}</InfoRow>
+                        <InfoRow>Email: {company.contact.email}</InfoRow>
+                    </Col>
+                </Row>
 
-            <AuthorPane className="text-center">
-                <hr />
-                {`© ${author.year} Copyright: Created by ${author.author}`}
-                <hr />
-            </AuthorPane>
+                <AuthorPane className="text-center">
+                    <hr />
+                    {`© ${author.year} Copyright: Created by ${author.author}`}
+                    <hr />
+                </AuthorPane>
+            </Container>
         </FooterWrapper>
     )
 }

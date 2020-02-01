@@ -4,7 +4,8 @@ import styled from 'styled-components';
 import {
     CarouselItem,
     CarouselCaption,
-    UncontrolledCarousel
+    UncontrolledCarousel,
+    Container
 } from 'reactstrap';
 
 import items from '../../data/banner.json';
@@ -48,9 +49,11 @@ const Banner = (props) => {
     });
 
     return (
-        <BannerWrapper className="">
-            <UncontrolledCarousel items={items} />
-        </BannerWrapper>
+        <Container>
+            <BannerWrapper className="">
+                <UncontrolledCarousel items={items} />
+            </BannerWrapper>
+        </Container>
     );
 
 }

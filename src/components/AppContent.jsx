@@ -3,9 +3,7 @@ import styled from 'styled-components';
 import TopBar from './menu/TopBar';
 import Banner from './banner/Banner';
 import Footer from './footer/Footer';
-import { Container } from 'reactstrap';
-import Poe from './common/Poe';
-import poes from '../data/poes.json';
+import Section from './sections/Section';
 
 
 const AppWrapper = styled.div`
@@ -14,12 +12,10 @@ const AppWrapper = styled.div`
 const AppContent = () => {
     return (
         <AppWrapper className="">
-            <Container>
-                <TopBar />
-                <Banner />
-                <Poe header={poes['FIRST'].header} paragraphs={poes['FIRST'].paragraphs} />
-                <Footer />
-            </Container>
+            <TopBar />
+            <Banner />
+            <Section />
+            <Footer />
         </AppWrapper>
     )
 }

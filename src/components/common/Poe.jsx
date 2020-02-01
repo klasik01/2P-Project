@@ -18,7 +18,6 @@ const Poe = (props) => {
     return (
         <Wrapper className="text-center">
             <h1 className="">{header}</h1>
-            <hr />
             {
                 paragraphs.map((item, index) => {
                     return <p className="font-italic" key={index}>{item}</p>
@@ -26,7 +25,6 @@ const Poe = (props) => {
             }
             <PrimaryButton href="#poe">Zjistit více</PrimaryButton>
         </Wrapper>
-
     )
 }
 

@@ -4,5 +4,26 @@
         "year": 2020,
         "provider": "unknown",
         "email": "stanislav.kasika@gmail.com"
+    },
+    "COMPANY": {
+        "name": "Company name",
+        "address": {
+            "street": "Ulice",
+            "number": "čp",
+            "city": "Město",
+            "zip": "PSČ"
+        },
+        "contact": {
+            "name": "First Last Name",
+            "tel1": "+420 123 456 789",
+            "tel2": "+420 987 654 321",
+            "email": "email@domain.com",
+            "emailAlt": "emailAlt@domain.com"
+        },
+        "links": {
+            "facebook": "www.google.com",
+            "instagram": "www.google.com",
+            "linkedin": "www.google.com"
+        }
     }
 }
