@@ -9,7 +9,7 @@ const AppWrapper = styled.div``;
 
 function AppContent() {
     return (
-        <AppWrapper>
+        <AppWrapper className="">
             <TopBar />
             <Banner />
             <Footer />
