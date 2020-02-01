@@ -2,11 +2,9 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import {
-    Carousel,
     CarouselItem,
-    CarouselControl,
-    CarouselIndicators,
-    CarouselCaption
+    CarouselCaption,
+    UncontrolledCarousel
 } from 'reactstrap';
 
 import items from '../../data/banner.json';
@@ -38,7 +36,7 @@ const Banner = (props) => {
 
     const slides = items.map((item) => {
         return (
-            <CarouselItem
+            <CarouselItem className="img-fluid"
                 onExiting={() => setAnimating(true)}
                 onExited={() => setAnimating(false)}
                 key={item.src}
@@ -50,16 +48,9 @@ const Banner = (props) => {
     });
 
     return (
-        <Carousel
-            activeIndex={activeIndex}
-            next={next}
-            previous={previous}
-        >
-            <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
-            {slides}
-            <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-            <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
-        </Carousel>
+        <BannerWrapper className="">
+            <UncontrolledCarousel items={items} />
+        </BannerWrapper>
     );
 
 }

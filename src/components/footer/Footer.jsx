@@ -1,14 +1,33 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import base from '../../data/baseInfo.json';
+import { Col, Row } from 'reactstrap';
 
 
 const FooterWrapper = styled.footer``;
 
-function Footer() {
+const AuthorPane = styled.div`
+    text-align: center;
+`;
+
+
+const Footer = (props) => {
+
+    const author = base['DEVELOPER'];
+
     return (
         <FooterWrapper>
-            Footer...
+            <Row>
+                <Col>
+                </Col>
+            </Row>
+
+            <AuthorPane>
+                <hr />
+                {`Created by ${author.author}, in ${author.year}`}
+                <hr />
+            </AuthorPane>
         </FooterWrapper>
     )
 }

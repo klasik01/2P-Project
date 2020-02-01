@@ -4,18 +4,19 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import {
   Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  NavbarText
-} from 'reactstrap';
+  UncontrolledDropdown,
+  NavbarToggler,
+  NavItem,
+  NavbarBrand,
+  Navbar,
+  NavLink,
+  Nav,
+
+} from "reactstrap";
+import classNames from "classnames";
 
 
 const TopBarWrapper = styled.footer``;
@@ -28,27 +29,27 @@ const TopBar = (props) => {
 
   return (
     <TopBarWrapper >
-      <Navbar color="danger" dark expand="md" fixed>
+      <Navbar className="" fixed="top" color="danger" dark expand="md">
         <NavbarBrand href="/">2P Stavební</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink href="#about">O Nás</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-                Options
+                O Nás
               </DropdownToggle>
-              <DropdownMenu right>
+              <DropdownMenu right={false}>
                 <DropdownItem>
-                  Option 1
+                  Historie
                 </DropdownItem>
                 <DropdownItem>
-                  Option 2
+                  Zakázky
                 </DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem>
@@ -56,6 +57,12 @@ const TopBar = (props) => {
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
+            <NavItem>
+              <NavLink href="#galerie">Galerie</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="#contact">Kontakt</NavLink>
+            </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
