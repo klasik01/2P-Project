@@ -12,18 +12,15 @@ const AppWrapper = styled.div`
 `;
 
 const AppContent = () => {
-    console.log(poes);
     return (
-        <>
-            <TopBar />
-            <AppWrapper className="">
-                <Container>
-                    <Banner />
-                    <Poe header={poes['FIRST'].header} paragraphs={poes['FIRST'].paragraphs} />
-                    <Footer />
-                </Container>
-            </AppWrapper>
-        </>
+        <AppWrapper className="">
+            <Container>
+                <TopBar />
+                <Banner />
+                <Poe header={poes['FIRST'].header} paragraphs={poes['FIRST'].paragraphs} />
+                <Footer />
+            </Container>
+        </AppWrapper>
     )
 }
 
