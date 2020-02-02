@@ -1,34 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircle, faLock, faLaptop } from '@fortawesome/free-solid-svg-icons';
+import { PrettyHeader } from '../../common/PretyHeader';
+import data from '../../../data/services.json';
+import Service from '../../common/Service';
 
 
 const Services = (props) => {
 
     return (
-        <div class="row text-center">
-            <div class="col-md-4">
-                <span class="fa-stack fa-4x">
-                    <FontAwesomeIcon icon={faCircle} />
-                </span>
-                <h4 class="service-heading">E-Commerce</h4>
-                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-            </div>
-            <div class="col-md-4">
-                <span class="fa-stack fa-4x">
-                    <FontAwesomeIcon icon={faLock} />
-                </span>
-                <h4 class="service-heading">Responsive Design</h4>
-                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-            </div>
-            <div class="col-md-4">
-                <span class="fa-stack fa-4x">
-                    <FontAwesomeIcon icon={faLaptop} />
-                </span>
-                <h4 class="service-heading">Web Security</h4>
-                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-            </div>
+        <div className="row text-center">
+            <PrettyHeader>Services</PrettyHeader>
+            {
+                data
+                    .filter(item => item.category === 'SERVICE')
+                    .map(item => {
+                        const { icon, header, col, text, id, color = 'white' } = item;
+                        return <Service key={id} icon={icon} header={header} col={col} text={text} color={color} />
+                    })
+            }
         </div>
     )
 }

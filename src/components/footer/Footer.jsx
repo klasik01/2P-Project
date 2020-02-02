@@ -14,6 +14,7 @@ const FooterWrapper = styled.footer`
 
 const AuthorPane = styled.div`
     color: ${FOOTER_TEXT_3};
+    padding-bottom: 10px;
 `;
 
 const FooterHeader = styled.h1`
@@ -77,7 +78,6 @@ const Footer = (props) => {
                 <AuthorPane className="text-center">
                     <hr />
                     {`© ${author.year} Copyright: Created by ${author.author}`}
-                    <hr />
                 </AuthorPane>
             </Container>
         </FooterWrapper>

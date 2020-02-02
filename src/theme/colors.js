@@ -16,7 +16,7 @@ export const BACKGROUND_COLOR_SECONDARY = '#000000';
 
 
 
-export const TOPBAR_BACKGROUND_PRIMARY = '#ffffff';
+export const TOPBAR_BACKGROUND_PRIMARY = '#eeeeee';
 export const TOPBAR_BACKGROUND_SECONDARY = '#ffffff';
 
 
@@ -25,5 +25,5 @@ export const FOOTER_BACKGROUND_COLOR_PRIMARY = '#e8e8e8';
 export const FOOTER_BACKGROUND_COLOR_SECONDARY = '#000000';
 
 export const FOOTER_TEXT_1 = 'black';
-export const FOOTER_TEXT_2 = 'lightBlue';
+export const FOOTER_TEXT_2 = 'warning';
 export const FOOTER_TEXT_3 = 'blue';

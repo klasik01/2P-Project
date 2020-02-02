@@ -1,61 +1,38 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
+import background from '../../images/bg-1.jpg';
+
 import {
-    CarouselItem,
-    CarouselCaption,
-    UncontrolledCarousel,
-    Container
+    Jumbotron
 } from 'reactstrap';
 
-import items from '../../data/banner.json';
 
+const BannerWrapper = styled(Jumbotron)`
+    margin-top: -53px;
+    z-index: 100;
+    background: url(${background});
+    height: 50vh;
+`;
 
-const BannerWrapper = styled.footer``;
+const TitleHeader = styled.div`
+    color: white;
+`;
 
 const Banner = (props) => {
 
-    const [activeIndex, setActiveIndex] = useState(0);
-    const [animating, setAnimating] = useState(false);
-
-    const next = () => {
-        if (animating) return;
-        const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
-        setActiveIndex(nextIndex);
-    }
-
-    const previous = () => {
-        if (animating) return;
-        const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
-        setActiveIndex(nextIndex);
-    }
-
-    const goToIndex = (newIndex) => {
-        if (animating) return;
-        setActiveIndex(newIndex);
-    }
-
-    const slides = items.map((item) => {
-        return (
-            <CarouselItem className="img-fluid"
-                onExiting={() => setAnimating(true)}
-                onExited={() => setAnimating(false)}
-                key={item.src}
-            >
-                <img src={item.src} alt={item.altText} />
-                <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
-            </CarouselItem>
-        );
-    });
-
     return (
-        <Container>
-            <BannerWrapper className="">
-                <UncontrolledCarousel items={items} />
-            </BannerWrapper>
-        </Container>
+        <BannerWrapper>
+            <div className=" d-flex align-items-center h-100">
+                <div className="container text-center">
+                    <TitleHeader>
+                        <h1 className="display-3">2P Stavební</h1>
+                        <span className="display-5">Pavel Pinkas</span>
+                    </TitleHeader>
+                </div>
+            </div>
+        </BannerWrapper>
     );
-
 }
 
 export default Banner;
