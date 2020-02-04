@@ -1,11 +1,10 @@
 import React, { useLayoutEffect } from 'react';
 import styled from 'styled-components';
 import TopBar from './menu/TopBar';
-import Slider from './banner/Slider';
-import Banner from './banner/Banner';
+import Article from './articles/Article';
 import Footer from './footer/Footer';
-import Section from './sections/Section';
-import { BrowserRouter as Router, withRouter } from 'react-router-dom';
+import { BrowserRouter as Router, withRouter, Switch, Route } from 'react-router-dom';
+import Home from './home/Home';
 
 
 const AppWrapper = styled.div`
@@ -22,15 +21,14 @@ const ScrollToTop = withRouter(({ children, location: { pathname } }) => {
 const AppContent = () => {
     return (
         <AppWrapper className="">
-            <Router>
-                <ScrollToTop>
-                    <TopBar />
-                    <Banner id="home" />
-                    {/* <Slider /> */}
-                    <Section />
-                    <Footer />
-                </ScrollToTop>
-            </Router>
+            <TopBar />
+            <ScrollToTop>
+                <Switch>
+                    <Route exact path="/" render={() => <Home />} />
+                    <Route path="/article" render={() => <Article />} />
+                </Switch>
+                <Footer />
+            </ScrollToTop>
         </AppWrapper>
     )
 }

@@ -3,33 +3,18 @@ import PropTypes from 'prop-types';
 import React, { useMemo, useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import {
-  Collapse,
   Container,
-  DropdownItem,
-  DropdownMenu,
-  DropdownToggle,
-  Nav,
-  Navbar,
-  NavbarBrand,
-  NavbarToggler,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
 } from 'reactstrap';
-import styled from 'styled-components';
-import { TOPBAR_BACKGROUND_PRIMARY, TOPBAR_BACKGROUND_SECONDARY } from '../../theme/colors';
-
-
-const TopBarWrapper = styled.nav`
-  margin-bottom: 54px;
-`;
-
-const TopNavBar = styled(Navbar)`
-  opacity: ${props => (props.show ? '1' : '1')};
-  color: ${props => (props.show ? 'black' : 'navy')};
-  height: ${props => (props.show ? '80px' : '54px')};
-  transition: all 0.2s;
- `;
+import {
+  MyCollapse,
+  MyNavItem,
+  MyNav,
+  MyNavBar,
+  MyNavLink,
+  MyNavbarBrand,
+  MyNavbarToggler,
+  TopBarWrapper
+} from './style';
 
 const TopBar = (props) => {
 
@@ -44,65 +29,37 @@ const TopBar = (props) => {
     [classOnScroll], false, false, 300
   )
 
-
   return useMemo(() => {
     const toggle = () => setIsOpen(!isOpen)
     return (
-      <TopBarWrapper >
-        <TopNavBar className="" fixed="top" color="dark" dark expand="md" role="navigation" show={classOnScroll}>
+      <TopBarWrapper>
+        <MyNavBar className="" fixed="top" dark color="dark" expand="md" role="navigation" show={classOnScroll}>
           <Container>
-            <NavbarBrand href="/">2P Stavební</NavbarBrand>
-            <NavbarToggler onClick={toggle} />
-            <Collapse isOpen={isOpen} navbar >
-              <Nav className="ml-auto" navbar>
-                <NavItem>
-                  <NavLink href="#about">O Nás</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-                </NavItem>
-                <UncontrolledDropdown nav inNavbar>
-                  <DropdownToggle nav caret>
-                    O Nás
-              </DropdownToggle>
-                  <DropdownMenu right={false}>
-                    <DropdownItem>
-                      Historie
-                </DropdownItem>
-                    <DropdownItem>
-                      Zakázky
-                </DropdownItem>
-                    <DropdownItem divider />
-                    <DropdownItem>
-                      Reset
-                </DropdownItem>
-                  </DropdownMenu>
-                </UncontrolledDropdown>
-                <NavItem>
-                  <NavLink href="#gallery">Galerie</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="#service">Služby</NavLink>
-                </NavItem>
-              </Nav>
-            </Collapse>
+            <MyNavbarBrand href="/" show={classOnScroll}>2P Stavební</MyNavbarBrand>
+            <MyNavbarToggler onClick={toggle} show={classOnScroll} />
+            <MyCollapse isOpen={isOpen} navbar show={classOnScroll}>
+              <MyNav className="ml-auto" navbar show={classOnScroll}>
+                <MyNavItem show={classOnScroll}>
+                  <MyNavLink active href="article" show={classOnScroll}>O Nás</MyNavLink>
+                </MyNavItem>
+                <MyNavItem show={classOnScroll}>
+                  <MyNavLink href="#error" show={classOnScroll}>Projekty</MyNavLink>
+                </MyNavItem>
+                <MyNavItem show={classOnScroll}>
+                  <MyNavLink href="#gallery" show={classOnScroll}>Galerie</MyNavLink>
+                </MyNavItem>
+                <MyNavItem show={classOnScroll}>
+                  <MyNavLink href="#service" show={classOnScroll}>Služby</MyNavLink>
+                </MyNavItem>
+              </MyNav>
+            </MyCollapse>
           </Container>
-        </TopNavBar>
+        </MyNavBar>
       </TopBarWrapper>
     )
   },
     [classOnScroll, isOpen]
   );
-}
-
-Navbar.propTypes = {
-  light: PropTypes.bool,
-  dark: PropTypes.bool,
-  fixed: PropTypes.string,
-  color: PropTypes.string,
-  role: PropTypes.string,
-  expand: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
 }
 
 TopBar.propTypes = {

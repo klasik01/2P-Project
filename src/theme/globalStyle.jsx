@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
     body {
         background: ${BACKGROUND_COLOR_PRIMARY};
     }
+
 `;
 
 export default GlobalStyle;

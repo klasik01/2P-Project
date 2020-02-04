@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Container } from 'reactstrap';
-import Poe from '../common/Poe';
+import Poe from '../../../common/Poe';
 import poes from '../../data/poes.json';
 import Services from './services/Services';
 import Gallery from './gallery/Gallery';

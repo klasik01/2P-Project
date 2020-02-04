@@ -1,21 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-
-import background from '../../images/bg-1.jpg';
-
+import background from '../../../images/bg-1.jpg';
 import {
     Jumbotron
 } from 'reactstrap';
-
 
 const BannerWrapper = styled(Jumbotron)`
     margin-top: -53px;
     z-index: 100;
     background: url(${background});
-    height: 50vh;
+    height: 75vh;
+    z-index: 10;
 `;
 
 const TitleHeader = styled.div`
+
     color: white;
 `;
 

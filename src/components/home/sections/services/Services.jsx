@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { PrettyHeader } from '../../common/PretyHeader';
-import data from '../../../data/services.json';
-import Service from '../../common/Service';
+import { PrettyHeader } from '../../../common/PretyHeader';
+import data from '../../../../data/services.json';
+import Service from '../../../common/Service';
 
 
 const Services = (props) => {

@@ -1,5 +1,5 @@
-const PRIMARY = '#ffffff';
-const SECONDARY = '#ffffff';
+export const PRIMARY = '#FFD700ed';
+export const SECONDARY = '3#34a40';
 
 const INFO = 'info';
 const ERROR = 'error';
