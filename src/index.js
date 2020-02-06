@@ -23,6 +23,8 @@ import {
     faInfoCircle,
     faPen,
     faPencilAlt,
+    faPencilRuler,
+    faTruckPickup,
     faPlus,
     faSort,
     faSortDown,
@@ -31,16 +33,17 @@ import {
     faTrashAlt,
     faCircle,
     faLock,
-    faLaptop
+    faLaptop,
+    faHammer
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
     faDownload, faTrashAlt, faArrowsAltV, faArrowsAlt, faPencilAlt, faChevronLeft, faChevronRight, faCheck, faTimes,
     faSort, faSortUp, faSortDown, faChevronDown, faPen, faHome, faCog, faBars, faExclamationCircle, faInfoCircle,
-    faCheckCircle, faPlus, faCopy, faCircle, faLock, faLaptop
+    faCheckCircle, faPlus, faCopy, faCircle, faLock, faLaptop, faHammer, faPencilRuler, faTruckPickup
 );
 
-ReactDOM.render( < Root / > , document.getElementById('root'));
+ReactDOM.render( < Root /> , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

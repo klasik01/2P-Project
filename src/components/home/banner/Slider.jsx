@@ -1,12 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import {
-    UncontrolledCarousel,
-    Container
-} from 'reactstrap';
+import {Container, UncontrolledCarousel} from 'reactstrap';
 
-import items from '../../data/banner.json';
+import items from '../../../data/banner.json';
 
 
 const BannerWrapper = styled(Container)`
@@ -18,7 +15,7 @@ const Slider = (props) => {
     return (
         <BannerWrapper>
             <BannerWrapper className="">
-                <UncontrolledCarousel items={items} />
+                <UncontrolledCarousel items={items}/>
             </BannerWrapper>
         </BannerWrapper>
     );

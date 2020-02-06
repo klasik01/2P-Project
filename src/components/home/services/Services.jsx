@@ -1,15 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import { PrettyHeader } from '../../../common/PretyHeader';
-import data from '../../../../data/services.json';
-import Service from '../../../common/Service';
+import { PrettyHeader } from '../../common/PretyHeader';
+import data from '../../../data/services.json';
+import Service from '../../common/Service';
 
 
 const Services = (props) => {
 
     return (
         <div className="row text-center">
-            <PrettyHeader>Services</PrettyHeader>
+            <PrettyHeader>služby</PrettyHeader>
             {
                 data
                     .filter(item => item.category === 'SERVICE')

@@ -1,0 +1,29 @@
+[
+  {
+    "category": "JOB",
+    "col": 4,
+    "id": 1,
+    "icon": "truck-pickup",
+    "header": "Volná pracovní pozice",
+    "alias": "job1",
+    "link": "/jobs/job1"
+  },
+  {
+    "category": "JOB",
+    "col": 4,
+    "id": 2,
+    "icon": "truck-pickup",
+    "header": "Volná pracovní pozice",
+    "alias": "job1",
+    "link": "/jobs/job2"
+  },
+  {
+    "category": "JOB",
+    "col": 4,
+    "id": 3,
+    "icon": "truck-pickup",
+    "header": "Volná pracovní pozice",
+    "alias": "job3",
+    "link": "/jobs/job3"
+  }
+]

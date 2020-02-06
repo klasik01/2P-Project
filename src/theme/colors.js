@@ -1,13 +1,13 @@
 export const PRIMARY = '#FFD700ed';
-export const SECONDARY = '3#34a40';
+export const SECONDARY = '#304a40';
 
 const INFO = 'info';
 const ERROR = 'error';
 const WARNING = 'warning';
 const SUCCESS = 'success';
 
-export const BUTTON_PRIMARY_1 = '#ff331f';
-export const BUTTON_PRIMARY_2 = '#eeeeee';
+export const BUTTON_PRIMARY_1 = PRIMARY;
+export const BUTTON_PRIMARY_2 = '#ffffff';
 export const BUTTON_SECONDARY_1 = '#3626a7'
 export const BUTTON_SECONDARY_2 = '#eeeeee'
 
