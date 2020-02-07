@@ -6,6 +6,7 @@ import { Col, Row, Container } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { FOOTER_BACKGROUND_COLOR_PRIMARY, FOOTER_TEXT_1, FOOTER_TEXT_2, FOOTER_TEXT_3 } from '../../theme/colors.js';
+import { Hr } from '../../theme/globalStyle';
 
 
 const FooterWrapper = styled.footer`
@@ -29,6 +30,7 @@ const InfoRow = styled.p`
     text-align: justify;
     font-weight: bolder;
     line-height: 1;
+    color: ${FOOTER_TEXT_1};
 
 `;
 
@@ -76,7 +78,7 @@ const Footer = (props) => {
                 </Row>
 
                 <AuthorPane className="text-center">
-                    <hr />
+                    <Hr />
                     {`© ${author.year} Copyright: Created by ${author.author}`}
                 </AuthorPane>
             </Container>

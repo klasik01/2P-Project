@@ -8,9 +8,9 @@ const SectionWrapper = styled.div`
 
 const Home = () => {
     return (
-        <SectionWrapper className="py-2">
-            <Banner id="home"/>
-            <Section/>
+        <SectionWrapper className="">
+            <Banner id="home" />
+            <Section />
         </SectionWrapper>
     )
 }
