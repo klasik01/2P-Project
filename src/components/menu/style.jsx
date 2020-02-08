@@ -1,46 +1,46 @@
 import styled from "styled-components";
 import { PRIMARY, SECONDARY } from '../../theme/colors';
-import { NavLink } from "reactstrap";
+import { NavLink, Navbar, Collapse, NavItem, NavbarBrand, NavbarToggler, Nav } from "reactstrap";
 
 
 export const TopBarWrapper = styled.nav`
 `;
 
-export const MyNavbar = styled.nav`
-    height: ${props => (props.main ? '80px' : '54px')};
-    transition: all 0.5s;
+export const MyNavbar = styled(Navbar)`
+    ${props => (props.main ? 'height: 80px' : '')};
+    transition: all 0.3s;
     font-size: 1em;
     opacity: ${props => (props.main ? '1' : '1')};
-    color: ${props => (props.main ? 'black' : 'navy')};
-    margin-top: ${props => (props.main ? '0px' : '20px')};
+    ${props => (props.main ? 'color: black' : '')};
+    margin-top: ${props => (props.main ? '20px' : '0px')};
  `;
 
-export const MyNavbarBrand = styled.a`
+export const MyNavbarBrand = styled(NavbarBrand)`
   margin-right: ${props => (props.main ? '0' : '0')};
   text-transform: uppercase;
-  padding: ${props => (props.main ? '10px 150px' : '10px 15px')};
-  transition: all 0.5s;
+  padding: ${props => (props.main ? '10px 15px' : '10px 15px')};
+  transition: all 0.3s;
   font-weight: bold;
-  background: ${props => props.main ? PRIMARY : SECONDARY};
+  ${props => props.main ? 'background: ' + PRIMARY : ''};
 `;
 
 export const MyNavbarBrandIcon = styled.span`
   `;
 
-export const MyNavbarToggler = styled.button`
+export const MyNavbarToggler = styled(NavbarToggler)`
 `;
 
-export const MyCollapse = styled.div`
+export const MyCollapse = styled(Collapse)`
  `;
 
-export const MyNav = styled.ul`
+export const MyNav = styled(Nav)`
  `;
 
-export const MyNavItem = styled.li`
+export const MyNavItem = styled(NavItem)`
   margin-right: ${props => (props.main ? '0' : '0')};
-  padding: ${props => (props.main ? '5px 10px' : '50px 10px')};
+  padding: ${props => (props.main ? '5px 10px' : '5px 10px')};
   transition: all 0.5s;
-  background: ${props => props.main ? SECONDARY : PRIMARY};
+  background: ${props => props.main ? PRIMARY : 'none'};
 `;
 
 export const MyNavLink = styled(NavLink)`
