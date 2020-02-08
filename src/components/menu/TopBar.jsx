@@ -53,29 +53,29 @@ const TopBar = (props) => {
 
   return (
     <TopBarWrapper main={main} className={navbarWrapperStyle()}>
-      <MyNavbar main={main} className={`navbar navbar-expand-lg fixed-top ${myNavbarStyle()}`}>
+      <MyNavbar main={main} dark className={`navbar navbar-expand-lg fixed-top ${myNavbarStyle()}`}>
         <Container>
           <MyNavbarBrand main={main} className="navbar-brand" href="/" >2P Stavební</MyNavbarBrand>
           <MyNavbarToggler main={main} className="navbar-toggler" onClick={toggle} />
           <MyCollapse main={main} className="collapse navbar-collapse " isOpen={isOpen} navbar>
-            <MyNav main={main} className="navbar-nav ml-auto bg-dark">
+            <MyNav main={main} className="navbar-nav ml-auto bg-dark text-warning">
               <MyNavItem main={main} className="nav-item ">
                 <MyNavLink main={main} activeClassName="" className="nav-link" tag={NavLink} to="/">Home <span className="sr-only">(current)</span></MyNavLink>
               </MyNavItem>
               <MyNavItem main={main} sclassName="nav-item">
-                <MyNavLink main={main} activeClassName="active btn" className="nav-link" tag={NavLink} to="/about">o nás</MyNavLink>
+                <MyNavLink main={main} activeClassName="active" className="nav-link" tag={NavLink} to="/about">o nás</MyNavLink>
               </MyNavItem>
               <MyNavItem main={main} className="nav-item">
-                <MyNavLink main={main} activeClassName="active btn" className="nav-link" tag={NavLink} to="/article">naše projekty</MyNavLink>
+                <MyNavLink main={main} activeClassName="active" className="nav-link" tag={NavLink} to="/article">naše projekty</MyNavLink>
               </MyNavItem>
               <MyNavItem main={main} className="nav-item">
-                <MyNavLink main={main} activeClassName="active btn" className="nav-link" tag={NavLink} to="/services">služby</MyNavLink>
+                <MyNavLink main={main} activeClassName="active" className="nav-link" tag={NavLink} to="/services">služby</MyNavLink>
               </MyNavItem>
               <MyNavItem main={main} className="nav-item">
-                <MyNavLink main={main} activeClassName="active btn" className="nav-link" tag={NavLink} to="/contact">kontakty</MyNavLink>
+                <MyNavLink main={main} activeClassName="active" className="nav-link" tag={NavLink} to="/contact">kontakty</MyNavLink>
               </MyNavItem>
               <MyNavItem main={main} className="nav-item">
-                <MyNavLink main={main} activeClassName="active btn" className="nav-link" tag={NavLink} to="/job">zaměstnání</MyNavLink>
+                <MyNavLink main={main} activeClassName="active" className="nav-link" tag={NavLink} to="/job">zaměstnání</MyNavLink>
               </MyNavItem>
             </MyNav>
           </MyCollapse>

@@ -8,10 +8,10 @@ export const TopBarWrapper = styled.nav`
 
 export const MyNavbar = styled(Navbar)`
     ${props => (props.main ? 'height: 80px' : '')};
-    transition: all 0.3s;
+    transition: all .5s;
     font-size: 1em;
     opacity: ${props => (props.main ? '1' : '1')};
-    ${props => (props.main ? 'color: black' : '')};
+    /* ${props => (props.main ? 'color: black' : '')}; */
     margin-top: ${props => (props.main ? '20px' : '0px')};
  `;
 

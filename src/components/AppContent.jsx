@@ -1,7 +1,6 @@
 import React, { useLayoutEffect, useMemo, useState } from 'react';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import styled from 'styled-components';
-import TopNavBar from './menu/TopNavBar';
 import TopBar from './menu/TopBar';
 import Article from './articles/Article';
 import Footer from './footer/Footer';
