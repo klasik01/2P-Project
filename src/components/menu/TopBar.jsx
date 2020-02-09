@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 import { Container } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
-import { MyCollapse, MyNav, MyNavbar, MyNavbarBrand, MyNavbarToggler, MyNavItem, MyNavLink, TopBarWrapper, MyNavbarBrandIcon } from './style';
+import { MyCollapse, MyNav, MyNavbar, MyNavbarBrand, MyNavbarToggler, MyNavItem, MyNavLink, TopBarWrapper } from './style';
 import useScreenType from '../../utils/screenType';
 import { getNavbarSize } from './utils';
 
@@ -62,7 +62,7 @@ const TopBar = (props) => {
               <MyNavItem main={main} className="nav-item ">
                 <MyNavLink main={main} activeClassName="" className="nav-link" tag={NavLink} to="/">Home <span className="sr-only">(current)</span></MyNavLink>
               </MyNavItem>
-              <MyNavItem main={main} sclassName="nav-item">
+              <MyNavItem main={main} className="nav-item">
                 <MyNavLink main={main} activeClassName="active" className="nav-link" tag={NavLink} to="/about">o nás</MyNavLink>
               </MyNavItem>
               <MyNavItem main={main} className="nav-item">
@@ -88,6 +88,6 @@ const TopBar = (props) => {
 TopBar.propTypes = {
   classOnScroll: PropTypes.bool,
 
-}
+};
 
 export default withRouter(TopBar);

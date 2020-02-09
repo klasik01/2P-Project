@@ -84,7 +84,7 @@ const Footer = (props) => {
             </Container>
         </FooterWrapper>
     )
-}
+};
 
 
 export default Footer;

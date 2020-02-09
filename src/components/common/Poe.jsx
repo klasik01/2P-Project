@@ -1,16 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { PrimaryButton } from './Button';
-import { PrettyHeader } from './PretyHeader';
+import {PrimaryButton} from './Button';
+import {PrettyHeader} from './PretyHeader';
 
 const Wrapper = styled.div`
 `;
 
-
 const Poe = (props) => {
 
-    const { paragraphs, header } = props;
+    const {paragraphs, header} = props;
 
     return (
         <Wrapper className="text-center">
@@ -23,11 +22,11 @@ const Poe = (props) => {
             <PrimaryButton href="#poe">Zjistit více</PrimaryButton>
         </Wrapper>
     )
-}
+};
 
 Poe.protoTypes = {
-    header: PropTypes.string.isrequired,
-    paragraphs: PropTypes.array.isrequired,
-}
+    header: PropTypes.string.isRequired,
+    paragraphs: PropTypes.array.isRequired,
+};
 
 export default Poe;

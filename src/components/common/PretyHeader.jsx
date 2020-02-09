@@ -20,3 +20,4 @@ export const PrettyHeader = styled.h1`
     &:before { right: 1.5%; }
     &:after { left: 1.5%; }
 `;
+

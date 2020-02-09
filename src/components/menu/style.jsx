@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { PRIMARY, SECONDARY } from '../../theme/colors';
-import { NavLink, Navbar, Collapse, NavItem, NavbarBrand, NavbarToggler, Nav } from "reactstrap";
+import {PRIMARY} from '../../theme/colors';
+import {Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink} from "reactstrap";
 
 
 export const TopBarWrapper = styled.nav`

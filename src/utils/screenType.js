@@ -1,22 +1,21 @@
-'use strict';
-import { useState, useEffect } from 'react';
+import {useEffect, useState} from 'react';
 
 const useScreenType = () => {
     const [screenType, setScreenType] = useState(getScreenType());
 
     const resizeEvent = () => {
         setScreenType(getScreenType())
-    }
+    };
 
     useEffect(() => {
         window.addEventListener('resize', resizeEvent);
         return () => {
             window.removeEventListener('resize', resizeEvent);
         };
-    }, [])
+    }, []);
 
     return screenType;
-}
+};
 
 const getScreenType = () => {
     let screenType = null;

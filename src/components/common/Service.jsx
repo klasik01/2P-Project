@@ -30,7 +30,7 @@ const Service = (props) => {
             <p className="text-muted">{text}</p>
         </Wrapper>
     )
-}
+};
 
 Service.protoTypes = {
     icon: PropTypes.string.isRequired,
@@ -38,6 +38,6 @@ Service.protoTypes = {
     text: PropTypes.string.isRequired,
     col: PropTypes.number.isRequired,
     color: PropTypes.string.isRequired,
-}
+};
 
 export default Service;
