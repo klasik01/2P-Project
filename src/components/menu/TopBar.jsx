@@ -47,7 +47,7 @@ const TopBar = (props) => {
     if (classOnScroll) {
       return '';
     }
-    return 'bg-dark text-light';
+    return 'bg-warning text-light';
   }
 
 
@@ -58,7 +58,7 @@ const TopBar = (props) => {
           <MyNavbarBrand main={main} className="navbar-brand" href="/" >2P Stavební</MyNavbarBrand>
           <MyNavbarToggler main={main} className="navbar-toggler" onClick={toggle} />
           <MyCollapse main={main} className="collapse navbar-collapse " isOpen={isOpen} navbar>
-            <MyNav main={main} className="navbar-nav ml-auto bg-dark text-warning">
+            <MyNav main={main} className="navbar-nav ml-auto ">
               <MyNavItem main={main} className="nav-item ">
                 <MyNavLink main={main} activeClassName="" className="nav-link" tag={NavLink} to="/">Home <span className="sr-only">(current)</span></MyNavLink>
               </MyNavItem>

@@ -6,6 +6,7 @@ import poes from '../../data/poes.json';
 import Services from './services/Services';
 import Gallery from './gallery/Gallery';
 import Jobs from "./job/Jobs";
+import Order from "./order/Order";
 
 
 const SectionWrapper = styled(Container)`
@@ -24,7 +25,7 @@ const Section = () => {
             <Services id="service"/>
             <Poe header={poes['SECOND'].header} paragraphs={poes['SECOND'].paragraphs}/>
             <Jobs id="job" />
-
+            <Order id="order" />
             <Gallery id="gallery"/>
 
         </SectionWrapper>

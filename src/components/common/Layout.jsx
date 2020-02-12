@@ -1,7 +1,7 @@
 import React from 'react';
 import {BannerHeader} from './BannerHeader';
 import PropTypes from 'prop-types';
-import {Container} from 'reactstrap';
+import {Col, Container, Row} from 'reactstrap';
 
 export const Layout = (props) => {
     const {children, header, footer} = props;
@@ -10,7 +10,11 @@ export const Layout = (props) => {
         <div>
             <BannerHeader header={header}/>
             <Container>
-                {children}
+                <Row>
+                    <Col className="p-3">
+                        {children}
+                    </Col>
+                </Row>
                 <div>{footer}</div>
             </Container>
         </div>
