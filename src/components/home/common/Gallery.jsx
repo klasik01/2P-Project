@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { PrettyHeader } from '../../common/PretyHeader';
-import {
-    Row
-} from 'reactstrap';
+import {Row} from 'reactstrap';
 
 const Wrapper = styled.div`
 `;

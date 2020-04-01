@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Row, Col } from 'reactstrap';
-import backgorundImg from '../../../images/bg-3.jpg';
+import backgorundImg from '../../images/bg-3.jpg';
 
 
 const BannerWrapper = styled(Row)`

@@ -75,7 +75,7 @@ const TopBar = (props) => {
                 <MyNavLink main={main} activeClassName="active" className="nav-link" tag={NavLink} to="/contact">kontakty</MyNavLink>
               </MyNavItem>
               <MyNavItem main={main} className="nav-item">
-                <MyNavLink main={main} activeClassName="active" className="nav-link" tag={NavLink} to="/job">zaměstnání</MyNavLink>
+                <MyNavLink main={main} activeClassName="active" className="nav-link" tag={NavLink} to="/jobs">zaměstnání</MyNavLink>
               </MyNavItem>
             </MyNav>
           </MyCollapse>
