@@ -1,9 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Row, Col } from 'reactstrap';
+import backgorundImg from '../../../images/bg-3.jpg';
+
 
 const BannerWrapper = styled(Row)`
     background: linear-gradient(to right, #f2eb86, #b37d17);
+    background-image: url(${backgorundImg}) ;
+    background-size: cover;
     margin: 0;
     border-radius: 0;
     min-height: 60vh;

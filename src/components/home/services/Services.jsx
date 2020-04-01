@@ -7,8 +7,9 @@ import Service from '../../common/Service';
 const Services = (props) => {
 
     return (
-        <div className="row text-center">
+        <div className="text-center">
             <PrettyHeader>služby</PrettyHeader>
+            <div className="row">
             {
                 data
                     .filter(item => item.category === 'SERVICE')
@@ -17,6 +18,7 @@ const Services = (props) => {
                         return <Service key={id} icon={icon} header={header} col={col} text={text} color={color}/>
                     })
             }
+            </div>
         </div>
     )
 };

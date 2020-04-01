@@ -3,9 +3,8 @@ import {PrettyHeader} from '../../common/PretyHeader';
 import data from '../../../data/jobs.json';
 import {Link} from '../../common/Link';
 import styled from "styled-components";
-import {Row} from "reactstrap";
 
-const JobsWrapper = styled(Row)`
+const JobsWrapper = styled.div`
     color: ${props => props.color};
 `;
 
@@ -15,6 +14,7 @@ const Jobs = (props) => {
     return (
         <JobsWrapper className="text-center">
             <PrettyHeader>zaměstnání</PrettyHeader>
+            <div className="row">
             {
                 data.filter(item => item.category === 'JOB')
                     .map(item => {
@@ -23,6 +23,7 @@ const Jobs = (props) => {
                                      color={color}/>
                     })
             }
+            </div>
         </JobsWrapper>
     )
 }
