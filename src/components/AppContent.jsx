@@ -10,19 +10,25 @@ import PageNotFound from './PageNotFound';
 const AppWrapper = styled.div`
 `;
 
+const Main = styled.main`
+    
+`;
+
 const AppContent = (props) => {
     const { classOnScroll } = props;
 
 
     return (
-        <AppWrapper className="">
+        <AppWrapper className="d-flex flex-column min-vh-100">
             <TopBar classOnScroll={classOnScroll} />
+            <Main className="wrapper flex-grow-1">
             <Switch>
                 <Route exact path="/" render={() => <Home />} />
                 <Route render={() => <Section />} />
                 <Route render={() => <PageNotFound/>}/>
             </Switch>
-            <Footer />
+            </Main>
+            <Footer/>
         </AppWrapper>
     )
 

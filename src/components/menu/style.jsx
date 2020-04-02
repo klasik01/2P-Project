@@ -1,53 +1,114 @@
 import styled from "styled-components";
 import {PRIMARY} from '../../theme/colors';
-import {Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink} from "reactstrap";
-
-
-export const TopBarWrapper = styled.nav`
-`;
-
-export const MyNavbar = styled(Navbar)`
-    ${props => (props.main ? 'height: 80px' : '')};
-    transition: all .5s;
-    font-size: 1em;
-    opacity: ${props => (props.main ? '1' : '1')};
-    /* ${props => (props.main ? 'color: black' : '')}; */
-    margin-top: ${props => (props.main ? '20px' : '0px')};
- `;
+import {Nav, NavbarBrand, DropdownItem, DropdownMenu, DropdownToggle, UncontrolledDropdown} from "reactstrap";
+import { NavLink } from "react-router-dom";
 
 export const MyNavbarBrand = styled(NavbarBrand)`
   margin-right: ${props => (props.main ? '0' : '0')};
   text-transform: uppercase;
-  padding: ${props => (props.main ? '10px 15px' : '10px 15px')};
+  padding: ${props => (props.main === 'true' ? '10px 15px' : '10px 15px')};
   transition: all 0.3s;
   font-weight: bold;
-  ${props => props.main ? 'background: ' + PRIMARY : ''};
+  ${props => props.main === 'true' ? 'background: ' + PRIMARY : ''};
 `;
-
-export const MyNavbarBrandIcon = styled.span`
-  `;
-
-export const MyNavbarToggler = styled(NavbarToggler)`
-`;
-
-export const MyCollapse = styled(Collapse)`
- `;
 
 export const MyNav = styled(Nav)`
+  background-color: ${props => (props.main === 'true' ? PRIMARY : 'none' )};
  `;
 
-export const MyNavItem = styled(NavItem)`
-  margin-right: ${props => (props.main ? '0' : '0')};
-  padding: ${props => (props.main ? '5px 10px' : '5px 10px')};
-  transition: all 0.5s;
-  background: ${props => props.main ? PRIMARY : 'none'};
+export const MyUncontrolledDropdown = styled(UncontrolledDropdown)`
 `;
 
-export const MyNavLink = styled(NavLink)`
-  text-transform: uppercase;
-  font-weight: bold;
-  opacity: 1;
+export const DropToggleMenuLink = styled(DropdownToggle)`    
+    :visited,
+    :link {
+        color: rgba(255, 255, 255, 0.85);
+    }
+    :active,
+    :focus,
+    :hover
+    {
+        color: black !important;
+    }
+    transition: all 0.5s ease;
+    
+    && {
+        padding: 0.6em 1em;
+        margin: 5px;
+    }
+`;
 
-  &:hover {
-  }
+export const WrappedDropdownMenu = styled(DropdownMenu)`
+    color: rgba(255, 255, 255, 0.85);
+    border-radius: 0;
+    background-color: ${PRIMARY};
+`;
+
+export const MenuDropdownItem = styled(DropdownItem)`
+    :visited,
+    :link,
+    :active,
+    :focus,
+    :hover {
+        opacity: 0.8;
+        background-color: ${PRIMARY};
+        
+    }
+    && {
+        color: white;
+        padding-right: 15px;
+    }
+`;
+
+export const DropMenuLink = styled(NavLink)`
+    :visited,
+    :link {
+
+    }
+    :active,
+    :focus,
+    :hover
+    {
+      color: black;
+      text-decoration: none;
+    }
+    && {
+      color: white;
+    }
+`;
+
+export const MenuNavLink = styled(NavLink)`
+    :visited,
+    :link {
+        color: rgba(255, 255, 255, 0.85);
+    }
+    :active,
+    :focus,
+    :hover
+    {
+        color: black !important;
+    }
+    transition: all 0.5s ease;
+    
+    && {
+        padding: 0.6em 1em;
+        margin: 5px;
+    }
+`;
+
+export const TopNavigation = styled.nav`
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 1px 10px;
+    background-color: ${props => (props.main ? '' : PRIMARY )};
+    ${props => (props.main ? 'height: 80px' : '')};
+    transition: all .2s ease-in-out;
+    margin-top: ${props => (props.main ? '20px' : '0px')};
+`;
+
+
+export const CollapseButton = styled.button`
+    color: rgba(255, 255, 255, 0.7);
+    border-color: rgba(255, 255, 255, 0.7);
+    border-radius: .25em;
 `;

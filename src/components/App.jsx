@@ -21,7 +21,7 @@ const App = () => {
         ({ prevPos, currPos }) => {
             const isShow = currPos.y > -80
             if (isShow !== classOnScroll) setStyleOnScroll(isShow)
-        }, [classOnScroll], false, false, 300
+        }, [classOnScroll], false, false, 0
     );
 
     return useMemo(() => {

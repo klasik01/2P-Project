@@ -3,7 +3,7 @@ import {BannerHeader} from './BannerHeader';
 import PropTypes from 'prop-types';
 import {Col, Container, Row} from 'reactstrap';
 
-export const Layout = (props) => {
+export const ArticleLayout = (props) => {
     const {children, header, footer} = props;
 
     return (
@@ -22,8 +22,37 @@ export const Layout = (props) => {
     );
 };
 
-Layout.propTypes = {
-    children: PropTypes.object,
+ArticleLayout.propTypes = {
+    children: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.node),
+        PropTypes.node
+    ]).isRequired,
     header: PropTypes.string.isRequired,
     footer: PropTypes.string
+};
+
+export const DefaultLayout = (props) => {
+    const {children, header} = props;
+
+    return (
+        <div>
+            <BannerHeader header={header}/>
+            <Container>
+                <Row>
+                    <Col className="p-3">
+                        {children}
+                    </Col>
+                </Row>
+            </Container>
+        </div>
+
+    );
+};
+
+DefaultLayout.propTypes = {
+    children: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.node),
+        PropTypes.node
+    ]).isRequired,
+    header: PropTypes.string.isRequired,
 };

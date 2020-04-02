@@ -1,93 +1,60 @@
-import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
-import { Container } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
-
-import { MyCollapse, MyNav, MyNavbar, MyNavbarBrand, MyNavbarToggler, MyNavItem, MyNavLink, TopBarWrapper } from './style';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Collapse, Container } from "reactstrap";
+import { DropdownMenuComponent } from "./DropDownMenu";
+import { buildAboutMenu, buildJobMenu, buildHomeMenu, buildProjectMenu, buildServiceMenu, buildContactMenu } from "./MenuStructure";
 import useScreenType from '../../utils/screenType';
-import { getNavbarSize } from './utils';
+import { getNavbarSize, setNavbarWrapperStyle} from './utils';
+import { MyNav, MyNavbarBrand, MenuNavLink, TopNavigation, CollapseButton } from './style';
+import PropTypes from "prop-types";
 
 const TopBar = (props) => {
 
-  const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const [homeMenu, setHomeMenu] = useState(buildHomeMenu());
+    const [aboutMenu, setAboutMenu] = useState(buildAboutMenu());
+    const [jobMenu, setJobMenu] = useState(buildJobMenu());
+    const [projectMenu, setProjectMenu] = useState(buildProjectMenu());
+    const [serviceMenu, setServiceMenu] = useState(buildServiceMenu());
+    const [contactMenu, setContactMenu] = useState(buildContactMenu());
 
-  const toggle = () => setIsOpen(!isOpen);
+    const toggle = () => setIsOpen(!isOpen);
 
-  const { classOnScroll } = props;
+    const { classOnScroll } = props;
+    const screenType = useScreenType();
+    const isLarge = !!getNavbarSize(classOnScroll, useScreenType());
+    const navbarWrapperStyle = () => setNavbarWrapperStyle(screenType, classOnScroll);
 
-  const main = getNavbarSize(classOnScroll, useScreenType());
+    useEffect(() => {
+    });
 
-  const screenType = useScreenType();
-
-  const navbarWrapperStyle = () => {
-    if (screenType === 'sm' || screenType === 'xs' || screenType === 'md') {
-      if (classOnScroll) {
-        return 'd-block';
-      } else {
-        return 'd-block';
-      }
-    }
-
-    if (classOnScroll) {
-      return 'd-none d-lg-block';
-    }
-    return '';
-  }
-
-  const myNavbarStyle = () => {
-    if (screenType === 'sm' || screenType === 'xs' || screenType === 'md') {
-      if (classOnScroll) {
-        return 'navbar-dark bg-dark text-light';
-      } else {
-        return 'navbar-dark bg-dark text-light';
-      }
-    }
-
-    if (classOnScroll) {
-      return '';
-    }
-    return 'bg-warning text-light';
-  }
-
-
-  return (
-    <TopBarWrapper main={main} className={navbarWrapperStyle()}>
-      <MyNavbar main={main} dark className={`navbar navbar-expand-lg fixed-top ${myNavbarStyle()}`}>
-        <Container>
-          <MyNavbarBrand main={main} className="navbar-brand" href="/" >2P Stavební</MyNavbarBrand>
-          <MyNavbarToggler main={main} className="navbar-toggler" onClick={toggle} />
-          <MyCollapse main={main} className="collapse navbar-collapse " isOpen={isOpen} navbar>
-            <MyNav main={main} className="navbar-nav ml-auto ">
-              <MyNavItem main={main} className="nav-item ">
-                <MyNavLink main={main} activeClassName="" className="nav-link" tag={NavLink} to="/">Home <span className="sr-only">(current)</span></MyNavLink>
-              </MyNavItem>
-              <MyNavItem main={main} className="nav-item">
-                <MyNavLink main={main} activeClassName="active" className="nav-link" tag={NavLink} to="/about">o nás</MyNavLink>
-              </MyNavItem>
-              <MyNavItem main={main} className="nav-item">
-                <MyNavLink main={main} activeClassName="active" className="nav-link" tag={NavLink} to="/article">naše projekty</MyNavLink>
-              </MyNavItem>
-              <MyNavItem main={main} className="nav-item">
-                <MyNavLink main={main} activeClassName="active" className="nav-link" tag={NavLink} to="/services">služby</MyNavLink>
-              </MyNavItem>
-              <MyNavItem main={main} className="nav-item">
-                <MyNavLink main={main} activeClassName="active" className="nav-link" tag={NavLink} to="/contact">kontakty</MyNavLink>
-              </MyNavItem>
-              <MyNavItem main={main} className="nav-item">
-                <MyNavLink main={main} activeClassName="active" className="nav-link" tag={NavLink} to="/jobs">zaměstnání</MyNavLink>
-              </MyNavItem>
-            </MyNav>
-          </MyCollapse>
-        </Container>
-      </MyNavbar>
-    </TopBarWrapper>
-  )
+    return (
+        <TopNavigation className={`navbar navbar-expand-lg fixed-top ${navbarWrapperStyle()}`} main={isLarge}>
+            <Container>
+                <MyNavbarBrand main={isLarge.toString()} className="navbar-brand" tag={MenuNavLink} to="/" >2P Stavební</MyNavbarBrand>
+                <CollapseButton className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                    onClick={toggle}>
+                    <FontAwesomeIcon icon="bars" size="lg" />
+                </CollapseButton>
+                <Collapse isOpen={isOpen} navbar className="collapse navbar-collapse">
+                    <MyNav className="navbar-nav ml-auto px-4" main={isLarge.toString()} >
+                        {/* <DropdownMenuComponent label={'Úvod'} roles={homeMenu} /> */}
+                        <DropdownMenuComponent label={'O nás'} roles={aboutMenu} />
+                        <DropdownMenuComponent label={'Naše projekty'} roles={projectMenu} />
+                        <DropdownMenuComponent label={'Služby'} roles={serviceMenu} />
+                        <DropdownMenuComponent label={'Zaměstnání'} roles={jobMenu} />
+                        <DropdownMenuComponent label={'Kontakt'} roles={contactMenu} />
+                    </MyNav>
+                </Collapse>
+            </Container>
+        </TopNavigation>
+    );
 }
 
 TopBar.propTypes = {
-  classOnScroll: PropTypes.bool,
-
-};
+    main: PropTypes.bool,
+}
 
 export default withRouter(TopBar);
