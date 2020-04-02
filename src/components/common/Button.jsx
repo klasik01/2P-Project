@@ -52,7 +52,7 @@ export const LongButton = (props) => {
 
     return (
         <Button href={href}
-                className="btn bg-warning d-flex rounded-0 justify-content-center py-2 font-weight-bold"
+                className="btn bg-danger d-flex rounded-0 justify-content-center py-2 font-weight-bold"
                 color={BUTTON_PRIMARY_1}
                 color2={BUTTON_PRIMARY_2}>
             {children}
