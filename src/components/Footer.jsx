@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-
 import base from "../data/baseInfo.json";
 import { Col, Row, Container } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

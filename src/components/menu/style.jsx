@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {PRIMARY} from '../../theme/colors';
+import { NavLink } from 'react-router-dom';
 import {Nav, NavbarBrand, DropdownItem, DropdownMenu, DropdownToggle, UncontrolledDropdown} from "reactstrap";
-import { NavLink } from "react-router-dom";
 
 export const MyNavbarBrand = styled(NavbarBrand)`
   margin-right: ${props => (props.main ? '0' : '0')};
@@ -93,6 +93,9 @@ export const MenuNavLink = styled(NavLink)`
     && {
         padding: 0.6em 1em;
         margin: 5px;
+    }
+    &.${'nav-item-active'} {
+        color: black;
     }
 `;
 

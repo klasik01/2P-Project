@@ -59,7 +59,7 @@ export const buildServiceMenu = roles => {
         result.push(
             {
                 label: 'Služby',
-                to: '/services'
+                to: '/article'
             }
         );
     return result;

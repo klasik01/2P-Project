@@ -2,6 +2,7 @@ import React from 'react';
 import {PrettyHeader} from '../../common/PretyHeader';
 import data from '../../../data/services.json';
 import Service from '../../common/Service';
+import Lightbox from '../../common/Lightbox';
 
 
 const Services = (props) => {
@@ -10,6 +11,7 @@ const Services = (props) => {
         <div className="text-center">
             <PrettyHeader>služby</PrettyHeader>
             <div className="row">
+                <Lightbox />
             {
                 data
                     .filter(item => item.category === 'SERVICE')
