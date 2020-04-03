@@ -7,7 +7,7 @@ import poes from '../../data/poes.json';
 import Services from './common/Services';
 import Gallery from './common/Gallery';
 import Jobs from "./common/Jobs";
-import Order from "./common/Order";
+import {LeftHeaderRightTextLayout, RightHeaderLeftTextLayout, CalculationLayout, ActualityLayout} from "../common/BlockLayout";
 
 
 const HomeWrapper = styled.div`
@@ -27,14 +27,10 @@ const Home = () => {
     return (
         <HomeWrapper className="">
             <Banner id="home" />
-            <SectionWrapper className="py-2">
-                <Poe header={poes['FIRST'].header} paragraphs={poes['FIRST'].paragraphs}/>
-                <Services id="service"/>
-                <Poe header={poes['SECOND'].header} paragraphs={poes['SECOND'].paragraphs}/>
-                <Jobs id="job" />
-                <Order id="order" />
-                <Gallery id="gallery"/>
-        </SectionWrapper>
+                <LeftHeaderRightTextLayout />
+                <ActualityLayout />
+                <RightHeaderLeftTextLayout />
+                <CalculationLayout />
         </HomeWrapper>
     )
 }

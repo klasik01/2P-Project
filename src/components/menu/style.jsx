@@ -36,6 +36,9 @@ export const DropToggleMenuLink = styled(DropdownToggle)`
         padding: 0.6em 1em;
         margin: 5px;
     }
+    &.${'nav-item-active'} {
+        color: black;
+    }
 `;
 
 export const WrappedDropdownMenu = styled(DropdownMenu)`

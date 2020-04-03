@@ -1,4 +1,4 @@
-export const PRIMARY = '#eb1c24';
+export const PRIMARY = 'rgb(168, 58, 50)';
 export const SECONDARY = '#343a40';
 
 export const BUTTON_PRIMARY_1 = PRIMARY;

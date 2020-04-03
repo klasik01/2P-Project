@@ -3,12 +3,17 @@ import {PrettyHeader} from '../../common/PretyHeader';
 import data from '../../../data/services.json';
 import Service from '../../common/Service';
 import Lightbox from '../../common/Lightbox';
+import {Container} from 'reactstrap';
+import styled from 'styled-components';
 
+
+const Wrapper = styled(Container)`
+`;
 
 const Services = (props) => {
 
     return (
-        <div className="text-center">
+        <Wrapper className="text-center py-5">
             <PrettyHeader>služby</PrettyHeader>
             <div className="row">
             {
@@ -20,7 +25,7 @@ const Services = (props) => {
                     })
             }
             </div>
-        </div>
+        </Wrapper>
     )
 };
 

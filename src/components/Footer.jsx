@@ -12,7 +12,8 @@ import {
     FOOTER_BACKGROUND_COLOR_PRIMARY,
     FOOTER_TEXT_1,
     FOOTER_TEXT_2,
-    FOOTER_TEXT_3
+    FOOTER_TEXT_3,
+    PRIMARY
 } from "../theme/colors.js";
 import { Hr } from "../theme/globalStyle";
 
@@ -25,6 +26,7 @@ const AuthorPane = styled.div`
 `;
 
 const FooterHeader = styled.h1`
+  text-align: center;
   color: ${FOOTER_TEXT_1};
   text-transform: uppercase;
   font-size: 1.3rem;
@@ -33,7 +35,7 @@ const FooterHeader = styled.h1`
 `;
 
 const InfoRow = styled.p`
-  text-align: justify;
+  text-align: center;
   font-weight: bolder;
   line-height: 1;
   color: ${FOOTER_TEXT_1};
@@ -46,7 +48,7 @@ const LinkCustom = styled.a`
   transition: all 0.5s;
   &&:hover {
     transition: all 0.5s;
-    color: ${FOOTER_TEXT_2};
+    color: ${PRIMARY};
   }
 `;
 
