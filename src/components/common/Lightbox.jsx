@@ -30,7 +30,7 @@ const LightBox = () => {
       {lighboxes.map(item => (
         <div>
           <Margin className="">
-                    <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="gallery" className="col-md-4">
+                    <a href="https://unsplash.it/1200/768.jpg?image=251" className="col-md-4">
                         <img src="https://unsplash.it/600.jpg?image=251" className="img-fluid rounded" alt="" />
                     </a>
                     <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="gallery" className="col-md-4">

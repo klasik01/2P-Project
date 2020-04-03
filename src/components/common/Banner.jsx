@@ -6,7 +6,8 @@ import backgorundImg from '../../images/bg-3.jpg';
 
 const BannerWrapper = styled(Row)`
     background: linear-gradient(to right, #f2eb86, #b37d17);
-    background-image: url(${backgorundImg}) ;
+/*     filter: contrast(8);
+ */    background-image: linear-gradient(to right, rgba(242, 235, 134, 0.8), rgba(179,125,23,0.8)), url(${backgorundImg}) ;
     background-size: cover;
     margin: 0;
     border-radius: 0;

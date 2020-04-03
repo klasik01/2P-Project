@@ -11,7 +11,6 @@ const Services = (props) => {
         <div className="text-center">
             <PrettyHeader>služby</PrettyHeader>
             <div className="row">
-                <Lightbox />
             {
                 data
                     .filter(item => item.category === 'SERVICE')
