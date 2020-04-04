@@ -1,5 +1,5 @@
 import React from 'react';
-import {PrettyHeader} from '../../common/PretyHeader';
+import {PrettyHeader} from '../../common/Typography';
 import data from '../../../data/services.json';
 import Service from '../../common/Service';
 import Lightbox from '../../common/Lightbox';

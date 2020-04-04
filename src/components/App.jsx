@@ -1,16 +1,17 @@
-import React, { useLayoutEffect, useMemo, useState } from 'react';
-import { useScrollPosition } from '@n8tb1t/use-scroll-position';
+import React, {useLayoutEffect, useMemo, useState} from 'react';
+import {useScrollPosition} from '@n8tb1t/use-scroll-position';
 import GlobalStyle from '../theme/globalStyle';
 import AppContent from './AppContent';
-import { withRouter } from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 
 
-const ScrollToTop = withRouter(({ children, location: { pathname } }) => {
+const ScrollToTop = withRouter(({children, location: {pathname}}) => {
     useLayoutEffect(() => {
-        window.scrollTo(0, 0)
-    }, [pathname])
+        // eslint-disable-next-line no-undef
+        window.scrollTo(0, 0);
+    }, [pathname]);
 
-    return children || null
+    return children || null;
 });
 
 const App = () => {
@@ -18,24 +19,25 @@ const App = () => {
     const [classOnScroll, setStyleOnScroll] = useState(true);
 
     useScrollPosition(
-        ({ prevPos, currPos }) => {
-            const isShow = currPos.y > -80
-            if (isShow !== classOnScroll) setStyleOnScroll(isShow)
+        // eslint-disable-next-line no-unused-vars
+        ({prevPos, currPos}) => {
+            const isShow = currPos.y > -80;
+            if (isShow !== classOnScroll) setStyleOnScroll(isShow);
         }, [classOnScroll], false, false, 0
     );
 
     return useMemo(() => {
         return (
             <React.Fragment>
-                <GlobalStyle />
+                <GlobalStyle/>
                 <ScrollToTop>
-                    <AppContent classOnScroll={classOnScroll} />
+                    <AppContent classOnScroll={classOnScroll}/>
                 </ScrollToTop>
             </React.Fragment>
-        )
+        );
     },
-        [classOnScroll]
+    [classOnScroll]
     );
-}
+};
 
 export default App;

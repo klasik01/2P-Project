@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { PrimaryButton } from './Button';
 import { Container } from 'reactstrap';
-import { PrettyHeader } from './PretyHeader';
+import { PrettyHeader } from './Typography';
 import { PRIMARY } from '../../theme/colors';
 
 const Wrapper = styled.div`

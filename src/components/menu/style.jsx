@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 import {PRIMARY} from '../../theme/colors';
-import { NavLink } from 'react-router-dom';
-import {Nav, NavbarBrand, DropdownItem, DropdownMenu, DropdownToggle, UncontrolledDropdown} from "reactstrap";
+import {NavLink} from 'react-router-dom';
+import {Nav, NavbarBrand, DropdownItem, DropdownMenu, DropdownToggle, UncontrolledDropdown} from 'reactstrap';
 
 export const MyNavbarBrand = styled(NavbarBrand)`
   margin-right: ${props => (props.main ? '0' : '0')};
@@ -13,7 +13,7 @@ export const MyNavbarBrand = styled(NavbarBrand)`
 `;
 
 export const MyNav = styled(Nav)`
-  background-color: ${props => (props.main === 'true' ? PRIMARY : 'none' )};
+  background-color: ${props => (props.main === 'true' ? PRIMARY : 'none')};
  `;
 
 export const MyUncontrolledDropdown = styled(UncontrolledDropdown)`
@@ -106,7 +106,7 @@ export const TopNavigation = styled.nav`
     font-family: sans-serif;
     font-weight: bold;
     padding: 1px 10px;
-    background-color: ${props => (props.main ? '' : PRIMARY )};
+    background-color: ${props => (props.main ? '' : PRIMARY)};
     ${props => (props.main ? 'height: 80px' : '')};
     transition: all .2s ease-in-out;
     margin-top: ${props => (props.main ? '20px' : '0px')};

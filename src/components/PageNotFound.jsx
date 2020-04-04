@@ -1,8 +1,7 @@
-import React from "react";
-import { DefaultLayout } from "./common/Layout";
-import { NavLink } from "react-router-dom";
-import { NavLink as MyNavLink } from "reactstrap";
-
+import React from 'react';
+import {DefaultLayout} from './common/Layout';
+import {NavLink} from 'react-router-dom';
+import {NavLink as MyNavLink} from 'reactstrap';
 
 const PageNotFound = () => {
     return (

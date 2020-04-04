@@ -14,12 +14,17 @@
     "@testing-library/user-event": "^10.0.1",
     "bootstrap": "^4.4.1",
     "classnames": "^2.2.6",
+    "eslint-plugin-jest": "^23.8.2",
+    "eslint-plugin-json": "^2.1.1",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^3.0.0",
     "get-value": "^3.0.1",
     "jquery": "^3.4.1",
     "popper.js": "^1.16.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-image-lightbox": "^5.1.1",
     "react-photo-gallery": "^8.0.0",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
@@ -29,8 +34,7 @@
     "redux-form": "^8.3.2",
     "redux-thunk": "^2.3.0",
     "set-value": "^3.0.2",
-    "styled-components": "^5.0.1",
-    "react-image-lightbox": "^5.1.1"
+    "styled-components": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,5 +1,5 @@
 import React from 'react';
-import { PrettyHeader } from '../../common/PretyHeader';
+import { PrettyHeader } from '../../common/Typography';
 import data from '../../../data/jobs.json';
 import styled from "styled-components";
 import { Container } from 'reactstrap';

@@ -1,21 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import base from "../data/baseInfo.json";
-import { Col, Row, Container } from "reactstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faFacebookSquare,
-    faLinkedin,
-    faInstagram
-} from "@fortawesome/free-brands-svg-icons";
-import {
-    FOOTER_BACKGROUND_COLOR_PRIMARY,
-    FOOTER_TEXT_1,
-    FOOTER_TEXT_2,
-    FOOTER_TEXT_3,
-    PRIMARY
-} from "../theme/colors.js";
-import { Hr } from "../theme/globalStyle";
+import React from 'react';
+import styled from 'styled-components';
+import base from '../data/baseInfo.json';
+import {Col, Container, Row} from 'reactstrap';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faFacebookSquare, faInstagram, faLinkedin} from '@fortawesome/free-brands-svg-icons';
+import {FOOTER_BACKGROUND_COLOR_PRIMARY, FOOTER_TEXT_1, FOOTER_TEXT_3, PRIMARY} from '../theme/colors.js';
+import {Hr} from '../theme/globalStyle';
 
 const FooterWrapper = styled.footer`
   background: ${FOOTER_BACKGROUND_COLOR_PRIMARY};
@@ -52,9 +42,9 @@ const LinkCustom = styled.a`
   }
 `;
 
-const Footer = props => {
-    const author = base["DEVELOPER"];
-    const company = base["COMPANY"];
+const Footer = () => {
+    const author = base['DEVELOPER'];
+    const company = base['COMPANY'];
 
     return (
         <FooterWrapper>
@@ -62,15 +52,15 @@ const Footer = props => {
                 <Row className="pt-4">
                     <Col md={4} className="">
                         <FooterHeader>{company.name}</FooterHeader>
-                        <InfoRow className="" style={{ fontSize: "4em" }}>
+                        <InfoRow className="" style={{fontSize: '4em'}}>
                             <LinkCustom href={company.links.facebook}>
-                                <FontAwesomeIcon icon={faFacebookSquare} />
+                                <FontAwesomeIcon icon={faFacebookSquare}/>
                             </LinkCustom>
                             <LinkCustom href={company.links.linkedin}>
-                                <FontAwesomeIcon icon={faLinkedin} />
+                                <FontAwesomeIcon icon={faLinkedin}/>
                             </LinkCustom>
                             <LinkCustom href={company.links.instagram}>
-                                <FontAwesomeIcon icon={faInstagram} />
+                                <FontAwesomeIcon icon={faInstagram}/>
                             </LinkCustom>
                         </InfoRow>
                     </Col>
@@ -93,7 +83,7 @@ const Footer = props => {
                 </Row>
             </Container>
             <AuthorPane className="text-center pb-3">
-                <Hr />
+                <Hr/>
                 {`© ${author.year} Copyright: Created by ${author.author}`}
             </AuthorPane>
         </FooterWrapper>

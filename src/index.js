@@ -5,7 +5,7 @@ import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 
-import { library } from '@fortawesome/fontawesome-svg-core';
+import {library} from '@fortawesome/fontawesome-svg-core';
 import {
     faArrowsAlt,
     faArrowsAltV,
@@ -15,26 +15,26 @@ import {
     faChevronDown,
     faChevronLeft,
     faChevronRight,
+    faCircle,
     faCog,
     faCopy,
     faDownload,
     faExclamationCircle,
+    faHammer,
     faHome,
     faInfoCircle,
+    faLaptop,
+    faLock,
     faPen,
     faPencilAlt,
     faPencilRuler,
-    faTruckPickup,
     faPlus,
     faSort,
     faSortDown,
     faSortUp,
     faTimes,
     faTrashAlt,
-    faCircle,
-    faLock,
-    faLaptop,
-    faHammer
+    faTruckPickup
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -43,7 +43,8 @@ library.add(
     faCheckCircle, faPlus, faCopy, faCircle, faLock, faLaptop, faHammer, faPencilRuler, faTruckPickup
 );
 
-ReactDOM.render( < Root /> , document.getElementById('root'));
+// eslint-disable-next-line no-undef
+ReactDOM.render(< Root/>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

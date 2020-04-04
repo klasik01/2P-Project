@@ -1,8 +1,6 @@
 export const getNavbarSize = (scrollY, screenSize) => {
-    if ((screenSize === 'sm' || screenSize === 'xs' || screenSize === 'md') || !scrollY) {
-        return false;
-    }
-    return true;
+    return !((screenSize === 'sm' || screenSize === 'xs' || screenSize === 'md') || !scrollY);
+
 };
 
 export const setNavbarWrapperStyle = (screenType, classOnScroll) => {
@@ -18,4 +16,4 @@ export const setNavbarWrapperStyle = (screenType, classOnScroll) => {
         return 'd-none d-lg-block';
     }
     return '';
-}
+};

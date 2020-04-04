@@ -1,17 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-
 import {Container, UncontrolledCarousel} from 'reactstrap';
-
-import items from '../../../data/banner.json';
-
+import items from '../../data/banner.json';
 
 const BannerWrapper = styled(Container)`
     z-index: 100;
 `;
 
-const Slider = (props) => {
-
+export const Slider = () => {
     return (
         <BannerWrapper>
             <BannerWrapper className="">
@@ -19,7 +15,4 @@ const Slider = (props) => {
             </BannerWrapper>
         </BannerWrapper>
     );
-
-}
-
-export default Slider;
+};

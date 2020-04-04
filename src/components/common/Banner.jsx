@@ -1,19 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Row, Col } from 'reactstrap';
-import backgorundImg from '../../images/bg-3.jpg';
-
+import backgroundImg from '../../images/bg-3.jpg';
+import {PRIMARY, PRIMARY_TO} from '../../theme/colors';
 
 const BannerWrapper = styled(Row)`
-    background: linear-gradient(to right, #f2eb86, #b37d17);
-/*     filter: contrast(8);
- */    background-image: linear-gradient(to right, rgba(168, 58, 50, 0.8), rgba(191, 106, 99,0.8)), url(${backgorundImg}) ;
+    background-image: linear-gradient(to right, ${PRIMARY + '80'}, ${PRIMARY_TO + '80'}), url(${backgroundImg}) ;
     background-size: cover;
     margin: 0;
     border-radius: 0;
     min-height: 60vh;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-/*     clip-path: ellipse(100% 55% at 48% 44%);*/    
     filter: drop-shadow(0px 7px 4px rgba(0, 0, 0, 0.5));
 `;
 
@@ -22,8 +19,7 @@ const TitleHeader = styled.div`
     padding: 0;
 `;
 
-const Banner = (props) => {
-
+const Banner = () => {
     return (
         <BannerWrapper className="align-items-center">
             <Col className="">
@@ -36,6 +32,6 @@ const Banner = (props) => {
             </Col>
         </BannerWrapper>
     );
-}
+};
 
 export default Banner;

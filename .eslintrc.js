@@ -2,12 +2,19 @@ module.exports = {
     "env": {
         "node": true,
         "es6": true,
-        "jest/globals": true
+        "jest": true
     },
-    "extends": "eslint:recommended",
-    "parseOptions": {
+    "extends": [
+        "eslint:recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:react/recommended"
+    ],
+    "parserOptions": {
         "ecmaVersion": 2018,
-        "sourceType": "module"
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
     },
     "rules": {
         "indent": [
@@ -29,6 +36,8 @@ module.exports = {
     },
     "plugins": [
         "json",
-        "jest"
+        "jest",
+        "react",
+        "react-hooks"
     ]
 };
