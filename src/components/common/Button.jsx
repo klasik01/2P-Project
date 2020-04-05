@@ -30,12 +30,16 @@ export const PrimaryButton = (props) => {
     const {href = '#', children, inverse = false} = props;
     if (!inverse) {
         return (
-            <Button href={href} className="btn rounded-0" color1={BUTTON_PRIMARY_1}
+            <Button
+                href={href} className="btn rounded-0" color1={BUTTON_PRIMARY_1}
                 color2={BUTTON_PRIMARY_2}>{children}</Button>
         );
     } else {
-        return (<ButtonInverse href={href} className="btn rounded-0" color1={BUTTON_PRIMARY_1}
-            color2={BUTTON_PRIMARY_2}>{children}</ButtonInverse>);
+        return (
+            <ButtonInverse
+                href={href} className="btn rounded-0" color1={BUTTON_PRIMARY_1}
+                color2={BUTTON_PRIMARY_2}>{children}</ButtonInverse>
+        );
     }
 };
 
@@ -44,11 +48,11 @@ export const SecondaryButton = (props) => {
     if (!inverse) {
         return (
             <Button href={href} className="btn rounded-0" color1={BUTTON_SECONDARY_1}
-                color2={BUTTON_SECONDARY_2}>{children}</Button>
+                    color2={BUTTON_SECONDARY_2}>{children}</Button>
         );
     } else {
         return (<ButtonInverse href={href} className="btn" color1={BUTTON_SECONDARY_2}
-            color2={BUTTON_SECONDARY_1}>{children}</ButtonInverse>);
+                               color2={BUTTON_SECONDARY_1}>{children}</ButtonInverse>);
     }
 };
 

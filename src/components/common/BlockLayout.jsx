@@ -54,7 +54,7 @@ SmallColumn.propTypes = {
 export const LargeColumn = (props) => {
     const {children, className} = props;
     return (
-        <div className={`col-md-8 ${className}`}>
+        <div className={`col-md-8 ${className} `}>
             <div className="row clearfix">
                 {children}
             </div>

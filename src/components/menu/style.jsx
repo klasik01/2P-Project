@@ -1,15 +1,25 @@
 import styled from 'styled-components';
-import {PRIMARY} from '../../theme/colors';
+import {PRIMARY, SECONDARY} from '../../theme/colors';
 import {NavLink} from 'react-router-dom';
 import {Nav, NavbarBrand, DropdownItem, DropdownMenu, DropdownToggle, UncontrolledDropdown} from 'reactstrap';
 
 export const MyNavbarBrand = styled(NavbarBrand)`
   margin-right: ${props => (props.main ? '0' : '0')};
   text-transform: uppercase;
-  padding: ${props => (props.main === 'true' ? '10px 15px' : '10px 15px')};
+  padding: ${props => (props.main === 'true' ? '10px 0px' : '10px 0px')};
   transition: all 0.3s;
   font-weight: bold;
+  max-height: 64px;
   ${props => props.main === 'true' ? 'background: ' + PRIMARY : ''};
+  
+  :hover {
+    background: ${SECONDARY};
+  }
+`;
+
+export const MyNavBarBrandImg = styled.img`
+  height: 35px;
+  width: auto;
 `;
 
 export const MyNav = styled(Nav)`
@@ -28,7 +38,7 @@ export const DropToggleMenuLink = styled(DropdownToggle)`
     :focus,
     :hover
     {
-        color: black !important;
+        color: ${SECONDARY};
     }
     transition: all 0.5s ease;
     
@@ -37,7 +47,7 @@ export const DropToggleMenuLink = styled(DropdownToggle)`
         margin: 5px;
     }
     &.${'nav-item-active'} {
-        color: black;
+        color: ${SECONDARY};
     }
 `;
 
@@ -72,7 +82,7 @@ export const DropMenuLink = styled(NavLink)`
     :focus,
     :hover
     {
-      color: black;
+      color: ${SECONDARY};
       text-decoration: none;
     }
     && {
@@ -89,7 +99,7 @@ export const MenuNavLink = styled(NavLink)`
     :focus,
     :hover
     {
-        color: black !important;
+        color: ${SECONDARY};
     }
     transition: all 0.5s ease;
     
@@ -98,7 +108,7 @@ export const MenuNavLink = styled(NavLink)`
         margin: 5px;
     }
     &.${'nav-item-active'} {
-        color: black;
+        color: ${SECONDARY};
     }
 `;
 

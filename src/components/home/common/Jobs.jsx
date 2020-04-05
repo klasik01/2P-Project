@@ -1,27 +1,37 @@
 import React from 'react';
-import { PrettyHeader } from '../../common/Typography';
-import data from '../../../data/jobs.json';
-import styled from "styled-components";
-import { Container } from 'reactstrap';
-import { PRIMARY } from '../../../theme/colors';
+import {HeaderTwo, Paragraph} from '../../common/Typography';
+import styled from 'styled-components';
+import {DefaultSectionContainer, LargeColumn, SmallColumn} from '../../common/BlockLayout';
+import {LinkCard} from '../../common/Card';
+import {PrimaryButton} from '../../common/Button';
 
-const WrapperContainer = styled(Container)`
-`;
 const JobsWrapper = styled.div`
-    color: ${props => props.color};
 `;
 
-const Jobs = (props) => {
+const Jobs = () => {
     return (
         <JobsWrapper className="text-center">
-            <WrapperContainer>
-                <PrettyHeader>zaměstnání</PrettyHeader>
-                <div className="row">
-                   
-                </div>
-            </WrapperContainer>
+            <DefaultSectionContainer>
+                <LargeColumn>
+                    {[1, 2].map(item =>
+                        <LinkCard
+                            key={item}
+                            title="Dělník pozice"
+                            paragraph="Lorem ipsum dolor amet contur adip isicing elit sed eiusm"
+                            icon="hammer"
+                            to="/"/>
+                    )}
+                </LargeColumn>
+                <SmallColumn>
+                    <HeaderTwo title="Hledáš práci?"/>
+                    <Paragraph text="Máme trvalý zájem o spolupráci s novými zaměstnanci, kteří jsou
+                        odborníky ve svém oboru, chtějí se trvale rozvíjet a patřit společně s námi ke špičce
+                        stavební profese."/>
+                    <PrimaryButton href="#">Seznam volných pozic</PrimaryButton>
+                </SmallColumn>
+            </DefaultSectionContainer>
         </JobsWrapper>
-    )
-}
+    );
+};
 
 export default Jobs;

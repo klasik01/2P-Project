@@ -56,3 +56,60 @@ LinkCard.propTypes = {
     icon: PropTypes.string,
     to: PropTypes.string,
 };
+
+
+const BlockWrapperLIRTC = styled.div`
+`;
+
+export const LeftIconRightTextCard = props => {
+    const {icon, title, paragraph} = props;
+    return (
+        <div className="col-sm-6 col-xs-12">
+            <BlockWrapperLIRTC className="row clearfix">
+                <div className="col-4 d-flex align-items-center justify-content-center">
+                    <IconWrapper className="fa-stack fa-2x align-self-center" color="white">
+                        <MyFontAwesomeIcon className="fas fa-stack-2x" icon="circle"/>
+                        <FontAwesomeIcon className="fas fa-stack-1x" icon={icon}/>
+                    </IconWrapper>
+                </div>
+                <div className="col-8">
+                    <h4 className="service-heading">{title}</h4>
+                    <p className="text-muted">{paragraph}</p>
+                </div>
+
+            </BlockWrapperLIRTC>
+        </div>
+    );
+};
+
+LeftIconRightTextCard.propTypes = {
+    icon: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    paragraph: PropTypes.string.isRequired,
+};
+
+
+export const TopIconBottomText = (props) => {
+    const {icon, title, paragraph} = props;
+    return (
+        <div className="col-md-6">
+            <BlockWrapperLIRTC className="row clearfix">
+                <BlockWrapperLIRTC className="my-2 text-center">
+                    <IconWrapper className="fa-stack fa-2x" color={'white'}>
+                        <MyFontAwesomeIcon className="fas fa-stack-2x" icon="circle"/>
+                        <FontAwesomeIcon className="fas  fa-stack-1x" icon={icon}/>
+                    </IconWrapper>
+                    <h4 className="service-heading">{title}</h4>
+                    <div className="text">{paragraph}</div>
+                </BlockWrapperLIRTC>
+            </BlockWrapperLIRTC>
+        </div>
+    );
+};
+
+TopIconBottomText.propTypes = {
+    icon: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    paragraph: PropTypes.string.isRequired,
+    screenType: PropTypes.string
+};

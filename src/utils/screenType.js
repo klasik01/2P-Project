@@ -43,4 +43,15 @@ const getScreenType = () => {
     return screenType;
 };
 
+export const showMinLarge= (screenSize) => {
+    return !(screenSize === 'sm' || screenSize === 'xs' || screenSize === 'md');
+};
+export const showMinMiddle= (screenSize) => {
+    return !(screenSize === 'sm' || screenSize === 'xs');
+};
+export const showMaxSmall= (screenSize) => {
+    return (screenSize === 'sm' || screenSize === 'xs');
+};
+
+
 export default useScreenType;
