@@ -1,7 +1,7 @@
 import React from 'react';
 import {DefaultSectionContainer, LargeColumn, SmallColumn} from '../../common/BlockLayout';
 import {HeaderTwo, Paragraph} from '../../common/Typography';
-import {PrimaryButton} from '../../common/Button';
+import {PrimaryButton, StyledLink} from '../../common/Button';
 
 const AboutInfo = () => {
     return (
@@ -13,7 +13,9 @@ const AboutInfo = () => {
                         officia deserunt mollit anim id est laborum.sed ut perspiciatis unde omnis natus error
                         sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae. ab
                         illo inventore veritatis quasi architebeatae. vitae"/>
-                    <PrimaryButton inverse>Více informací</PrimaryButton>
+                    <StyledLink to="/about">
+                        <PrimaryButton inverse className="btn-block my-2">Více informací</PrimaryButton>
+                    </StyledLink>
                 </SmallColumn>
                 <LargeColumn>
                     <HeaderTwo title="O nás?"/>
@@ -30,7 +32,9 @@ const AboutInfo = () => {
                         qui officia deserunt mollit anim id est laborum.sed ut perspiciatis unde omnis natus
                         error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa
                         quae. ab illo inventore veritatis quasi architebeatae. vitae"/>
-                    <PrimaryButton href="#" inverse>Více informací</PrimaryButton>
+                    <StyledLink to="/about">
+                        <PrimaryButton inverse className="btn-block my-2">Více informací</PrimaryButton>
+                    </StyledLink>
                 </LargeColumn>
             </DefaultSectionContainer>
         </div>

@@ -34,9 +34,9 @@ DefaultSectionContainer.propTypes = {
 };
 
 export const SmallColumn = (props) => {
-    const {children} = props;
+    const {children, className} = props;
     return (
-        <div className="col-md-4">
+        <div className={`col-md-4 ${className}`}>
             <div className="p-2">
                 {children}
             </div>
@@ -49,6 +49,7 @@ SmallColumn.propTypes = {
         PropTypes.arrayOf(PropTypes.node),
         PropTypes.node
     ]),
+    className: PropTypes.string
 };
 
 export const LargeColumn = (props) => {

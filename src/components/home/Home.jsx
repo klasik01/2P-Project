@@ -17,7 +17,7 @@ const Home = () => {
             <Banner id="home"/>
             <Services screenType={screenType}/>
             <Contracts/>
-            <Jobs/>
+            <Jobs screenType={screenType}/>
             <AboutInfo/>
 
         </HomeWrapper>
