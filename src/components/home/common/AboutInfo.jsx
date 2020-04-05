@@ -14,27 +14,29 @@ const AboutInfo = () => {
                         sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae. ab
                         illo inventore veritatis quasi architebeatae. vitae"/>
                     <StyledLink to="/about">
-                        <PrimaryButton inverse className="btn-block my-2">Více informací</PrimaryButton>
+                        <PrimaryButton inverse className=" my-2">Více informací</PrimaryButton>
                     </StyledLink>
                 </SmallColumn>
-                <LargeColumn>
-                    <HeaderTwo title="O nás?"/>
-                    <Paragraph text="Excepteur sint occaecat cupidatat non proident nt occaecat
+                <LargeColumn className="">
+                    <div className="col">
+                        <HeaderTwo title="O nás?"/>
+                        <Paragraph text="Excepteur sint occaecat cupidatat non proident nt occaecat
                         cupidatat non proident nt occaecat cupidatat non proident sunt in culpa qui officia
                         deserunt mollit anim id est laborum.sed ut perspiciatis unde omnis natus error sit
                         voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae. ab
                         illo inventore veritatis quasi architebeatae. vitae"/>
-                    <Paragraph text="Excepteur sint occaecat cupidatat non proident sunt in culpa
+                        <Paragraph text="Excepteur sint occaecat cupidatat non proident sunt in culpa
                         qui officia deserunt mollit anim id est laborum.sed ut perspiciatis unde omnis natus
                         error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa
                         quae. ab illo inventore veritatis quasi architebeatae. vitae"/>
-                    <Paragraph text="Excepteur sint occaecat cupidatat non proident sunt in culpa
+                        <Paragraph text="Excepteur sint occaecat cupidatat non proident sunt in culpa
                         qui officia deserunt mollit anim id est laborum.sed ut perspiciatis unde omnis natus
                         error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa
                         quae. ab illo inventore veritatis quasi architebeatae. vitae"/>
-                    <StyledLink to="/about">
-                        <PrimaryButton inverse className="btn-block my-2">Více informací</PrimaryButton>
-                    </StyledLink>
+                        <StyledLink to="/about">
+                            <PrimaryButton inverse className="my-2">Více informací</PrimaryButton>
+                        </StyledLink>
+                    </div>
                 </LargeColumn>
             </DefaultSectionContainer>
         </div>

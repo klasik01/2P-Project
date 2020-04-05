@@ -24,7 +24,7 @@ const IconWrapper = styled.span`
     color: ${props => props.color};
 `;
 
-const MyFontAwesomeIcon = styled(FontAwesomeIcon)`
+export const MyFontAwesomeIcon = styled(FontAwesomeIcon)`
     color: ${PRIMARY};
 `;
 

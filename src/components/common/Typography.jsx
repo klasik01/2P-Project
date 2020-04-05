@@ -3,8 +3,6 @@ import React from "react";
 import PropTypes from 'prop-types';
 
 export const PrettyHeader = styled.h1`
-    margin-top:2em;
-    margin-bottom: 2em;
     font: 1.5rem sans-serif;
     text-transform: uppercase;
     padding-top: 10px;

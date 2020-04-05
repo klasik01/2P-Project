@@ -72,9 +72,9 @@ LargeColumn.propTypes = {
 };
 
 export const FullColumn = (props) => {
-    const {children} = props;
+    const {children, className} = props;
     return (
-        <div className="col-12">
+        <div className={`${className} col-12`}>
             <div className="row clearfix py-2">
                 {children}
             </div>
@@ -87,4 +87,5 @@ FullColumn.propTypes = {
         PropTypes.arrayOf(PropTypes.node),
         PropTypes.node
     ]),
+    className: PropTypes.string
 };
