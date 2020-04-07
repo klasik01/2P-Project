@@ -1,6 +1,6 @@
 import React, {useLayoutEffect, useMemo, useState} from 'react';
 import {useScrollPosition} from '@n8tb1t/use-scroll-position';
-import GlobalStyle from '../theme/globalStyle';
+import {GlobalStyle, GlobalFonts} from '../theme/globalStyle';
 import AppContent from './AppContent';
 import {withRouter} from 'react-router-dom';
 
@@ -30,6 +30,7 @@ const App = () => {
         return (
             <React.Fragment>
                 <GlobalStyle/>
+                <GlobalFonts/>
                 <ScrollToTop>
                     <AppContent classOnScroll={classOnScroll}/>
                 </ScrollToTop>

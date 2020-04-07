@@ -69,7 +69,9 @@ const Contracts = () => {
         <Wrapper className="text-center">
             <DefaultSectionContainer isBackground>
                 <FullColumn>
-                    <PrettyHeader>Aktuální zakázky</PrettyHeader>
+                    <div className="col text-center">
+                        <PrettyHeader>Realizované zakázky</PrettyHeader>
+                    </div>
                 </FullColumn>
                 <FullColumn>
                     <div className="container mt-40">
@@ -80,8 +82,7 @@ const Contracts = () => {
                                     <h3 className="title">Barabizna Pešek</h3>
                                     <div className="box-content">
                                         <ul className="icon">
-                                            <li><a href="#"><i className="fa fa-search"/><MyFontAwesomeIcon icon={'hammer'} /></a></li>
-                                            <li><a href="#"><i className="fa fa-link"/><MyFontAwesomeIcon icon={'pen'} /></a></li>
+                                            <li><a href="#"><MyFontAwesomeIcon icon={'hammer'} /></a></li>
                                         </ul>
                                     </div>
                                 </div>

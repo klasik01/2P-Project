@@ -1,24 +1,19 @@
 import styled from 'styled-components';
-import React from "react";
 import PropTypes from 'prop-types';
+import React from 'react';
 
 export const PrettyHeader = styled.h1`
-    font: 1.5rem sans-serif;
     text-transform: uppercase;
-    padding-top: 10px;
-    line-height: 1;
-    display: table;
-    white-space: nowrap;
-    &:before, &:after {
-        border-top: 1px solid black;
-        content: '';
-        display: table-cell;
-        position: relative;
-        top: 0.5em;
-        width: 50%;
-    }
-    &:before { right: 1.5%; }
-    &:after { left: 1.5%; }
+    //&:before, &:after {
+    //    border-top: 1px solid black;
+    //    content: '';
+    //    display: table-cell;
+    //    position: relative;
+    //    top: 0.5em;
+    //    width: 50%;
+    //}
+    //&:before { right: 1.5%; }
+    //&:after { left: 1.5%; }
 `;
 
 export const HeaderTwo = (props) => {
@@ -32,7 +27,9 @@ HeaderTwo.propTypes = {
 
 export const Paragraph = (props) => {
     const {text} = props;
-    return (<div className="text my-4">{text}</div>);
+    return (
+        <div className="text my-4">{text}</div>
+    );
 };
 
 Paragraph.propTypes = {

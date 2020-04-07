@@ -10,6 +10,7 @@ export const MyNavbarBrand = styled(NavbarBrand)`
   transition: all 0.3s;
   font-weight: bold;
   max-height: 64px;
+  font-family: OctinCollege;
   ${props => props.main === 'true' ? 'background: ' + PRIMARY : ''};
   
   :hover {
@@ -20,6 +21,7 @@ export const MyNavbarBrand = styled(NavbarBrand)`
 export const MyNavBarBrandImg = styled.img`
   height: 35px;
   width: auto;
+  font-family: OctinCollege;
 `;
 
 export const MyNav = styled(Nav)`
@@ -41,6 +43,7 @@ export const DropToggleMenuLink = styled(DropdownToggle)`
         color: ${SECONDARY};
     }
     transition: all 0.5s ease;
+    font-family: OctinCollege;
     
     && {
         padding: 0.6em 1em;
@@ -65,18 +68,17 @@ export const MenuDropdownItem = styled(DropdownItem)`
     :hover {
         opacity: 0.8;
         background-color: ${PRIMARY};
-        
     }
     && {
         color: white;
         padding-right: 15px;
+        font-family: OctinCollege;
     }
 `;
 
 export const DropMenuLink = styled(NavLink)`
     :visited,
     :link {
-
     }
     :active,
     :focus,
@@ -87,6 +89,7 @@ export const DropMenuLink = styled(NavLink)`
     }
     && {
       color: white;
+      font-family: OctinCollege;
     }
 `;
 
@@ -106,6 +109,7 @@ export const MenuNavLink = styled(NavLink)`
     && {
         padding: 0.6em 1em;
         margin: 5px;
+        font-family: OctinCollege;
     }
     &.${'nav-item-active'} {
         color: ${SECONDARY};
@@ -120,6 +124,7 @@ export const TopNavigation = styled.nav`
     ${props => (props.main ? 'height: 80px' : '')};
     transition: all .2s ease-in-out;
     margin-top: ${props => (props.main ? '20px' : '0px')};
+    font-family: OctinCollege;
 `;
 
 
@@ -127,4 +132,5 @@ export const CollapseButton = styled.button`
     color: rgba(255, 255, 255, 0.7);
     border-color: rgba(255, 255, 255, 0.7);
     border-radius: .25em;
+    font-family: OctinCollege;
 `;

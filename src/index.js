@@ -4,6 +4,7 @@ import Root from './components/Root';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
+import './theme/fonts/octin-college-free.ttf';
 
 import {library} from '@fortawesome/fontawesome-svg-core';
 import {
