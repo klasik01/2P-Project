@@ -1,6 +1,6 @@
 import styled, {createGlobalStyle} from 'styled-components';
 import {BACKGROUND_COLOR_PRIMARY} from './colors';
-import OctinCollege from './fonts/octin-college-free.ttf';
+import OctinCollege from './fonts/Champagne_Limousines-Thick.ttf';
 
 
 export const GlobalStyle = createGlobalStyle`
@@ -9,6 +9,10 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         margin: 0;
         font-family: OctinCollege;
+        font-size: 18px;
+    }
+    h1,h2,h3,h4 {
+      text-transform: uppercase;
     }
 `;
 

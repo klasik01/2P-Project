@@ -44,7 +44,7 @@ export const DropToggleMenuLink = styled(DropdownToggle)`
     }
     transition: all 0.5s ease;
     font-family: OctinCollege;
-    
+    text-transform: uppercase;
     && {
         padding: 0.6em 1em;
         margin: 5px;
@@ -73,6 +73,8 @@ export const MenuDropdownItem = styled(DropdownItem)`
         color: white;
         padding-right: 15px;
         font-family: OctinCollege;
+        text-transform: uppercase;
+
     }
 `;
 
@@ -90,6 +92,7 @@ export const DropMenuLink = styled(NavLink)`
     && {
       color: white;
       font-family: OctinCollege;
+      text-transform: uppercase;
     }
 `;
 
@@ -110,6 +113,7 @@ export const MenuNavLink = styled(NavLink)`
         padding: 0.6em 1em;
         margin: 5px;
         font-family: OctinCollege;
+        text-transform: uppercase;
     }
     &.${'nav-item-active'} {
         color: ${SECONDARY};
