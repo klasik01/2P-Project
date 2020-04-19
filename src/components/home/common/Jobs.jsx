@@ -15,7 +15,7 @@ const jobsInfoData = {
     'title': 'Hledáš práci?',
     'paragraph': 'Máme trvalý zájem o spolupráci s novými zaměstnanci, kteří jsou odborníky ve svém oboru, chtějí se trvale rozvíjet a patřit společně s námi ke špičce stavební profese.',
     'buttonTitle': 'Seznam volných pozic',
-    'to': '/'
+    'to': 'jobs'
 };
 
 const jobsData = [

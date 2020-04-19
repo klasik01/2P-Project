@@ -57,7 +57,7 @@ const Services = (props) => {
                         officia deserunt mollit anim id est laborum.sed ut perspiciatis unde omnis natus error
                         sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae. ab
                         illo inventore veritatis quasi architebeatae. vitae"/>
-                    <StyledLink to="/service" className="d-flex justify-content-center">
+                    <StyledLink to="/services" className="d-flex justify-content-center">
                         <PrimaryButton className="d-flex justify-content-end">Více informací</PrimaryButton>
                     </StyledLink>
                 </SmallColumn>

@@ -115,7 +115,7 @@ const Contracts = () => {
                     </div>
                 </FullColumn>
                 <FullColumn className="d-flex justify-content-center">
-                    <StyledLink to="/about">
+                    <StyledLink to="/projects">
                         <PrimaryButton inverse className="btn-block my-2">Zobrazit všechny</PrimaryButton>
                     </StyledLink>
                 </FullColumn>
