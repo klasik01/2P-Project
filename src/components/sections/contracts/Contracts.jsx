@@ -1,10 +1,11 @@
 import React from 'react';
-import {ArticleLayout} from '../common/Layout';
-import image from '../../images/house.jpg';
-import {FullColumn} from '../common/BlockLayout';
+import {ArticleLayout} from '../../common/Layout';
+import image from '../../../images/house.jpg';
+import {FullColumn} from '../../common/BlockLayout';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {PRIMARY} from '../../theme/colors';
+import {PRIMARY} from '../../../theme/colors';
 const MyFontAwesomeIcon = styled(FontAwesomeIcon)`
     color: ${PRIMARY};
 `;
@@ -21,7 +22,7 @@ const Contracts = () => {
                                 <h3 className="title">Barabizna Pešek</h3>
                                 <div className="box-content">
                                     <ul className="icon">
-                                        <li><a href="#"><MyFontAwesomeIcon icon={'hammer'} /></a></li>
+                                        <li><a href="/projects/view/1"><MyFontAwesomeIcon icon={'hammer'} /></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -32,8 +33,7 @@ const Contracts = () => {
                                 <h3 className="title">Vila Hladílek</h3>
                                 <div className="box-content">
                                     <ul className="icon">
-                                        <li><a href="#"><i className="fa fa-search"/><MyFontAwesomeIcon icon={'hammer'} /></a></li>
-                                        <li><a href="#"><i className="fa fa-link"/><MyFontAwesomeIcon icon={'pen'} /></a></li>
+                                        <li><a href="/projects/view/3"><MyFontAwesomeIcon icon={'hammer'} /></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -44,8 +44,7 @@ const Contracts = () => {
                                 <h3 className="title">Bunkr u Lehni</h3>
                                 <div className="box-content">
                                     <ul className="icon">
-                                        <li><a href="#"><i className="fa fa-search"/><MyFontAwesomeIcon icon={'hammer'} /></a></li>
-                                        <li><a href="#"><i className="fa fa-link"/><MyFontAwesomeIcon icon={'pen'} /></a></li>
+                                        <li><a href="/projects/view/3"><MyFontAwesomeIcon icon={'hammer'} /></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -56,6 +55,5 @@ const Contracts = () => {
         </ArticleLayout>
     );
 };
-
 
 export default Contracts;

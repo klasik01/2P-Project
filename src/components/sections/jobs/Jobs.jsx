@@ -1,9 +1,9 @@
 import React from 'react';
-import {ArticleLayout} from '../common/Layout';
-import {FullColumn} from "../common/BlockLayout";
-import workerWorkerImg from "../../images/worker-svg.svg";
-import workerMisterImg from "../../images/worker-mister.svg";
-import {JobCard} from "../home/common/Jobs";
+import {ArticleLayout} from '../../common/Layout';
+import {FullColumn} from "../../common/BlockLayout";
+import workerWorkerImg from "../../../images/worker-svg.svg";
+import workerMisterImg from "../../../images/worker-mister.svg";
+import {JobCard} from "../../home/common/Jobs";
 
 const Jobs = () => {
 
