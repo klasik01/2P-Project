@@ -39,9 +39,7 @@ export const DefaultLayout = (props) => {
             <BannerHeader header={header}/>
             <Container>
                 <Row>
-                    <Col className="p-3">
-                        {children}
-                    </Col>
+                    {children}
                 </Row>
             </Container>
         </div>

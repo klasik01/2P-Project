@@ -6,7 +6,7 @@ import {NavLink as MyNavLink} from 'reactstrap';
 const PageNotFound = () => {
     return (
         <DefaultLayout header="">
-            <div className="text-center">
+            <div className="col py-3 text-center">
                 <span className="display-1 d-block">404</span>
                 <div className="mb-4 lead">The page you are looking for was not found.</div>
                 <MyNavLink tag={NavLink} to="/" className="btn btn-link">Back to Home</MyNavLink>
