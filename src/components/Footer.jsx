@@ -53,13 +53,13 @@ const Footer = () => {
                     <Col md={4} className="">
                         <FooterHeader>{company.name}</FooterHeader>
                         <InfoRow className="" style={{fontSize: '4em'}}>
-                            <LinkCustom href={company.links.facebook}>
-                                <FontAwesomeIcon icon={faFacebookSquare}/>
+                            <LinkCustom className="small" href={company.links.facebook}>
+                                <FontAwesomeIcon className="" icon={faFacebookSquare}/>
                             </LinkCustom>
-                            <LinkCustom href={company.links.linkedin}>
+                            <LinkCustom className="small" href={company.links.linkedin}>
                                 <FontAwesomeIcon icon={faLinkedin}/>
                             </LinkCustom>
-                            <LinkCustom href={company.links.instagram}>
+                            <LinkCustom className="small" href={company.links.instagram}>
                                 <FontAwesomeIcon icon={faInstagram}/>
                             </LinkCustom>
                         </InfoRow>

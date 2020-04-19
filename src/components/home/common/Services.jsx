@@ -13,6 +13,41 @@ const Wrapper = styled(Container)`
 
 const Services = (props) => {
     const {screenType} = props;
+
+    const data = [
+        {
+            key: 1,
+            title: 'Stavební práce',
+            paragraph: 'Veškeré stavební práce',
+            icon: 'hammer'
+        },{
+            key: 2,
+            title: 'Rozpočtářské služby',
+            paragraph: 'Vytváření, úpravy a poradenství',
+            icon: 'hammer'
+        },{
+            key: 3,
+            title: 'Výplně otvorů',
+            paragraph: 'Zajištění dodávky a montáže plastových výplní otvorů',
+            icon: 'hammer'
+        },{
+            key: 4,
+            title: 'Stavební dozor',
+            paragraph: 'Zajištění stavebního dozoru staveb',
+            icon: 'hammer'
+        },{
+            key: 5,
+            title: 'Inženýrská činnost',
+            paragraph: 'Zajištění poradenství a koordinace subdodávek na stavbách prováděných svépomocí',
+            icon: 'hammer'
+        },{
+            key: 6,
+            title: 'Oceňování nemovitostí',
+            paragraph: 'Ocenění nemovitostí vyhláškovou nebo tržní metodou',
+            icon: 'hammer'
+        },
+    ];
+
     return (
         <Wrapper className="">
             <DefaultSectionContainer>
@@ -22,23 +57,23 @@ const Services = (props) => {
                         officia deserunt mollit anim id est laborum.sed ut perspiciatis unde omnis natus error
                         sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae. ab
                         illo inventore veritatis quasi architebeatae. vitae"/>
-                    <StyledLink to="/service">
+                    <StyledLink to="/service" className="d-flex justify-content-center">
                         <PrimaryButton className="d-flex justify-content-end">Více informací</PrimaryButton>
                     </StyledLink>
                 </SmallColumn>
                 {!showMaxSmall(screenType) &&
                 <LargeColumn className={`${showMaxSmall(screenType) ? 'd-flex justify-content-center flex-wrap' : ''}`}>
-                    {[1, 2, 3, 4, 5, 6].map(item => showMinLarge(screenType) ?
+                    {data.map(item => showMinLarge(screenType) ?
                         <LeftIconRightTextCard
-                            key={item}
-                            title="Služba 1"
-                            paragraph="Lorem ipsum dolor amet contur adip isicing elit sed eiusm"
-                            icon="hammer"/> :
+                            key={item.key}
+                            title={item.title}
+                            paragraph={item.paragraph}
+                            icon={item.icon}/> :
                         <TopIconBottomText
-                            key={item}
-                            title="Stavební práce"
-                            paragraph={`${item % 2 === 0 ? 'Lorem ipsum dolor amet contur adip isicing elit sed eiusm' : 'Lorem ipsum dolor amet contur adip isicing elit sed eiusm Lorem ipsum dolor amet contur adip isicing elit sed eiusm'}`}
-                            icon="hammer"
+                            key={item.key}
+                            title={item.title}
+                            paragraph={item.paragraph}
+                            icon={item.icon}
                             screenType={screenType}
                         />
                     )}

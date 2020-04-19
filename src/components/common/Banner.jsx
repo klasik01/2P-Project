@@ -6,7 +6,7 @@ import {PRIMARY, PRIMARY_TO} from '../../theme/colors';
 import logo from '../../images/logo.png';
 
 const BannerWrapper = styled(Row)`
-    background-image: linear-gradient(to right, ${PRIMARY + '80'}, ${PRIMARY_TO + '80'}), url(${backgroundImg}) ;
+    background-image: /*linear-gradient(to right, ${PRIMARY + '80'}, ${PRIMARY_TO + '80'}),*/ url(${backgroundImg}) ;
     background-size: cover;
     margin: 0;
     border-radius: 0;

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const DefaultSection = styled.section`
     padding: 0 20px;
-    background-image: ${props => props.background ? `linear-gradient(to right, ${PRIMARY + '80'}, ${PRIMARY_TO + '80'}),` : ''} url('https://wp3.ourwpdemo.com/cretox/wp-content/uploads/2018/05/patern-1.png');
+    background-image: ${props => props.background ? `linear-gradient(to right, ${PRIMARY + '80'}, ${PRIMARY_TO + '80'}),` : ''} url('https://wp3.ourwpdemo.com/cretkox/wp-content/uploads/2018/05/patern-1.png');
     background-repeat: no-repeat;
     background-position: center;
     clip-path: polygon(${props => props.polygon ? '0 10%, 100% 0, 100% 90%, 0 100%' : '0 0, 0 100%, 100% 100%, 100% 0'});
@@ -36,7 +36,7 @@ DefaultSectionContainer.propTypes = {
 export const SmallColumn = (props) => {
     const {children, className} = props;
     return (
-        <div className={`col-md-4 ${className}`}>
+        <div className={`col-lg-4 ${className}`}>
             <div className="p-2">
                 {children}
             </div>
@@ -55,7 +55,7 @@ SmallColumn.propTypes = {
 export const LargeColumn = (props) => {
     const {children, className} = props;
     return (
-        <div className={`col-md-8 ${className} `}>
+        <div className={`col-lg-8 ${className} `}>
             <div className="row clearfix">
                 {children}
             </div>

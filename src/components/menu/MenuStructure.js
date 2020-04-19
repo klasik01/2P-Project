@@ -15,14 +15,8 @@ export const buildJobMenu = () => {
 
     result.push(
         {
-            label: 'Dělník',
-            to: '/jobs/1'
-        }
-    );
-    result.push(
-        {
-            label: 'Mistr',
-            to: '/jobs/2'
+            label: 'Zaměstnání',
+            to: '/jobs'
         }
     );
     return result;
@@ -58,7 +52,7 @@ export const buildServiceMenu = () => {
     result.push(
         {
             label: 'Služby',
-            to: '/article'
+            to: '/services'
         }
     );
     return result;

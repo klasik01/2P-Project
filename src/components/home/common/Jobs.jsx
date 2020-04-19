@@ -45,7 +45,7 @@ const BlockItem = styled.div`
 const BlockLink = styled.div`
 `;
 
-const JobCard = (props) => {
+export const JobCard = (props) => {
     const {image, title, to} = props;
     return (
         <BlockWrapper backgroundImage={image} className="col-md-6 col-sm-12">

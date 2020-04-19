@@ -6,15 +6,15 @@
         "email": "stanislav.kasika@gmail.com"
     },
     "COMPANY": {
-        "name": "Company name",
+        "name": "2P Stavební",
         "address": {
             "street": "Ulice",
             "number": "čp",
-            "city": "Město",
+            "city": "Pacov",
             "zip": "PSČ"
         },
         "contact": {
-            "name": "First Last Name",
+            "name": "Pavel Pinkas",
             "tel1": "+420 123 456 789",
             "tel2": "+420 987 654 321",
             "email": "email@domain.com",

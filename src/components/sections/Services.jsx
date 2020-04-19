@@ -1,9 +1,9 @@
 import React from 'react';
 import {ArticleLayout} from '../common/Layout';
 
-const Article = () => {
+const Services = () => {
     return (
-        <ArticleLayout header="Article 1" footer="3.2.2018 v Praze">
+        <ArticleLayout header="Jaké služby nabízíme?" footer="">
             <p className="text-justify">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce dui leo,
                 imperdiet in, aliquam sit amet, feugiat eu, orci. Mauris elementum mauris vitae tortor. Aenean vel massa
                 quis mauris vehicula lacinia. Vivamus ac leo pretium faucibus. Nulla turpis magna, cursus sit amet,
@@ -59,4 +59,4 @@ const Article = () => {
 };
 
 
-export default Article;
+export default Services;
