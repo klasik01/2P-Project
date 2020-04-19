@@ -2,13 +2,7 @@ import React from 'react';
 import {ArticleLayout} from '../../common/Layout';
 import image from '../../../images/house.jpg';
 import {FullColumn} from '../../common/BlockLayout';
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {PRIMARY} from '../../../theme/colors';
-const MyFontAwesomeIcon = styled(FontAwesomeIcon)`
-    color: ${PRIMARY};
-`;
+import {ContractCard, contractsData} from '../../home/common/Contracts';
 
 const Contracts = () => {
     return (
@@ -16,39 +10,11 @@ const Contracts = () => {
             <FullColumn>
                 <div className="container mt-40">
                     <div className="row mt-30">
-                        <div className="col-md-4 col-sm-6">
-                            <div className="box8">
-                                <img src={image}/>
-                                <h3 className="title">Barabizna Pešek</h3>
-                                <div className="box-content">
-                                    <ul className="icon">
-                                        <li><a href="/projects/view/1"><MyFontAwesomeIcon icon={'hammer'} /></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4 col-sm-6">
-                            <div className="box8">
-                                <img src={image}/>
-                                <h3 className="title">Vila Hladílek</h3>
-                                <div className="box-content">
-                                    <ul className="icon">
-                                        <li><a href="/projects/view/3"><MyFontAwesomeIcon icon={'hammer'} /></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4 col-sm-6">
-                            <div className="box8">
-                                <img src={image}/>
-                                <h3 className="title">Bunkr u Lehni</h3>
-                                <div className="box-content">
-                                    <ul className="icon">
-                                        <li><a href="/projects/view/3"><MyFontAwesomeIcon icon={'hammer'} /></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                        {contractsData.map(item =>
+                            <ContractCard
+                                key={item.id} title={item.title} icon={'hammer'} image={image}
+                                to={item.to + item.id}/>
+                        )}
                     </div>
                 </div>
             </FullColumn>

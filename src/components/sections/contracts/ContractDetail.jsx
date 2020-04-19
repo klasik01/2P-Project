@@ -2,12 +2,12 @@ import {DefaultLayout} from '../../common/Layout';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Table} from 'reactstrap';
-import {FullColumn} from "../../common/BlockLayout";
+import {FullColumn} from '../../common/BlockLayout';
 
 const ContractDetail = (props) => {
 
     const {
-        header = 'Rekonstrukce Barabizna Pešek', text,
+        header = 'Rekonstrukce Barabizna Pešek',
         data = {
             cost: '0,- Kč',
             startDate: '2019-12-12',
@@ -15,7 +15,37 @@ const ContractDetail = (props) => {
             investor: 'Nevím někdo',
             manager: 'Moje maličkost',
             dodavatel: 'Všichni moji lidi'
-        }
+        },
+        text = [
+            `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce dui leo,
+             imperdiet in, aliquam sit amet, feugiat eu, orci. Mauris elementum mauris vitae tortor. Aenean
+             vel massa
+             quis mauris vehicula lacinia. Vivamus ac leo pretium faucibus. Nulla turpis magna, cursus sit
+             amet,
+             suscipit a, interdum id, felis. Nulla est. Aliquam erat volutpat. Pellentesque ipsum. Fusce
+             nibh.
+             Aliquam in lorem sit amet leo accumsan lacinia. Aenean fermentum risus id tortor. Itaque earum
+             rerum hic
+             tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut
+             perferendis
+             doloribus asperiores repellat. Nullam at arcu a est sollicitudin euismod. Maecenas sollicitudin.
+             Aenean
+             placerat.`,
+            `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce dui leo,
+             imperdiet in, aliquam sit amet, feugiat eu, orci. Mauris elementum mauris vitae tortor. Aenean
+             vel massa
+             quis mauris vehicula lacinia. Vivamus ac leo pretium faucibus. Nulla turpis magna, cursus sit
+             amet,
+             suscipit a, interdum id, felis. Nulla est. Aliquam erat volutpat. Pellentesque ipsum. Fusce
+             nibh.
+             Aliquam in lorem sit amet leo accumsan lacinia. Aenean fermentum risus id tortor. Itaque earum
+             rerum hic
+             tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut
+             perferendis
+             doloribus asperiores repellat. Nullam at arcu a est sollicitudin euismod. Maecenas sollicitudin.
+             Aenean
+             placerat.`
+        ]
     } = props;
 
 
@@ -23,37 +53,10 @@ const ContractDetail = (props) => {
         <DefaultLayout header={header} footer="">
             <div className="col-md-8 py-4">
                 <div className="">
-                    <p className="text-justify">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce dui leo,
-                        imperdiet in, aliquam sit amet, feugiat eu, orci. Mauris elementum mauris vitae tortor. Aenean
-                        vel massa
-                        quis mauris vehicula lacinia. Vivamus ac leo pretium faucibus. Nulla turpis magna, cursus sit
-                        amet,
-                        suscipit a, interdum id, felis. Nulla est. Aliquam erat volutpat. Pellentesque ipsum. Fusce
-                        nibh.
-                        Aliquam in lorem sit amet leo accumsan lacinia. Aenean fermentum risus id tortor. Itaque earum
-                        rerum hic
-                        tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut
-                        perferendis
-                        doloribus asperiores repellat. Nullam at arcu a est sollicitudin euismod. Maecenas sollicitudin.
-                        Aenean
-                        placerat.</p>
-                    <p className="text-justify">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce dui leo,
-                        imperdiet in, aliquam sit amet, feugiat eu, orci. Mauris elementum mauris vitae tortor. Aenean
-                        vel massa
-                        quis mauris vehicula lacinia. Vivamus ac leo pretium faucibus. Nulla turpis magna, cursus sit
-                        amet,
-                        suscipit a, interdum id, felis. Nulla est. Aliquam erat volutpat. Pellentesque ipsum. Fusce
-                        nibh.
-                        Aliquam in lorem sit amet leo accumsan lacinia. Aenean fermentum risus id tortor. Itaque earum
-                        rerum hic
-                        tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut
-                        perferendis
-                        doloribus asperiores repellat. Nullam at arcu a est sollicitudin euismod. Maecenas sollicitudin.
-                        Aenean
-                        placerat.</p>
+                    {text.map(item => <p className="text-justify">{item}</p>)}
                 </div>
             </div>
-            <div className="col-md-4 py-4">
+            <div className="col-md-4 py-md-4">
                 <div className="">
                     <Table responsive hover striped>
                         <thead>
@@ -61,27 +64,27 @@ const ContractDetail = (props) => {
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Finanční objem</td>
+                                <th>Finanční objem</th>
                                 <td>{data.cost}</td>
                             </tr>
                             <tr>
-                                <td>Termín zahájení</td>
+                                <th>Termín zahájení</th>
                                 <td>{data.startDate}</td>
                             </tr>
                             <tr>
-                                <td>Termín dokončení</td>
+                                <th>Termín dokončení</th>
                                 <td>{data.endDate}</td>
                             </tr>
                             <tr>
-                                <td>Investor</td>
+                                <th>Investor</th>
                                 <td>{data.investor}</td>
                             </tr>
                             <tr>
-                                <td>Projektant</td>
+                                <th>Projektant</th>
                                 <td>{data.manager}</td>
                             </tr>
                             <tr>
-                                <td>Dodavatelé</td>
+                                <th>Dodavatelé</th>
                                 <td>{data.dodavatel}</td>
                             </tr>
                         </tbody>
