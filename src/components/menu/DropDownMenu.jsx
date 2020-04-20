@@ -48,7 +48,7 @@ export const DropdownMenuComponent = ({label, roles, onClick}) => {
 DropdownMenuComponent.propTypes = {
     label: PropTypes.string.isRequired,
     roles: PropTypes.array.isRequired,
-    onClick: PropTypes.func.isRequired,
+    onClick: PropTypes.func,
 };
 
 

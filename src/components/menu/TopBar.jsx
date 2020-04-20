@@ -48,11 +48,11 @@ const TopBar = (props) => {
                 </CollapseButton>
                 <Collapse isOpen={isOpen} navbar>
                     <MyNav navbar className="ml-auto px-4" main={isLarge.toString()}>
-                        <DropdownMenuComponent label={'O nás'} roles={aboutMenu} onClick={toggle}/>
-                        <DropdownMenuComponent label={'Naše projekty'} roles={projectMenu} onClick={toggle}/>
-                        <DropdownMenuComponent label={'Služby'} roles={serviceMenu} onClick={toggle}/>
-                        <DropdownMenuComponent label={'Zaměstnání'} roles={jobMenu} onClick={toggle}/>
-                        <DropdownMenuComponent label={'Kontakt'} roles={contactMenu} onClick={toggle}/>
+                        <DropdownMenuComponent label={'O nás'} roles={aboutMenu} onClick={isLarge ? () => {} : toggle}/>
+                        <DropdownMenuComponent label={'Naše projekty'} roles={projectMenu} onClick={isLarge ? () => {} : toggle}/>
+                        <DropdownMenuComponent label={'Služby'} roles={serviceMenu} onClick={isLarge ? () => {} : toggle}/>
+                        <DropdownMenuComponent label={'Zaměstnání'} roles={jobMenu} onClick={isLarge ? () => {} :toggle}/>
+                        <DropdownMenuComponent label={'Kontakt'} roles={contactMenu} onClick={isLarge ? () => {} : toggle}/>
                     </MyNav>
                 </Collapse>
             </Container>
