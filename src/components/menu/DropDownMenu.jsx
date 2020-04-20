@@ -10,7 +10,7 @@ import {
 import {NavItem} from 'reactstrap';
 import PropTypes from 'prop-types';
 
-export const DropdownMenuComponent = ({label, roles}) => {
+export const DropdownMenuComponent = ({label, roles, onClick}) => {
 
     if (roles === null || roles === undefined || roles.length === 0) {
         return null;
@@ -19,7 +19,7 @@ export const DropdownMenuComponent = ({label, roles}) => {
     if (roles.length === 1) {
         return (
             <NavItem>
-                <MenuNavLink className="nav-link" to={roles[0].to}
+                <MenuNavLink onClick={() => onClick()} className="nav-link" to={roles[0].to}
                     activeClassName="nav-item-active">
                     {roles[0].label}
                 </MenuNavLink>
@@ -47,7 +47,8 @@ export const DropdownMenuComponent = ({label, roles}) => {
 
 DropdownMenuComponent.propTypes = {
     label: PropTypes.string.isRequired,
-    roles: PropTypes.array.isRequired
+    roles: PropTypes.array.isRequired,
+    onClick: PropTypes.func.isRequired,
 };
 
 

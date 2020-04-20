@@ -10,7 +10,7 @@ export const MyNavbarBrand = styled(NavbarBrand)`
   transition: all 0.3s;
   font-weight: bold;
   max-height: 64px;
-  font-family: OctinCollege;
+  font-family: OctinCollege,serif;
   ${props => props.main === 'true' ? 'background: ' + PRIMARY : ''};
   
   :hover {
@@ -21,7 +21,7 @@ export const MyNavbarBrand = styled(NavbarBrand)`
 export const MyNavBarBrandImg = styled.img`
   height: 35px;
   width: auto;
-  font-family: OctinCollege;
+  font-family: OctinCollege,serif;
 `;
 
 export const MyNav = styled(Nav)`
@@ -43,7 +43,7 @@ export const DropToggleMenuLink = styled(DropdownToggle)`
         color: ${SECONDARY};
     }
     transition: all 0.5s ease;
-    font-family: OctinCollege;
+    font-family: OctinCollege,serif;
     text-transform: uppercase;
     && {
         padding: 0.6em 1em;
@@ -72,7 +72,7 @@ export const MenuDropdownItem = styled(DropdownItem)`
     && {
         color: white;
         padding-right: 15px;
-        font-family: OctinCollege;
+        font-family: OctinCollege,serif;
         text-transform: uppercase;
 
     }
@@ -91,7 +91,7 @@ export const DropMenuLink = styled(NavLink)`
     }
     && {
       color: white;
-      font-family: OctinCollege;
+      font-family: OctinCollege,serif;
       text-transform: uppercase;
     }
 `;
@@ -112,7 +112,7 @@ export const MenuNavLink = styled(NavLink)`
     && {
         padding: 0.6em 1em;
         margin: 5px;
-        font-family: OctinCollege;
+        font-family: OctinCollege,serif;
         text-transform: uppercase;
     }
     &.${'nav-item-active'} {
@@ -121,14 +121,13 @@ export const MenuNavLink = styled(NavLink)`
 `;
 
 export const TopNavigation = styled.nav`
-    font-family: sans-serif;
     font-weight: bold;
     padding: 1px 10px;
     background-color: ${props => (props.main ? '' : PRIMARY)};
     ${props => (props.main ? 'height: 80px' : '')};
-    transition: all .2s ease-in-out;
+    transition: all 0.2s;
     margin-top: ${props => (props.main ? '20px' : '0px')};
-    font-family: OctinCollege;
+    font-family: OctinCollege,serif;
 `;
 
 
@@ -136,5 +135,7 @@ export const CollapseButton = styled.button`
     color: rgba(255, 255, 255, 0.7);
     border-color: rgba(255, 255, 255, 0.7);
     border-radius: .25em;
-    font-family: OctinCollege;
+    font-family: OctinCollege,serif;
+    transition: all 0.2s;
+
 `;

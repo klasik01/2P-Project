@@ -37,20 +37,22 @@ const TopBar = (props) => {
     return (
         <TopNavigation className={`navbar navbar-expand-lg fixed-top ${navbarWrapperStyle()}`} main={isLarge}>
             <Container>
-                <MyNavbarBrand main={isLarge.toString()} className="navbar-brand" tag={MenuNavLink} to="/"><MyNavBarBrandImg className="img-fluid" src={logo} /></MyNavbarBrand>
+                <MyNavbarBrand
+                    main={isLarge.toString()} className="" tag={MenuNavLink}
+                    to="/"><MyNavBarBrandImg className="img-fluid" src={logo}/></MyNavbarBrand>
                 <CollapseButton
                     className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
                     onClick={toggle}>
                     <FontAwesomeIcon icon="bars" size="lg"/>
                 </CollapseButton>
-                <Collapse isOpen={isOpen} navbar className="collapse navbar-collapse">
-                    <MyNav className="navbar-nav ml-auto px-4" main={isLarge.toString()}>
-                        <DropdownMenuComponent label={'O nás'} roles={aboutMenu}/>
-                        <DropdownMenuComponent label={'Naše projekty'} roles={projectMenu}/>
-                        <DropdownMenuComponent label={'Služby'} roles={serviceMenu}/>
-                        <DropdownMenuComponent label={'Zaměstnání'} roles={jobMenu}/>
-                        <DropdownMenuComponent label={'Kontakt'} roles={contactMenu}/>
+                <Collapse isOpen={isOpen} navbar>
+                    <MyNav navbar className="ml-auto px-4" main={isLarge.toString()}>
+                        <DropdownMenuComponent label={'O nás'} roles={aboutMenu} onClick={toggle}/>
+                        <DropdownMenuComponent label={'Naše projekty'} roles={projectMenu} onClick={toggle}/>
+                        <DropdownMenuComponent label={'Služby'} roles={serviceMenu} onClick={toggle}/>
+                        <DropdownMenuComponent label={'Zaměstnání'} roles={jobMenu} onClick={toggle}/>
+                        <DropdownMenuComponent label={'Kontakt'} roles={contactMenu} onClick={toggle}/>
                     </MyNav>
                 </Collapse>
             </Container>
