@@ -5,9 +5,7 @@ import PropTypes from 'prop-types';
 
 const DefaultSection = styled.section`
     padding: 0 20px;
-    background-image: ${props => props.background ? `linear-gradient(to right, ${PRIMARY + '80'}, ${PRIMARY_TO + '80'}),` : ''} url('https://wp3.ourwpdemo.com/cretkox/wp-content/uploads/2018/05/patern-1.png');
-    background-repeat: no-repeat;
-    background-position: center;
+    background: ${props => props.background ? `linear-gradient(to right, ${PRIMARY + 'CD'}, ${PRIMARY_TO + '80'})` : ''};
     clip-path: polygon(${props => props.polygon ? '0 10%, 100% 0, 100% 90%, 0 100%' : '0 0, 0 100%, 100% 100%, 100% 0'});
 `;
 

@@ -4,7 +4,6 @@ import Root from './components/Root';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
-import './theme/fonts/octin-college-free.ttf';
 
 import {library} from '@fortawesome/fontawesome-svg-core';
 import {
@@ -35,13 +34,14 @@ import {
     faSortUp,
     faTimes,
     faTrashAlt,
-    faTruckPickup
+    faTruckPickup,
+    faPhone
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
     faDownload, faTrashAlt, faArrowsAltV, faArrowsAlt, faPencilAlt, faChevronLeft, faChevronRight, faCheck, faTimes,
     faSort, faSortUp, faSortDown, faChevronDown, faPen, faHome, faCog, faBars, faExclamationCircle, faInfoCircle,
-    faCheckCircle, faPlus, faCopy, faCircle, faLock, faLaptop, faHammer, faPencilRuler, faTruckPickup
+    faCheckCircle, faPlus, faCopy, faCircle, faLock, faLaptop, faHammer, faPencilRuler, faTruckPickup, faPhone
 );
 
 // eslint-disable-next-line no-undef

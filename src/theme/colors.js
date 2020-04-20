@@ -1,6 +1,6 @@
 export const PRIMARY = '#A83A32';
 export const PRIMARY_TO = '#BF6A63';
-export const SECONDARY = '#aba729';
+export const SECONDARY = '#d0cdc5';
 
 export const BUTTON_PRIMARY_1 = PRIMARY;
 export const BUTTON_PRIMARY_2 = '#ffffff';

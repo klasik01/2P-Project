@@ -52,7 +52,7 @@ const Services = (props) => {
         <Wrapper className="">
             <DefaultSectionContainer>
                 <SmallColumn>
-                    <HeaderTwo title="Kdo jsme?"/>
+                    <HeaderTwo title="Co nabízíme?"/>
                     <Paragraph text="Excepteur sint occaecat cupidatat non proident sunt in culpa qui
                         officia deserunt mollit anim id est laborum.sed ut perspiciatis unde omnis natus error
                         sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae. ab

@@ -6,7 +6,7 @@ import backgroundImg from '../../images/bg-3.jpg';
 
 const BannerWrapper = styled(Row)`
     padding-top: 80px;
-    background-image: url(${backgroundImg});
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${backgroundImg});
     background-size: cover;
     margin: 0;
     border-radius: 0;

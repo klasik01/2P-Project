@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {Collapse, Container} from 'reactstrap';
 import {DropdownMenuComponent} from './DropDownMenu';
 import {buildAboutMenu, buildContactMenu, buildJobMenu, buildProjectMenu, buildServiceMenu} from './MenuStructure';
-import useScreenType from '../../utils/screenType';
+import useScreenType, {showMinLarge} from '../../utils/screenType';
 import {getNavbarSize, setNavbarWrapperStyle} from './utils';
 import {CollapseButton, MenuNavLink, MyNav, MyNavbarBrand, MyNavBarBrandImg, TopNavigation} from './style';
 import PropTypes from 'prop-types';
@@ -48,11 +48,11 @@ const TopBar = (props) => {
                 </CollapseButton>
                 <Collapse isOpen={isOpen} navbar>
                     <MyNav navbar className="ml-auto px-4" main={isLarge.toString()}>
-                        <DropdownMenuComponent label={'O nás'} roles={aboutMenu} onClick={isLarge ? () => {} : toggle}/>
-                        <DropdownMenuComponent label={'Naše projekty'} roles={projectMenu} onClick={isLarge ? () => {} : toggle}/>
-                        <DropdownMenuComponent label={'Služby'} roles={serviceMenu} onClick={isLarge ? () => {} : toggle}/>
-                        <DropdownMenuComponent label={'Zaměstnání'} roles={jobMenu} onClick={isLarge ? () => {} :toggle}/>
-                        <DropdownMenuComponent label={'Kontakt'} roles={contactMenu} onClick={isLarge ? () => {} : toggle}/>
+                        <DropdownMenuComponent label={'O nás'} roles={aboutMenu} onClick={showMinLarge(screenType) ? () => {} : toggle}/>
+                        <DropdownMenuComponent label={'Naše projekty'} roles={projectMenu} onClick={showMinLarge(screenType) ? () => {} : toggle}/>
+                        <DropdownMenuComponent label={'Služby'} roles={serviceMenu} onClick={showMinLarge(screenType) ? () => {} : toggle}/>
+                        <DropdownMenuComponent label={'Zaměstnání'} roles={jobMenu} onClick={showMinLarge(screenType) ? () => {} :toggle}/>
+                        <DropdownMenuComponent label={'Kontakt'} roles={contactMenu} onClick={showMinLarge(screenType) ? () => {} : toggle}/>
                     </MyNav>
                 </Collapse>
             </Container>

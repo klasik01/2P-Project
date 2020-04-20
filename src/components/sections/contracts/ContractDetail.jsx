@@ -53,14 +53,16 @@ const ContractDetail = (props) => {
         <DefaultLayout header={header} footer="">
             <div className="col-md-8 py-4">
                 <div className="">
-                    {text.map(item => <p className="text-justify">{item}</p>)}
+                    {text.map((item, index) => <p key={index} className="text-justify">{item}</p>)}
                 </div>
             </div>
             <div className="col-md-4 py-md-4">
                 <div className="">
                     <Table responsive hover striped>
                         <thead>
-                            <th colSpan={2}>Základní informace</th>
+                            <tr>
+                                <th colSpan={2}>Základní informace</th>
+                            </tr>
                         </thead>
                         <tbody>
                             <tr>
