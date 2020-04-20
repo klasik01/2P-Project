@@ -35,13 +35,18 @@ import {
     faTimes,
     faTrashAlt,
     faTruckPickup,
-    faPhone
+    faPhone,
+    faCalculator,
+    faRulerCombined,
+    faUserTie,
+    faMoneyBill,
+    faTools
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
     faDownload, faTrashAlt, faArrowsAltV, faArrowsAlt, faPencilAlt, faChevronLeft, faChevronRight, faCheck, faTimes,
     faSort, faSortUp, faSortDown, faChevronDown, faPen, faHome, faCog, faBars, faExclamationCircle, faInfoCircle,
-    faCheckCircle, faPlus, faCopy, faCircle, faLock, faLaptop, faHammer, faPencilRuler, faTruckPickup, faPhone
+    faCheckCircle, faPlus, faCopy, faCircle, faLock, faLaptop, faHammer, faPencilRuler, faTruckPickup, faPhone, faCalculator, faRulerCombined, faUserTie, faMoneyBill, faTools
 );
 
 // eslint-disable-next-line no-undef

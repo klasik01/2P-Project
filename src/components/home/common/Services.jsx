@@ -24,27 +24,27 @@ const Services = (props) => {
             key: 2,
             title: 'Rozpočtářské služby',
             paragraph: 'Vytváření, úpravy a poradenství',
-            icon: 'hammer'
+            icon: 'calculator'
         },{
             key: 3,
             title: 'Výplně otvorů',
             paragraph: 'Zajištění dodávky a montáže plastových výplní otvorů',
-            icon: 'hammer'
+            icon: 'tools'
         },{
             key: 4,
             title: 'Stavební dozor',
             paragraph: 'Zajištění stavebního dozoru staveb',
-            icon: 'hammer'
+            icon: 'user-tie'
         },{
             key: 5,
             title: 'Inženýrská činnost',
             paragraph: 'Zajištění poradenství a koordinace subdodávek na stavbách prováděných svépomocí',
-            icon: 'hammer'
+            icon: 'ruler-combined'
         },{
             key: 6,
             title: 'Oceňování nemovitostí',
             paragraph: 'Ocenění nemovitostí vyhláškovou nebo tržní metodou',
-            icon: 'hammer'
+            icon: 'money-bill'
         },
     ];
 
@@ -64,7 +64,7 @@ const Services = (props) => {
                 {!showMaxSmall(screenType) &&
                 <LargeColumn className={`${showMaxSmall(screenType) ? 'd-flex justify-content-center flex-wrap' : ''}`}>
                     {data.map(item => showMinLarge(screenType) ?
-                        <LeftIconRightTextCard
+                        <TopIconBottomText
                             key={item.key}
                             title={item.title}
                             paragraph={item.paragraph}

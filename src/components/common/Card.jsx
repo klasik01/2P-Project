@@ -72,7 +72,7 @@ export const LeftIconRightTextCard = props => {
                         <FontAwesomeIcon className="fas fa-stack-1x" icon={icon}/>
                     </IconWrapper>
                 </div>
-                <div className="col-8">
+                <div className="col-8 text-center">
                     <h4 className="service-heading">{title}</h4>
                     <p className="text-muted">{paragraph}</p>
                 </div>
