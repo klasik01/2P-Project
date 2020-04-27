@@ -73,7 +73,7 @@ export const FullColumn = (props) => {
     const {children, className} = props;
     return (
         <div className={`${className} col-12`}>
-            <div className="row clearfix py-2">
+            <div className="py-2">
                 {children}
             </div>
         </div>

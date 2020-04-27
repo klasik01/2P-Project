@@ -24,7 +24,7 @@ export const BannerHeader = (props) => {
                 <Col className="">
                     <div className="">
                         <TitleHeader className="py-4 my-auto">
-                            <h1 className="display-4">{props.header}</h1>
+                            <h1 className="">{props.header}</h1>
                         </TitleHeader>
                     </div>
                 </Col>

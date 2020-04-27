@@ -25,14 +25,14 @@ const jobsData = [
         'description': 'Lorem ipsum dolor amet contur adip isicing elit sed eiusm',
         'img': workerWorkerImg,
         'icon': '',
-        'to': '/jobs/1'
+        'to': '/jobs/'
     }, {
         'id': 2,
         'contract': 'Pozice Mistr',
         'description': 'Lorem ipsum dolor amet contur adip isicing elit sed eiusm',
         'img': workerMisterImg,
         'icon': 'hammer',
-        'to': '/jobs/2'
+        'to': '/jobs/'
     }
 ];
 
@@ -53,11 +53,11 @@ export const JobCard = (props) => {
                 <div>
                     <img src={image} className="img-fluid w-75" alt="item"/>
                 </div>
-                <BlockLink>
-                    <StyledLink to={to} >
-                        <SecondaryButton className="btn-block my-2">{title}</SecondaryButton>
-                    </StyledLink>
-                </BlockLink>
+                {/*<BlockLink>*/}
+                {/*    <StyledLink to={to} >*/}
+                {/*        <SecondaryButton className="btn-block my-2">{title}</SecondaryButton>*/}
+                {/*    </StyledLink>*/}
+                {/*</BlockLink>*/}
             </BlockItem>
         </BlockWrapper>
     );

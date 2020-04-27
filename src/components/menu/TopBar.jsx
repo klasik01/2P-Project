@@ -20,6 +20,7 @@ const TopBar = (props) => {
     const [contactMenu, setContactMenu] = useState([]);
 
     const toggle = () => setIsOpen(!isOpen);
+    const closeToggle = () => setIsOpen(false);
 
     const {classOnScroll} = props;
     const screenType = useScreenType();
@@ -38,6 +39,7 @@ const TopBar = (props) => {
         <TopNavigation className={`navbar navbar-expand-lg fixed-top ${navbarWrapperStyle()}`} main={isLarge}>
             <Container>
                 <MyNavbarBrand
+                    onClick={showMinLarge(screenType) ? () => {} : closeToggle}
                     main={isLarge.toString()} className="" tag={MenuNavLink}
                     to="/"><MyNavBarBrandImg className="img-fluid" src={logo}/></MyNavbarBrand>
                 <CollapseButton

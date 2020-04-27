@@ -1,9 +1,6 @@
 import React from 'react';
 import {ArticleLayout} from '../../common/Layout';
-import {FullColumn} from "../../common/BlockLayout";
-import workerWorkerImg from "../../../images/worker-svg.svg";
-import workerMisterImg from "../../../images/worker-mister.svg";
-import {JobCard} from "../../home/common/Jobs";
+import {FullColumn} from '../../common/BlockLayout';
 
 const Jobs = () => {
 
@@ -11,17 +8,39 @@ const Jobs = () => {
         {
             'id': 1,
             'contract': 'Pozice Dělník',
-            'description': 'Lorem ipsum dolor amet contur adip isicing elit sed eiusm',
-            'img': workerWorkerImg,
-            'icon': '',
-            'to': '/jobs/1'
-        }, {
-            'id': 2,
-            'contract': 'Pozice Mistr',
-            'description': 'Lorem ipsum dolor amet contur adip isicing elit sed eiusm',
-            'img': workerMisterImg,
-            'icon': 'hammer',
-            'to': '/jobs/2'
+            'sections': [
+                {
+                    'id': '1-required',
+                    'title': 'Požadujeme',
+                    'list': [
+                        'Todo',
+                        'Todo',
+                        'Todo',
+                        'Todo',
+                    ]
+                },
+                {
+                    'id': '1-description',
+                    'title': 'Náplň práce',
+                    'list':
+                        [
+                            'Todo',
+                            'Todo',
+                            'Todo',
+                            'Todo',
+                        ]
+                },
+                {
+                    'id': '1-benefits',
+                    'title': 'Nabízíme',
+                    'list': [
+                        'Todo',
+                        'Todo',
+                        'Todo',
+                        'Todo',
+                    ]
+                },
+            ]
         }
     ];
 
@@ -36,16 +55,18 @@ const Jobs = () => {
                 doloribus asperiores repellat. Nullam at arcu a est sollicitudin euismod. Maecenas sollicitudin. Aenean
                 placerat.</p>
 
-            <FullColumn>
-                {jobsData.map(item =>
-                    <JobCard
-                        key={item.id}
-                        title={item.contract}
-                        paragraph={item.description}
-                        image={item.img}
-                        to={item.to}/>
-                )}
-            </FullColumn>
+            <h2 className="border-bottom border-danger font-weight-bold">Hledáme zaměstance na tyto pozice:</h2>
+            {jobsData.map(item =>
+                <FullColumn key={item.id}>
+                    <h3 className="font-weight-bold">{item.contract}</h3>
+                    {item.sections.map(data => <div key={data.id}>
+                        <h4>{data.title}</h4>
+                        <ul>
+                            {data.list.map((listItem, index) => <li key={data.id + '-' + index}>{listItem}</li>)}
+                        </ul>
+                    </div>)}
+                </FullColumn>
+            )}
         </ArticleLayout>
     );
 };
