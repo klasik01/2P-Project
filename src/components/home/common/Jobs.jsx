@@ -2,7 +2,7 @@ import React from 'react';
 import {HeaderTwo, Paragraph} from '../../common/Typography';
 import styled from 'styled-components';
 import {DefaultSectionContainer, LargeColumn, SmallColumn} from '../../common/BlockLayout';
-import {PrimaryButton, SecondaryButton, StyledLink} from '../../common/Button';
+import {PrimaryButton, StyledLink} from '../../common/Button';
 import workerMisterImg from '../../../images/worker-mister.svg';
 import workerWorkerImg from '../../../images/worker-svg.svg';
 import PropTypes from 'prop-types';
@@ -42,11 +42,8 @@ const BlockWrapper = styled.div`
 const BlockItem = styled.div`
 `;
 
-const BlockLink = styled.div`
-`;
-
 export const JobCard = (props) => {
-    const {image, title, to} = props;
+    const {image} = props;
     return (
         <BlockWrapper backgroundImage={image} className="col-md-6 col-sm-12">
             <BlockItem className="p-4 my-2 text-center">

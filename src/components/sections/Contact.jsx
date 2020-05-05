@@ -1,17 +1,30 @@
 import React from 'react';
 import {ArticleLayout} from '../common/Layout';
+import MapComponent from '../common/MapComponent';
+import {Hr} from '../../theme/globalStyle';
 
 const Contact = () => {
     return (
         <ArticleLayout header="Kontakt" footer="">
-            <p className="text-justify">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce dui leo,
-                imperdiet in, aliquam sit amet, feugiat eu, orci. Mauris elementum mauris vitae tortor. Aenean vel massa
-                quis mauris vehicula lacinia. Vivamus ac leo pretium faucibus. Nulla turpis magna, cursus sit amet,
-                suscipit a, interdum id, felis. Nulla est. Aliquam erat volutpat. Pellentesque ipsum. Fusce nibh.
-                Aliquam in lorem sit amet leo accumsan lacinia. Aenean fermentum risus id tortor. Itaque earum rerum hic
-                tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis
-                doloribus asperiores repellat. Nullam at arcu a est sollicitudin euismod. Maecenas sollicitudin. Aenean
-                placerat.</p>
+            <h2>Sídlo firmy</h2>
+            <label>Pacov</label>
+            <label>Naměstíí čp.</label>
+            <label>tel: +420 132 456 789</label>
+            <label><a href={'mailTo:email@email.com'}>email@emailc.om</a></label>
+            <label>IČ</label>
+            <label>DIČ</label>
+            <h2>Kontaktní osoba</h2>
+            <label>Pavel Pinkas</label>
+            <label>tel: +420 132 456 789</label>
+            <label>tel: +420 132 456 789</label>
+            <label><a href={'mailTo:email@email.com'}>email@emailc.om</a></label>
+            <h2>Další kontakt</h2>
+            <label>Pavel Pinkas</label>
+            <label>tel: +420 132 456 789</label>
+            <label>tel: +420 132 456 789</label>
+            <label><a href={'mailTo:email@email.com'}>email@emailc.om</a></label>
+            <Hr/>
+            <MapComponent/>
         </ArticleLayout>
     );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Col, Row} from 'reactstrap';
-import backgroundImg from '../../images/bg-7.jpg';
+import backgroundImg from '../../images/bg-8.jpg';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import logo from '../../images/logoBrandNegativ.png';
 
