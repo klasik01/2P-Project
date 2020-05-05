@@ -20,7 +20,7 @@ const BlockItem = styled.div`
 const BlockLink = styled.div`
 `;
 
-const IconWrapper = styled.span`
+export const IconWrapper = styled.span`
     color: ${props => props.color};
 `;
 
@@ -62,9 +62,9 @@ const BlockWrapperLIRTC = styled.div`
 `;
 
 export const LeftIconRightTextCard = props => {
-    const {icon, title, paragraph} = props;
+    const {icon, title, paragraph, className} = props;
     return (
-        <div className="col-sm-6 col-xs-12">
+        <div className={`col-sm-6 col-xs-12 ${className}`}>
             <BlockWrapperLIRTC className="row clearfix">
                 <div className="col-4">
                     <IconWrapper className="fa-stack fa-2x align-self-center" color="white">
@@ -86,6 +86,7 @@ LeftIconRightTextCard.propTypes = {
     icon: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     paragraph: PropTypes.string.isRequired,
+    className: PropTypes.string.isRequired,
 };
 
 

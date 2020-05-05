@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import {Col, Row} from 'reactstrap';
 import backgroundImg from '../../images/bg-8.jpg';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import logo from '../../images/logoBrandNegativ.png';
 
 
@@ -33,7 +32,7 @@ const Banner = () => {
                 {/*</div>*/}
                 <div className="text-center">
                     <TitleHeader className="py-4 my-auto">
-                        <div><img className="w-50 img-fluid d-block mx-auto" src={logo} alt="2P Stavební"/> </div>
+                        <div><img className="w-50 img-fluid d-block mx-auto" src={logo} alt="2P Stavební"/></div>
                     </TitleHeader>
                 </div>
             </Col>

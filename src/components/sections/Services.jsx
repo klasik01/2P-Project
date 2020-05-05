@@ -1,9 +1,95 @@
 import React from 'react';
 import {ArticleLayout} from '../common/Layout';
+import {IconWrapper, MyFontAwesomeIcon} from "../common/Card";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {Hr} from "../../theme/globalStyle";
 
 const Services = () => {
+
+    const data = [
+        {
+            key: 1,
+            title: 'Stavební práce',
+            paragraph: 'Veškeré stavební práce',
+            list: [{id: '1', text: 'TODO'}, {id: '2', text: 'TODO'}, {id: '3', text: 'TODO'}, {
+                id: '4',
+                text: 'TODO'
+            }, {id: '5', text: 'TODO'}],
+            icon: 'hammer'
+        }, {
+            key: 2,
+            title: 'Rozpočtářské služby',
+            paragraph: 'Vytváření, úpravy a poradenství',
+            list: [{id: '1', text: 'TODO'}, {id: '2', text: 'TODO'}, {id: '3', text: 'TODO'}, {
+                id: '4',
+                text: 'TODO'
+            }, {id: '5', text: 'TODO'}],
+            icon: 'calculator'
+        }, {
+            key: 3,
+            title: 'Výplně otvorů',
+            paragraph: 'Zajištění dodávky a montáže plastových výplní otvorů',
+            list: [{id: '1', text: 'TODO'}, {id: '2', text: 'TODO'}, {id: '3', text: 'TODO'}, {
+                id: '4',
+                text: 'TODO'
+            }, {id: '5', text: 'TODO'}],
+            icon: 'tools'
+        }, {
+            key: 4,
+            title: 'Stavební dozor',
+            paragraph: 'Zajištění stavebního dozoru staveb',
+            list: [{id: '1', text: 'TODO'}, {id: '2', text: 'TODO'}, {id: '3', text: 'TODO'}, {
+                id: '4',
+                text: 'TODO'
+            }, {id: '5', text: 'TODO'}],
+            icon: 'user-tie'
+        }, {
+            key: 5,
+            title: 'Inženýrská činnost',
+            paragraph: 'Zajištění poradenství a koordinace subdodávek na stavbách prováděných svépomocí',
+            list: [{id: '1', text: 'TODO'}, {id: '2', text: 'TODO'}, {id: '3', text: 'TODO'}, {
+                id: '4',
+                text: 'TODO'
+            }, {id: '5', text: 'TODO'}],
+            icon: 'ruler-combined'
+        }, {
+            key: 6,
+            title: 'Oceňování nemovitostí',
+            paragraph: 'Ocenění nemovitostí vyhláškovou nebo tržní metodou',
+            list: [{id: '1', text: 'TODO'}, {id: '2', text: 'TODO'}, {id: '3', text: 'TODO'}, {
+                id: '4',
+                text: 'TODO'
+            }, {id: '5', text: 'TODO'}],
+            icon: 'money-bill'
+        },
+    ];
+
     return (
         <ArticleLayout header="Jaké služby nabízíme?" footer="">
+            {data.map(item =>
+                <div key={item.key} className="">
+                    <div className="row py-2">
+                        <div className="col-md-4 justify-content-center align-self-center">
+                            <IconWrapper className="fa-stack fa-6x" color={'white'}>
+                                <MyFontAwesomeIcon className="fas fa-stack-2x" icon="circle"/>
+                                <FontAwesomeIcon className="fas  fa-stack-1x" icon={item.icon}/>
+                            </IconWrapper>
+                        </div>
+                        <div className="col-md-8">
+                            <h2>{item.title}</h2>
+                            <hr/>
+                            <i className="text-justify">{item.paragraph}</i>
+                            <hr/>
+                            <ul>
+                                {item.list.map(todo => <li key={todo.id}>{todo.text}</li>)}
+                            </ul>
+                        </div>
+                    </div>
+                    <Hr/>
+                </div>
+            )}
+
+
             <p className="text-justify">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce dui leo,
                 imperdiet in, aliquam sit amet, feugiat eu, orci. Mauris elementum mauris vitae tortor. Aenean vel massa
                 quis mauris vehicula lacinia. Vivamus ac leo pretium faucibus. Nulla turpis magna, cursus sit amet,
@@ -12,48 +98,6 @@ const Services = () => {
                 tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis
                 doloribus asperiores repellat. Nullam at arcu a est sollicitudin euismod. Maecenas sollicitudin. Aenean
                 placerat.</p>
-
-            <p className="text-justify">Et harum quidem rerum facilis est et expedita distinctio. Maecenas ipsum velit,
-                consectetuer eu lobortis ut, dictum at dui. Aenean id metus id velit ullamcorper pulvinar. Vivamus
-                luctus egestas leo. Etiam posuere lacus quis dolor. Duis sapien nunc, commodo et, interdum suscipit,
-                sollicitudin et, dolor. Fusce suscipit libero eget elit. Itaque earum rerum hic tenetur a sapiente
-                delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores
-                repellat. Phasellus faucibus molestie nisl. Aenean id metus id velit ullamcorper pulvinar.</p>
-
-            <p className="text-justify">Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Praesent
-                dapibus. Nunc dapibus tortor vel mi dapibus sollicitudin. Suspendisse nisl. Aenean fermentum risus id
-                tortor. Aliquam ornare wisi eu metus. Nullam sapien sem, ornare ac, nonummy non, lobortis a enim. Nunc
-                auctor. Phasellus faucibus molestie nisl. Maecenas fermentum, sem in pharetra pellentesque, velit turpis
-                volutpat ante, in pharetra metus odio a lectus. Itaque earum rerum hic tenetur a sapiente delectus, ut
-                aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
-                Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Phasellus rhoncus. In sem justo,
-                commodo ut, suscipit at, pharetra vitae, orci. Pellentesque sapien. Integer in sapien.</p>
-
-            <p className="text-justify">Pellentesque arcu. Curabitur bibendum justo non orci. Phasellus enim erat,
-                vestibulum vel, aliquam a, posuere eu, velit. Mauris tincidunt sem sed arcu. Nullam rhoncus aliquam
-                metus. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                est laborum. Nullam rhoncus aliquam metus. Quisque tincidunt scelerisque libero. Pellentesque pretium
-                lectus id turpis. Integer pellentesque quam vel velit. Itaque earum rerum hic tenetur a sapiente
-                delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores
-                repellat. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. In dapibus augue non sapien.
-                Nulla non lectus sed nisl molestie malesuada. Proin pede metus, vulputate nec, fermentum fringilla,
-                vehicula vitae, justo. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
-                laboriosam, nisi ut aliquid ex ea commodi consequatur? Nulla non arcu lacinia neque faucibus fringilla.
-                Nam sed tellus id magna elementum tincidunt.</p>
-
-            <p className="text-justify">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-                hymenaeos. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Duis condimentum augue id magna
-                semper rutrum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo. Nulla est. Quisque tincidunt scelerisque libero. Neque porro quisquam est,
-                qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi
-                tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. In convallis. Mauris elementum
-                mauris vitae tortor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris elementum mauris
-                vitae tortor. Integer imperdiet lectus quis justo. Pellentesque sapien. Cum sociis natoque penatibus et
-                magnis dis parturient montes, nascetur ridiculus mus. Class aptent taciti sociosqu ad litora torquent
-                per conubia nostra, per inceptos hymenaeos. Duis sapien nunc, commodo et, interdum suscipit,
-                sollicitudin et, dolor. Nunc dapibus tortor vel mi dapibus sollicitudin. Maecenas lorem. Phasellus
-                rhoncus.</p>
         </ArticleLayout>
     );
 };

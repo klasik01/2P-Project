@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import {DefaultSectionContainer, LargeColumn, SmallColumn} from '../../common/BlockLayout';
 import {PrimaryButton, StyledLink} from '../../common/Button';
 import {showMaxSmall, showMinLarge} from '../../../utils/screenType';
-import {LeftIconRightTextCard, TopIconBottomText} from '../../common/Card';
+import {TopIconBottomText} from '../../common/Card';
 import PropTypes from 'prop-types';
 
 const Wrapper = styled(Container)`
