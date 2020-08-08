@@ -24,16 +24,16 @@ const Poe = (props) => {
                 <PrettyHeader className="">{header}</PrettyHeader>
                 {
                     paragraphs.map((item, index) => {
-                        return <p className="font-italic" key={index}>{item}</p>
+                        return <p className="font-italic" key={index}>{item}</p>;
                     })
                 }
                 <PrimaryButton href="#poe">Zjistit více</PrimaryButton>
             </WrapperContainer>
         </Wrapper>
-    )
+    );
 };
 
-Poe.protoTypes = {
+Poe.propTypes = {
     header: PropTypes.string.isRequired,
     paragraphs: PropTypes.array.isRequired,
 };

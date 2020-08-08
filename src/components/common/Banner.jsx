@@ -4,6 +4,7 @@ import {Col, Row} from 'reactstrap';
 import backgroundImg from '../../images/bg-8.jpg';
 import logo from '../../images/logoBrandNegativ.png';
 
+const title = '2P Stavebni';
 
 const BannerWrapper = styled(Row)`
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${backgroundImg}) ;
@@ -32,7 +33,7 @@ const Banner = () => {
                 {/*</div>*/}
                 <div className="text-center">
                     <TitleHeader className="py-4 my-auto">
-                        <div><img className="w-50 img-fluid d-block mx-auto" src={logo} alt="2P Stavební"/></div>
+                        <div><img className="w-50 img-fluid d-block mx-auto" src={logo} alt={title}/></div>
                     </TitleHeader>
                 </div>
             </Col>

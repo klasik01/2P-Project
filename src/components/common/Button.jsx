@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import {BUTTON_PRIMARY_1, BUTTON_PRIMARY_2, BUTTON_SECONDARY_1, BUTTON_SECONDARY_2} from '../../theme/colors';
-import {Link} from "react-router-dom";
+import {Link} from 'react-router-dom';
 
 const Button = styled.button`
     background: ${props => props.color2};

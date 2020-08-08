@@ -66,7 +66,7 @@ const ContractDetail = (props) => {
                         </thead>
                         <tbody>
                             <tr>
-                                <th>Finanční objem</th>
+                                <th>Finanční objnem</th>
                                 <td>{data.cost}</td>
                             </tr>
                             <tr>
