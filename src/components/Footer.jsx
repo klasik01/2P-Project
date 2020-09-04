@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import base from '../data/baseInfo.json';
 import {Col, Container, Row} from 'reactstrap';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faFacebookSquare, faInstagram, faLinkedin} from '@fortawesome/free-brands-svg-icons';
+import {faFacebookSquare, faInstagram} from '@fortawesome/free-brands-svg-icons';
 import {FOOTER_BACKGROUND_COLOR_PRIMARY, FOOTER_TEXT_1, FOOTER_TEXT_3, PRIMARY} from '../theme/colors.js';
 import {Hr} from '../theme/globalStyle';
 
@@ -56,9 +56,6 @@ const Footer = () => {
                             <LinkCustom className="small" href={company.links.facebook}>
                                 <FontAwesomeIcon className="" icon={faFacebookSquare}/>
                             </LinkCustom>
-                            <LinkCustom className="small" href={company.links.linkedin}>
-                                <FontAwesomeIcon icon={faLinkedin}/>
-                            </LinkCustom>
                             <LinkCustom className="small" href={company.links.instagram}>
                                 <FontAwesomeIcon icon={faInstagram}/>
                             </LinkCustom>
@@ -66,18 +63,19 @@ const Footer = () => {
                     </Col>
                     <Col md={4}>
                         <FooterHeader>Sídlo firmy</FooterHeader>
-                        <InfoRow>
-                            {company.address.street}, {company.address.number}
-                        </InfoRow>
-                        <InfoRow>
-                            {company.address.city}, {company.address.zip}
-                        </InfoRow>
+                        <InfoRow>{company.address.street}, {company.address.number}</InfoRow>
+                        <InfoRow>{company.address.city}, {company.address.zip}</InfoRow>
+                        <FooterHeader>Provizorní provozovna</FooterHeader>
+                        <InfoRow>{company.residence.street}, {company.residence.number}</InfoRow>
+                        <InfoRow>{company.residence.city}, {company.residence.zip}</InfoRow>
+                        <InfoRow>Tel: {company.residence.tel1}</InfoRow>
+                        <InfoRow>Email: {company.residence.email}</InfoRow>
                     </Col>
                     <Col md={4}>
                         <FooterHeader>Kontaktní osoba</FooterHeader>
                         <InfoRow>{company.contact.name}</InfoRow>
+                        <InfoRow>{company.contact.position}</InfoRow>
                         <InfoRow>Tel: {company.contact.tel1}</InfoRow>
-                        <InfoRow>Tel: {company.contact.tel2}</InfoRow>
                         <InfoRow>Email: {company.contact.email}</InfoRow>
                     </Col>
                 </Row>

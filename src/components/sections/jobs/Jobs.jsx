@@ -1,22 +1,22 @@
 import React from 'react';
 import {ArticleLayout} from '../../common/Layout';
-import {FullColumn} from '../../common/BlockLayout';
+import {Col, Row} from "reactstrap";
+import {Hr} from "../../../theme/globalStyle";
 
 const Jobs = () => {
+
 
     const jobsData = [
         {
             'id': 1,
-            'contract': 'Pozice Dělník',
+            'contract': 'Pozice pomocný dělník',
             'sections': [
                 {
                     'id': '1-required',
                     'title': 'Požadujeme',
                     'list': [
-                        'Todo',
-                        'Todo',
-                        'Todo',
-                        'Todo',
+                        'Základní vzdělání',
+                        'Praxe na obdobné pozici',
                     ]
                 },
                 {
@@ -24,20 +24,81 @@ const Jobs = () => {
                     'title': 'Náplň práce',
                     'list':
                         [
-                            'Todo',
-                            'Todo',
-                            'Todo',
-                            'Todo',
+                            'Práce na stavbách',
                         ]
                 },
                 {
                     'id': '1-benefits',
                     'title': 'Nabízíme',
                     'list': [
-                        'Todo',
-                        'Todo',
-                        'Todo',
-                        'Todo',
+                        'Zajímavé finanční ohodnocení',
+                        'Odměny za dobře odvedenou práci',
+                        'Možnost kariérního růstu',
+                    ]
+                },
+            ]
+        },
+        {
+            'id': 2,
+            'contract': 'Pozice stavební dělník',
+            'sections': [
+                {
+                    'id': '2-required',
+                    'title': 'Požadujeme',
+                    'list': [
+                        'Základní vzdělání',
+                        'Praxe na obdobné pozici',
+                    ]
+                },
+                {
+                    'id': '2-description',
+                    'title': 'Náplň práce',
+                    'list':
+                        [
+                            'Práce na stavbách',
+                        ]
+                },
+                {
+                    'id': '2-benefits',
+                    'title': 'Nabízíme',
+                    'list': [
+                        'Zajímavé finanční ohodnocení',
+                        'Odměny za dobře odvedenou práci',
+                        'Možnost kariérního růstu',
+                    ]
+                },
+            ]
+        },
+        {
+            'id': 3,
+            'contract': 'Pozice stavební dělník',
+            'sections': [
+                {
+                    'id': '3-required',
+                    'title': 'Požadujeme',
+                    'list': [
+                        'Základní či střední vzdělání',
+                        'Praxe na obdobné pozici min 2 roky',
+                    ]
+                },
+                {
+                    'id': '3-description',
+                    'title': 'Náplň práce',
+                    'list':
+                        [
+                            'Práce na stavbách',
+                            'Organizace a plánování',
+                            'Vedení samostatné skupiny'
+                        ]
+                },
+                {
+                    'id': '3-benefits',
+                    'title': 'Nabízíme',
+                    'list': [
+                        'Zajímavé finanční ohodnocení',
+                        'Odměny za dobře odvedenou práci',
+                        'Možnost kariérního růstu',
+                        'Firemní automobil a telefon'
                     ]
                 },
             ]
@@ -46,27 +107,23 @@ const Jobs = () => {
 
     return (
         <ArticleLayout header="Hledáte zaměstnání?" footer="">
-            <p className="text-justify">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce dui leo,
-                imperdiet in, aliquam sit amet, feugiat eu, orci. Mauris elementum mauris vitae tortor. Aenean vel massa
-                quis mauris vehicula lacinia. Vivamus ac leo pretium faucibus. Nulla turpis magna, cursus sit amet,
-                suscipit a, interdum id, felis. Nulla est. Aliquam erat volutpat. Pellentesque ipsum. Fusce nibh.
-                Aliquam in lorem sit amet leo accumsan lacinia. Aenean fermentum risus id tortor. Itaque earum rerum hic
-                tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis
-                doloribus asperiores repellat. Nullam at arcu a est sollicitudin euismod. Maecenas sollicitudin. Aenean
-                placerat.</p>
+            <p className="text-justify">Hledáme do našeho týmu nové pracovníky. Nebojte se nám ozvat.</p>
 
             <h2 className="border-bottom border-danger font-weight-bold">Hledáme zaměstance na tyto pozice:</h2>
-            {jobsData.map(item =>
-                <FullColumn key={item.id}>
-                    <h3 className="font-weight-bold">{item.contract}</h3>
-                    {item.sections.map(data => <div key={data.id}>
-                        <h4>{data.title}</h4>
-                        <ul>
-                            {data.list.map((listItem, index) => <li key={data.id + '-' + index}>{listItem}</li>)}
-                        </ul>
-                    </div>)}
-                </FullColumn>
-            )}
+            <Row>
+                {jobsData.map(item =>
+                    <Col md={6} key={item.id}>
+                        <h3 className="font-weight-bold">{item.contract}</h3>
+                        {item.sections.map(data => <div key={data.id}>
+                            <h4>{data.title}</h4>
+                            <ul>
+                                {data.list.map((listItem, index) => <li key={data.id + '-' + index}>{listItem}</li>)}
+                            </ul>
+                        </div>)}
+                        <Hr />
+                    </Col>
+                )}
+            </Row>
         </ArticleLayout>
     );
 };

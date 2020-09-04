@@ -5,6 +5,8 @@ import {Hr} from '../../theme/globalStyle';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import {Row} from 'reactstrap';
+import base from '../../data/baseInfo.json';
+
 
 const ContactItemWrapper = styled.div`
 `;
@@ -25,23 +27,27 @@ ContactItem.propTypes = {
 
 
 const Contact = () => {
+
+    const address = base['COMPANY']['address'];
+    const contact = base['COMPANY']['contact'];
+    const residence = base['COMPANY']['residence'];
+
     return (
         <ArticleLayout header="Kontakt" footer="">
             <Row>
                 <ContactItem
-                    data={['Pacov', 'Náměstí čp.', 'tel: +420 132 456 789',
-                        <a key="1" href={'mailTo:email@email.com'}>email@emailc.om</a>, 'DIČ', 'IČ']}
+                    data={[`${address.street} ${address.number}`, `${address.city} ${address.zip}`]}
                     header="Sídlo firmy"
                 />
                 <ContactItem
-                    data={['Pavel Pinkas', 'tel: +420 132 456 789', 'tel: +420 132 456 789',
-                        <a key="1" href={'mailTo:email@email.com'}>email@emailc.om</a>]}
-                    header="Kontaktní osoba"
+                    data={[`${residence.street} ${residence.number}`,`${residence.city} ${residence.zip}`,`${residence.tel1}`,
+                        <a key="1" href={`mailTo:${residence.email}`}>{residence.email}`</a>]}
+                    header="PROVIZORNÍ PROVOZOVNA"
                 />
                 <ContactItem
-                    data={['Další osoba', 'tel: +420 132 456 789', 'tel: +420 132 456 789',
-                        <a key="1" href={'mailTo:email@email.com'}>email@emailc.om</a>]}
-                    header="Další kontakt"
+                    data={[`${contact.name}`,`${contact.position}`,`${contact.tel1}`,
+                        <a key="1" href={`mailTo:${contact.email}`}>{contact.email}`</a>]}
+                    header="KONTAKTNÍ OSOBA"
                 />
                 <Hr/>
             </Row>
