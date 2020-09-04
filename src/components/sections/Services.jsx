@@ -3,7 +3,6 @@ import {ArticleLayout} from '../common/Layout';
 import {IconWrapper, MyFontAwesomeIcon} from '../common/Card';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {Hr} from '../../theme/globalStyle';
-import {create} from '../../api/rest';
 
 const Services = () => {
 
@@ -64,15 +63,6 @@ const Services = () => {
             icon: 'money-bill'
         },
     ];
-
-    useEffect(() => {
-        create({'id': 1, 'text': 'můj nový text'}).then((response) => {
-            console.log('API response', response);
-            // set app state
-        }).catch((error) => {
-            console.log('API error', error);
-        });
-    });
 
     return (
         <ArticleLayout header="Jaké služby nabízíme?" footer="">
