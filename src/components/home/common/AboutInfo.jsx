@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {DefaultSectionContainer, LargeColumn, SmallColumn} from '../../common/BlockLayout';
 import {HeaderTwo, Paragraph} from '../../common/Typography';
 import {PrimaryButton, StyledLink} from '../../common/Button';
+import {ArticleLayout} from "../../common/Layout";
 
 const AboutInfo = () => {
 
@@ -11,16 +12,19 @@ const AboutInfo = () => {
     useEffect(() => {
         setOffer({
             title: 'Chcete nezávaznou kalkulaci?',
-            text: 'Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.sed ut perspiciatis unde omnis natus error  sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae. ab illo inventore veritatis quasi architebeatae. vitae',
+            text: 'Zašlete nám žádost o zpracování cenové nabídky na email: info@2pstavebni.cz nebo použijte poptávkový formulář',
             ref: '/about'
         });
 
         setAbout({
             title: 'O nás?',
             text: [
-                'Excepteur sint occaecat cupidatat non proident nt occaecat cupidatat non proident nt occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.sed ut perspiciatis unde omnis natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae. ab illo inventore veritatis quasi architebeatae. vitae',
-                'Excepteur sint occaecat cupidatat non proident nt occaecat cupidatat non proident nt occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.sed ut perspiciatis unde omnis natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae. ab illo inventore veritatis quasi architebeatae. vitae',
-                'Excepteur sint occaecat cupidatat non proident nt occaecat cupidatat non proident nt occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.sed ut perspiciatis unde omnis natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae. ab illo inventore veritatis quasi architebeatae. vitae'
+                'Rozvíjející se stavební firma, která dává důraz na kvalitu a efektivní řešení ' +
+                'staveb. Zabýváme se jak kompletní realizací pozemních staveb, tak i inženýrskou činností, samostatné ' +
+                'dodávky výplní otvorů, odborná motáž požárních ucpávek apod. Více se dozvíte záložce služby.',
+
+                'Snažíme se jít s dobou a pracujeme s elektronickým stavebním deníkem, dáváme ' +
+                'investorovi možnost kontrolovat vlastní stavbu pomocí webového rozhraní atd.'
             ],
             ref: '/about'
         });

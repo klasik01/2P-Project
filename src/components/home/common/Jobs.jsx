@@ -50,11 +50,6 @@ export const JobCard = (props) => {
                 <div>
                     <img src={image} className="img-fluid w-75" alt="item"/>
                 </div>
-                {/*<BlockLink>*/}
-                {/*    <StyledLink to={to} >*/}
-                {/*        <SecondaryButton className="btn-block my-2">{title}</SecondaryButton>*/}
-                {/*    </StyledLink>*/}
-                {/*</BlockLink>*/}
             </BlockItem>
         </BlockWrapper>
     );

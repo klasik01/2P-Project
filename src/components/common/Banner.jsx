@@ -12,7 +12,7 @@ const BannerWrapper = styled(Row)`
     margin: 0;
     border-radius: 0;
     min-height: 100vh;
-    filter: drop-shadow(0px 7px 4px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.5));
 `;
 
 const TitleHeader = styled.div`

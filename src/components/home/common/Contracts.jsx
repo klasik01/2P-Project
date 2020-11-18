@@ -52,10 +52,16 @@ ContractCard.propTypes = {
 };
 
 export const contractsData = [
-    {id: 1, title: 'Barabizna Pešek', icon: 'pen', image: image, to: '/projects/view/'},
-    {id: 2, title: 'Vila Hladílek', icon: 'pen', image: image, to: '/projects/view/'},
-    {id: 3, title: 'Díra u Lehni', icon: 'pen', image: image, to: '/projects/view/'},
-    {id: 4, title: 'Kůlnička na dříví - Hojanovice', icon: 'pen', image: image, to: '/projects/view/'},
+    {id: 1, title: 'RD Pelhřimov - 3 bytové jednotky', icon: 'pen', image: image, to: '/projects/view/'},
+    {
+        id: 2,
+        title: 'ŽB konstrukce ve výbušném prostředí Sellier Bellot',
+        icon: 'pen',
+        image: image,
+        to: '/projects/view/'
+    },
+    {id: 3, title: 'Protipožární ucpávky hala DDL Humpolec', icon: 'pen', image: image, to: '/projects/view/'},
+    {id: 4, title: 'Rekonstrukce Obecního úřadu Vyklantice', icon: 'pen', image: image, to: '/projects/view/'},
 ];
 
 const Contracts = () => {
