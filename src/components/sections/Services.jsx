@@ -1,6 +1,5 @@
-import React, { useEffect} from 'react';
+import React from 'react';
 import {ArticleLayout} from '../common/Layout';
-import {IconWrapper, MyFontAwesomeIcon} from '../common/Card';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {Hr} from '../../theme/globalStyle';
 
@@ -16,16 +15,8 @@ const Services = () => {
                 text: 'TODO'
             }, {id: '5', text: 'TODO'}],
             icon: 'hammer'
-        }, {
-            key: 2,
-            title: 'Rozpočtářské služby',
-            paragraph: 'Vytváření, úpravy a poradenství',
-            list: [{id: '1', text: 'TODO'}, {id: '2', text: 'TODO'}, {id: '3', text: 'TODO'}, {
-                id: '4',
-                text: 'TODO'
-            }, {id: '5', text: 'TODO'}],
-            icon: 'calculator'
-        }, {
+        },
+        {
             key: 3,
             title: 'Výplně otvorů',
             paragraph: 'Zajištění dodávky a montáže plastových výplní otvorů',
@@ -34,7 +25,28 @@ const Services = () => {
                 text: 'TODO'
             }, {id: '5', text: 'TODO'}],
             icon: 'tools'
-        }, {
+        },
+        {
+            key: 6,
+            title: 'Protipožární ucpávky',
+            paragraph: 'Odborná montáž vč. protokolů protipožárních ucpávek',
+            list: [{id: '1', text: 'TODO'}, {id: '2', text: 'TODO'}, {id: '3', text: 'TODO'}, {
+                id: '4',
+                text: 'TODO'
+            }, {id: '5', text: 'TODO'}],
+            icon: 'money-bill'
+        },
+        {
+            key: 2,
+            title: 'Rozpočtářské služby',
+            paragraph: 'Vytváření, úpravy a poradenství',
+            list: [{id: '1', text: 'TODO'}, {id: '2', text: 'TODO'}, {id: '3', text: 'TODO'}, {
+                id: '4',
+                text: 'TODO'
+            }, {id: '5', text: 'TODO'}],
+            icon: 'calculator'
+        },
+        {
             key: 4,
             title: 'Stavební dozor',
             paragraph: 'Zajištění stavebního dozoru staveb',
@@ -43,7 +55,8 @@ const Services = () => {
                 text: 'TODO'
             }, {id: '5', text: 'TODO'}],
             icon: 'user-tie'
-        }, {
+        },
+        {
             key: 5,
             title: 'Inženýrská činnost',
             paragraph: 'Zajištění poradenství a koordinace subdodávek na stavbách prováděných svépomocí',
@@ -52,32 +65,16 @@ const Services = () => {
                 text: 'TODO'
             }, {id: '5', text: 'TODO'}],
             icon: 'ruler-combined'
-        }, {
-            key: 6,
-            title: 'Oceňování nemovitostí',
-            paragraph: 'Ocenění nemovitostí vyhláškovou nebo tržní metodou',
-            list: [{id: '1', text: 'TODO'}, {id: '2', text: 'TODO'}, {id: '3', text: 'TODO'}, {
-                id: '4',
-                text: 'TODO'
-            }, {id: '5', text: 'TODO'}],
-            icon: 'money-bill'
         },
     ];
 
     return (
         <ArticleLayout header="Jaké služby nabízíme?" footer="">
             {data.map(item =>
-                <div key={item.key} className="">
-                    <div className="row py-2">
-                        <div className="col-md-4 justify-content-center align-self-center">
-                            <IconWrapper className="fa-stack fa-6x" color={'white'}>
-                                <MyFontAwesomeIcon className="fas fa-stack-2x" icon="circle"/>
-                                <FontAwesomeIcon className="fas  fa-stack-1x" icon={item.icon}/>
-                            </IconWrapper>
-                        </div>
-                        <div className="col-md-8">
-                            <h2>{item.title}</h2>
-                            <hr/>
+                <div key={item.key} className="" id={item.key}>
+                    <div className="row py-2 card card-body bg-light">
+                        <div className="col">
+                            <h2><FontAwesomeIcon className="fas" icon={item.icon}/>&nbsp;{item.title}</h2>
                             <i className="text-justify">{item.paragraph}</i>
                             <hr/>
                             <ul>
@@ -89,15 +86,7 @@ const Services = () => {
                 </div>
             )}
 
-
-            <p className="text-justify">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce dui leo,
-                imperdiet in, aliquam sit amet, feugiat eu, orci. Mauris elementum mauris vitae tortor. Aenean vel massa
-                quis mauris vehicula lacinia. Vivamus ac leo pretium faucibus. Nulla turpis magna, cursus sit amet,
-                suscipit a, interdum id, felis. Nulla est. Aliquam erat volutpat. Pellentesque ipsum. Fusce nibh.
-                Aliquam in lorem sit amet leo accumsan lacinia. Aenean fermentum risus id tortor. Itaque earum rerum hic
-                tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis
-                doloribus asperiores repellat. Nullam at arcu a est sollicitudin euismod. Maecenas sollicitudin. Aenean
-                placerat.</p>
+            <p className="text-justify"></p>
         </ArticleLayout>
     );
 };

@@ -1,34 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {DefaultSectionContainer, LargeColumn, SmallColumn} from '../../common/BlockLayout';
 import {HeaderTwo, Paragraph} from '../../common/Typography';
 import {PrimaryButton, StyledLink} from '../../common/Button';
-import {ArticleLayout} from "../../common/Layout";
 
-const AboutInfo = () => {
+const AboutInfo = (props) => {
 
-    const [offer, setOffer] = useState({title: '', text: '', ref: '/'});
-    const [about, setAbout] = useState({title: '', text: [], ref: '/'});
-
-    useEffect(() => {
-        setOffer({
-            title: 'Chcete nezávaznou kalkulaci?',
-            text: 'Zašlete nám žádost o zpracování cenové nabídky na email: info@2pstavebni.cz nebo použijte poptávkový formulář',
-            ref: '/about'
-        });
-
-        setAbout({
-            title: 'O nás?',
-            text: [
-                'Rozvíjející se stavební firma, která dává důraz na kvalitu a efektivní řešení ' +
-                'staveb. Zabýváme se jak kompletní realizací pozemních staveb, tak i inženýrskou činností, samostatné ' +
-                'dodávky výplní otvorů, odborná motáž požárních ucpávek apod. Více se dozvíte záložce služby.',
-
-                'Snažíme se jít s dobou a pracujeme s elektronickým stavebním deníkem, dáváme ' +
-                'investorovi možnost kontrolovat vlastní stavbu pomocí webového rozhraní atd.'
-            ],
-            ref: '/about'
-        });
-    }, []);
+    const {offer, about} = props;
 
     return (
         <div>

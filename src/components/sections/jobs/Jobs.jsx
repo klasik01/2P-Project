@@ -1,7 +1,6 @@
 import React from 'react';
 import {ArticleLayout} from '../../common/Layout';
 import {Col, Row} from "reactstrap";
-import {Hr} from "../../../theme/globalStyle";
 
 const Jobs = () => {
 
@@ -9,7 +8,7 @@ const Jobs = () => {
     const jobsData = [
         {
             'id': 1,
-            'contract': 'Pozice pomocný dělník',
+            'contract': 'Pomocný dělník',
             'sections': [
                 {
                     'id': '1-required',
@@ -40,7 +39,7 @@ const Jobs = () => {
         },
         {
             'id': 2,
-            'contract': 'Pozice stavební dělník',
+            'contract': 'Stavební dělník',
             'sections': [
                 {
                     'id': '2-required',
@@ -71,7 +70,7 @@ const Jobs = () => {
         },
         {
             'id': 3,
-            'contract': 'Pozice stavební dělník',
+            'contract': 'Stavební dělník',
             'sections': [
                 {
                     'id': '3-required',
@@ -107,12 +106,12 @@ const Jobs = () => {
 
     return (
         <ArticleLayout header="Hledáte zaměstnání?" footer="">
-            <p className="text-justify">Hledáme do našeho týmu nové pracovníky. Nebojte se nám ozvat.</p>
+            {/*<p className="text-justify">Hledáme do našeho týmu nové pracovníky. Nebojte se nám ozvat.</p>*/}
 
             <h2 className="border-bottom border-danger font-weight-bold">Hledáme zaměstance na tyto pozice:</h2>
             <Row>
                 {jobsData.map(item =>
-                    <Col md={6} key={item.id}>
+                    <Col md={5} key={item.id} className="m-1 card card-body bg-light">
                         <h3 className="font-weight-bold">{item.contract}</h3>
                         {item.sections.map(data => <div key={data.id}>
                             <h4>{data.title}</h4>
@@ -120,7 +119,6 @@ const Jobs = () => {
                                 {data.list.map((listItem, index) => <li key={data.id + '-' + index}>{listItem}</li>)}
                             </ul>
                         </div>)}
-                        <Hr />
                     </Col>
                 )}
             </Row>

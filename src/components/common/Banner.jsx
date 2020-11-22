@@ -4,7 +4,7 @@ import {Col, Row} from 'reactstrap';
 import backgroundImg from '../../images/bg-8.jpg';
 import logo from '../../images/logoBrandNegativ.png';
 
-const title = '2P Stavebni';
+import basicData from '../../data/basic.json';
 
 const BannerWrapper = styled(Row)`
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${backgroundImg}) ;
@@ -12,7 +12,6 @@ const BannerWrapper = styled(Row)`
     margin: 0;
     border-radius: 0;
     min-height: 100vh;
-    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.5));
 `;
 
 const TitleHeader = styled.div`
@@ -24,16 +23,9 @@ const Banner = () => {
     return (
         <BannerWrapper className="align-items-center">
             <Col className="">
-                {/*<div className="text-center">*/}
-                {/*    <TitleHeader className="py-4 my-auto">*/}
-                {/*        <h1 className="display-1">Pavel Pinkas</h1>*/}
-                {/*        <h2 className="display-4">2P Stavební</h2>*/}
-                {/*        <h3 className="display-5"><FontAwesomeIcon className="fas" icon="phone"/> +420 606 060 606</h3>*/}
-                {/*    </TitleHeader>*/}
-                {/*</div>*/}
                 <div className="text-center">
                     <TitleHeader className="py-4 my-auto">
-                        <div><img className="w-50 img-fluid d-block mx-auto" src={logo} alt={title}/></div>
+                        <div><img className="w-50 img-fluid d-block mx-auto" src={logo} alt={basicData.title}/></div>
                     </TitleHeader>
                 </div>
             </Col>

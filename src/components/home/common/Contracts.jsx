@@ -3,9 +3,7 @@ import styled from 'styled-components';
 import {PrettyHeader} from '../../common/Typography';
 import {DefaultSectionContainer, FullColumn} from '../../common/BlockLayout';
 import {PrimaryButton, StyledLink} from '../../common/Button';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {Link} from 'react-router-dom';
-import {PRIMARY} from '../../../theme/colors';
 import PropTypes from 'prop-types';
 import './style.css';
 import image from '../../../images/house.jpg';
@@ -23,23 +21,17 @@ const BlockItem = styled.div`
   transition: all 0.5s ease;
 `;
 
-const MyFontAwesomeIcon = styled(FontAwesomeIcon)`
-    color: ${PRIMARY};
-`;
-
 export const ContractCard = (props) => {
-    const {title, image, icon, to} = props;
+    const {title, image, to} = props;
     return (
-        <BlockWrapper backgroundImage={image} className="col-md-4 col-sm-6 mb-30">
-            <BlockItem className="box8">
-                <img src={image} alt={title}/>
-                <h3 className="title">{title}</h3>
-                <div className="box-content">
-                    <ul className="icon">
-                        <li><Link to={to}><MyFontAwesomeIcon icon={icon}/></Link></li>
-                    </ul>
-                </div>
-            </BlockItem>
+        <BlockWrapper backgroundImage={image} className="col-md-4 col-sm-6 mb-3">
+            <Link to={to}>
+                <BlockItem className="box8">
+                    <img src={image} alt={title}/>
+                    <h3 className="title">{title}</h3>
+                    <div className="box-content"/>
+                </BlockItem>
+            </Link>
         </BlockWrapper>
     );
 };
@@ -51,20 +43,9 @@ ContractCard.propTypes = {
     to: PropTypes.string,
 };
 
-export const contractsData = [
-    {id: 1, title: 'RD Pelhřimov - 3 bytové jednotky', icon: 'pen', image: image, to: '/projects/view/'},
-    {
-        id: 2,
-        title: 'ŽB konstrukce ve výbušném prostředí Sellier Bellot',
-        icon: 'pen',
-        image: image,
-        to: '/projects/view/'
-    },
-    {id: 3, title: 'Protipožární ucpávky hala DDL Humpolec', icon: 'pen', image: image, to: '/projects/view/'},
-    {id: 4, title: 'Rekonstrukce Obecního úřadu Vyklantice', icon: 'pen', image: image, to: '/projects/view/'},
-];
+const Contracts = (props) => {
 
-const Contracts = () => {
+    const {data = []} = props;
 
     return (
         <Wrapper className="text-center">
@@ -75,14 +56,13 @@ const Contracts = () => {
                     </div>
                 </FullColumn>
                 <FullColumn>
-                    <div className="container mt-40">
-                        <div className="row mt-30">
-                            {contractsData.slice(0, 3).map(item =>
+                    <div className="container mt-1">
+                        <div className="row mt-1">
+                            {data.slice(0, 3).map(item =>
                                 <ContractCard
                                     key={item.id} title={item.title} icon={'hammer'} image={image}
                                     to={item.to + item.id}/>
                             )}
-
                         </div>
                     </div>
                 </FullColumn>
