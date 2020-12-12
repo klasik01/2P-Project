@@ -11,6 +11,7 @@ import textsData from '../../data/texts.json';
 import jobsData from '../../data/jobs.json';
 import contractsData from '../../data/orders.json';
 import servicesData from '../../data/services.json';
+import Preview from "./common/Preview";
 
 const HomeWrapper = styled.div`
 `;
@@ -26,6 +27,7 @@ const Home = () => {
     return (
         <HomeWrapper className="">
             <Banner id="home"/>
+            <Preview info={texts.PREVIEW} />
             <Services screenType={screenType} data={services} info={texts.SERVICE}/>
             <Contracts data={contracts} info={texts.CONTRACT}/>
             <Jobs screenType={screenType} data={jobs} info={texts.JOB}/>

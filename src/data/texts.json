@@ -14,6 +14,12 @@
     "buttonTitle": "Více informací",
     "ref": "/about"
   },
+  "PREVIEW": {
+    "title": "Kdo jsme?",
+    "text": "Rozvíjející se stavební firma, která dává důraz na kvalitu a efektivní řešení staveb. Zabýváme se jak kompletní realizací pozemních staveb, tak i inženýrskou činností, samostatné dodávky výplní otvorů, odborná motáž požárních ucpávek apod. Více se dozvíte záložce služby. Snažíme se jít s dobou a pracujeme s elektronickým stavebním deníkem, dáváme investorovi možnost kontrolovat vlastní stavbu pomocí webového rozhraní atd.",
+    "buttonTitle": "",
+    "ref": "/"
+  },
   "JOB": {
     "title": "Hledáte zaměstnání?",
     "text": "Máme trvalý zájem o spolupráci s novými zaměstnanci, kteří jsou odborníky ve svém oboru, chtějí se trvale rozvíjet a patřit společně s námi ke špičce stavební profese.",

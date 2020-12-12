@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const DefaultSection = styled.section`
     padding: 0 20px;
-    background: ${props => props.background ? `linear-gradient(to right, ${PRIMARY + 'CD'}, ${PRIMARY_TO + '80'})` : ''};
+    background: ${props => props.background ? `linear-gradient(to right, ${PRIMARY + 'CD'}, ${PRIMARY_TO + 'FF'})` : ''};
     clip-path: polygon(${props => props.polygon ? '0 10%, 100% 0, 100% 90%, 0 100%' : '0 0, 0 100%, 100% 100%, 100% 0'});
 `;
 
@@ -14,7 +14,7 @@ export const DefaultSectionContainer = (props) => {
     return (
         <DefaultSection className="py-5" background={isBackground} polygon={isPolygon}>
             <div className="container">
-                <div className="row py-5">
+                <div className="row">
                     {children}
                 </div>
             </div>

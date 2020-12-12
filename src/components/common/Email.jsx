@@ -13,13 +13,14 @@ export const EmailComponent = (props) => {
 
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    const [check, setCheck] = useState(false);
 
     const {text: {condition, buttonTitle}} = props;
 
     const [success, setSuccess] = useState(false);
 
     useEffect(() => {
-        if ( window.location.search.includes('success=true') ) {
+        if (window.location.search.includes('success=true')) {
             setSuccess(true);
         }
     }, []);
@@ -30,15 +31,20 @@ export const EmailComponent = (props) => {
             headers: {'Content-Type': 'application/x-www-form-urlencoded'},
             body: encode({'form-name': 'contact', email, message})
         })
-            .then(() => alert('Success!'))
+            .then(() => {
+                alert('Success!');
+                setMessage('');
+                setEmail('');
+                setCheck(false);
+            })
             .catch(error => alert(error));
         e.preventDefault();
     };
 
     return (
-        <div className="border border-light p-3 mb-4">
+        <div className="p-3 mb-4">
             {success && (
-                <p style={{ color: 'green' }}>Thanks for your message! </p>
+                <p style={{color: 'green'}}>Thanks for your message! </p>
             )}
             <Form
                 onSubmit={handleSubmit}
@@ -70,7 +76,7 @@ export const EmailComponent = (props) => {
                 <Row form>
                     <Col md={6}>
                         <FormGroup check>
-                            <Input type="checkbox" name="check" id="exampleCheck" required/>
+                            <Input type="checkbox" name="check" id="exampleCheck" checked={check} onChange={() => setCheck(!check)} required/>
                             <Label for="exampleCheck" check>{condition}</Label>
                         </FormGroup>
                     </Col>
