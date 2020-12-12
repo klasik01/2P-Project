@@ -3,13 +3,13 @@ import styled from 'styled-components';
 import companyInfoData from '../data/company-info.json';
 import applicationData from '../data/website.json';
 import textsData from '../data/texts.json';
-import {Col, Container, Form, FormGroup, Input, Label, Row} from 'reactstrap';
+import {Col, Container, Row} from 'reactstrap';
 import {FOOTER_BACKGROUND_COLOR_PRIMARY, FOOTER_TEXT_1, FOOTER_TEXT_3} from '../theme/colors.js';
 import {FullColumn} from './common/BlockLayout';
 import {PrettyHeader} from './common/Typography';
-import {PrimaryButton} from './common/Button';
 import {FOOTER_TEXT_2} from '../theme/colors';
-import {SocialIcon} from 'react-social-icons';
+import {EmailComponent} from "./common/Email";
+import {SocialIcons} from "./common/SocialIcons";
 
 
 const FooterWrapper = styled.footer`
@@ -40,11 +40,6 @@ const Footer = ({visible}) => {
 
     const {address, residence, links} = companyData;
 
-    const handleSubmit = ( event, v) => {
-        event.preventDefault();
-        console.log('Email', { event , v});
-    };
-
     return (
         <FooterWrapper>
             {visible && <Container>
@@ -55,39 +50,8 @@ const Footer = ({visible}) => {
                         </div>
                     </FullColumn>
                     <Col md={6} className="pb-3">
-                        <div className="border border-light p-3 mb-4">
-                            <Form onSubmit={handleSubmit}>
-                                <FormGroup>
-                                    <Input type="email" name="email" id="inputEmail" placeholder="Email..."/>
-                                </FormGroup>
-                                <FormGroup>
-                                    <Input type="textarea" name="text" id="inputText" placeholder="Zpráva..."/>
-                                </FormGroup>
-
-                                <Row form>
-                                    <Col md={6}>
-                                        <FormGroup check>
-                                            <Input type="checkbox" name="check" id="exampleCheck"/>
-                                            <Label for="exampleCheck" check>{footer.condition}</Label>
-                                        </FormGroup>
-                                    </Col>
-                                    <Col md={6} className="float-right right text-right">
-                                        <FormGroup check row>
-                                            <PrimaryButton>{footer.buttonTitle}</PrimaryButton>
-                                        </FormGroup>
-                                    </Col>
-                                </Row>
-                            </Form>
-                        </div>
-                        <div className="text-center">
-                            {links.map((item, index) => {
-                                return (
-                                    <span className="pb-3 m-3" key={index}>
-                                        <SocialIcon url={item}/>
-                                    </span>
-                                );
-                            })}
-                        </div>
+                        <EmailComponent text={footer}/>
+                        <SocialIcons data={links}/>
                     </Col>
                     <Col md={6} className="px-3">
                         <div>

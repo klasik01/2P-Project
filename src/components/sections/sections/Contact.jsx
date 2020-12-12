@@ -4,12 +4,12 @@ import MapComponent from '../../common/MapComponent';
 import {Hr} from '../../../theme/globalStyle';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import {Col, Form, FormGroup, Input, Label, Row} from 'reactstrap';
+import {Col, Row} from 'reactstrap';
 import data from '../../../data/company-info.json';
 import textsData from '../../../data/texts.json';
 import {FOOTER_TEXT_1, FOOTER_TEXT_2} from '../../../theme/colors';
-import {PrimaryButton} from '../../common/Button';
-import {SocialIcon} from 'react-social-icons';
+import {EmailComponent} from "../../common/Email";
+import {SocialIcons} from "../../common/SocialIcons";
 
 const ItemHeader = styled.h1`
   color: ${FOOTER_TEXT_1};
@@ -63,40 +63,9 @@ const Contact = () => {
                     <ItemInfoRow bold>{contact.emailAlt}</ItemInfoRow>
 
                     <Hr/>
-                    <div className="text-center">
-                        {links.map((item, index) => {
-                            return (
-                                <span className="pb-3 m-3" key={index}>
-                                    <SocialIcon url={item}/>
-                                </span>
-                            );
-                        })}
-                    </div>
+                    <SocialIcons data={links}/>
                     <Hr/>
-                    <div className=" p-3 mb-4">
-                        <Form>
-                            <FormGroup>
-                                <Input type="email" name="email" id="inputEmail" placeholder="Email..."/>
-                            </FormGroup>
-                            <FormGroup>
-                                <Input type="textarea" name="text" id="inputText" placeholder="Zpráva..."/>
-                            </FormGroup>
-
-                            <Row form>
-                                <Col md={6}>
-                                    <FormGroup check>
-                                        <Input type="checkbox" name="check" id="exampleCheck"/>
-                                        <Label for="exampleCheck" check>{contactData.condition}</Label>
-                                    </FormGroup>
-                                </Col>
-                                <Col md={6} className="float-right right text-right">
-                                    <FormGroup check row>
-                                        <PrimaryButton className="">{contactData.buttonTitle}</PrimaryButton>
-                                    </FormGroup>
-                                </Col>
-                            </Row>
-                        </Form>
-                    </div>
+                    <EmailComponent text={contactData}/>
                 </Col>
                 <Col md={6}>
                     <MapComponent/>
