@@ -33,6 +33,7 @@ export const EmailComponent = (props) => {
             <form
                 onSubmit={handleSubmit}
                 name="contact"
+                netlify
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
             >
