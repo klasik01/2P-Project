@@ -18,7 +18,7 @@ const Button = styled.button`
 const ButtonInverse = styled.button`
     background: ${props => props.color1};
     color: ${props => props.color2};
-    border: 2px solid ${props => props.color1};
+    border: 2px solid ${props => props.color2};
 
     &&:hover {
         color: ${props => props.color1};

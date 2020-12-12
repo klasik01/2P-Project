@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import {PRIMARY, PRIMARY_TO} from '../../theme/colors';
+import {PRIMARY, REVERSE_PRIMARY} from '../../theme/colors';
 import PropTypes from 'prop-types';
 
 const DefaultSection = styled.section`
     padding: 0 20px;
-    background: ${props => props.background ? `linear-gradient(to right, ${PRIMARY + 'CD'}, ${PRIMARY_TO + 'FF'})` : ''};
+    background: ${props => props.background ? PRIMARY : ''};
     clip-path: polygon(${props => props.polygon ? '0 10%, 100% 0, 100% 90%, 0 100%' : '0 0, 0 100%, 100% 100%, 100% 0'});
+    color: ${props => props.background ? REVERSE_PRIMARY : ''};
 `;
 
 export const DefaultSectionContainer = (props) => {
