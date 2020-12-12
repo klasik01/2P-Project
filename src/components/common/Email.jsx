@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import {Col, Form, FormGroup, Input, Label, Row} from 'reactstrap';
 import {PrimaryButton} from './Button';
 
-const encode = (data) => {
-    return Object.keys(data)
-        .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-        .join('&');
-};
+// const encode = (data) => {
+//     return Object.keys(data)
+//         .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+//         .join('&');
+// };
 
 export const EmailComponent = (props) => {
 
@@ -24,16 +24,16 @@ export const EmailComponent = (props) => {
         }
     }, []);
 
-    const handleSubmit = (e) => {
-        fetch('/', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-            body: encode({'form-name': 'contact', email, message})
-        })
-            .then(() => alert('Success!'))
-            .catch(error => alert(error));
-        e.preventDefault();
-    };
+    // const handleSubmit = (e) => {
+    //     fetch('/', {
+    //         method: 'POST',
+    //         headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    //         body: encode({'form-name': 'contact', email, message})
+    //     })
+    //         .then(() => alert('Success!'))
+    //         .catch(error => alert(error));
+    //     e.preventDefault();
+    // };
 
     return (
         <div className="border border-light p-3 mb-4">
