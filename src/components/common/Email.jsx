@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import {Col, Form, FormGroup, Input, Label, Row} from 'reactstrap';
 import {PrimaryButton} from './Button';
@@ -16,6 +16,14 @@ export const EmailComponent = (props) => {
 
     const {text: {condition, buttonTitle}} = props;
 
+    const [success, setSuccess] = useState(false);
+
+    useEffect(() => {
+        if ( window.location.search.includes('success=true') ) {
+            setSuccess(true);
+        }
+    }, []);
+
     const handleSubmit = (e) => {
         fetch('/', {
             method: 'POST',
@@ -29,7 +37,14 @@ export const EmailComponent = (props) => {
 
     return (
         <div className="border border-light p-3 mb-4">
-            <Form onSubmit={handleSubmit}>
+            {success && (
+                <p style={{ color: 'green' }}>Thanks for your message! </p>
+            )}
+            <Form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+            >
                 <input type="hidden" name="form-name" value="contact"/>
                 <FormGroup>
                     <Input
