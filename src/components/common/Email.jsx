@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import {Col, Form, FormGroup, Input, Label, Row} from 'reactstrap';
 import {PrimaryButton} from './Button';
 
-// const encode = (data) => {
-//     return Object.keys(data)
-//         .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-//         .join('&');
-// };
+const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+        .join('&');
+};
 
 export const EmailComponent = (props) => {
 
@@ -24,16 +24,16 @@ export const EmailComponent = (props) => {
         }
     }, []);
 
-    // const handleSubmit = (e) => {
-    //     fetch('/', {
-    //         method: 'POST',
-    //         headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-    //         body: encode({'form-name': 'contact', email, message})
-    //     })
-    //         .then(() => alert('Success!'))
-    //         .catch(error => alert(error));
-    //     e.preventDefault();
-    // };
+    const handleSubmit = (e) => {
+        fetch('/', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            body: encode({'form-name': 'contact', email, message})
+        })
+            .then(() => alert('Success!'))
+            .catch(error => alert(error));
+        e.preventDefault();
+    };
 
     return (
         <div className="border border-light p-3 mb-4">
@@ -41,8 +41,7 @@ export const EmailComponent = (props) => {
                 <p style={{ color: 'green' }}>Thanks for your message! </p>
             )}
             <Form
-                name="contact"
-                method="POST"
+                onSubmit={handleSubmit}
                 data-netlify="true"
             >
                 <input type="hidden" name="form-name" value="contact"/>
@@ -60,7 +59,7 @@ export const EmailComponent = (props) => {
                 <FormGroup>
                     <Input
                         type="textarea"
-                        name="text"
+                        name="message"
                         id="inputText"
                         placeholder="Zpráva..."
                         onChange={e => setMessage(e.target.value)}
