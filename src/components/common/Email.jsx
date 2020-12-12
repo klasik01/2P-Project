@@ -37,7 +37,6 @@ export const EmailComponent = (props) => {
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
             >
-                <input type="hidden" name="form-name" value="contact"/>
                 <FormGroup>
                     <Input
                         type="email"
