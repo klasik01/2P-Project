@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import {Route, Switch} from 'react-router-dom';
 import PageNotFound from '../PageNotFound';
-import About from './About';
-import Contact from './Contact';
-import Services from './Services';
-import ContractMainPage from './contracts/ContractMainPage';
-import JobMainPage from './jobs/JobMainPage';
+import About from './sections/About';
+import Contact from './sections/Contact';
+import Services from './sections/Services';
+import ContractMainPage from './sections/contracts/ContractMainPage';
+import JobMainPage from './sections/jobs/JobMainPage';
 
 const SectionWrapper = styled.div`
     

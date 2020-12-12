@@ -5,6 +5,8 @@ import {DefaultSectionContainer, LargeColumn, SmallColumn} from '../../common/Bl
 import {PrimaryButton, StyledLink} from '../../common/Button';
 import PropTypes from 'prop-types';
 import {showMaxSmall} from '../../../utils/screenType';
+import workerWorkerImg from '../../../images/worker-svg.svg';
+import workerMisterImg from '../../../images/worker-mister.svg';
 
 const JobsWrapper = styled.div`
 `;
@@ -16,12 +18,14 @@ const BlockItem = styled.div`
 `;
 
 export const JobCard = (props) => {
-    const {image} = props;
+    const {image, title} = props;
     return (
         <BlockWrapper backgroundImage={image} className="col-md-6 col-sm-12">
             <BlockItem className="p-4 my-2 text-center">
                 <div>
-                    <img src={image} className="img-fluid w-75" alt="item"/>
+                    <img
+                        src={image === 'workerWorkerImg' ? workerWorkerImg : image === 'workerMisterImg' ? workerMisterImg : ''}
+                        className="img-fluid w-75" alt={title}/>
                 </div>
             </BlockItem>
         </BlockWrapper>
@@ -53,8 +57,8 @@ const Jobs = (props) => {
                 }
                 <SmallColumn className="justify-content-center align-self-center">
                     <HeaderTwo title={info.title}/>
-                    <Paragraph text={info.paragraph}/>
-                    <StyledLink to={info.to}>
+                    <Paragraph text={info.text}/>
+                    <StyledLink to={info.ref}>
                         <PrimaryButton className="">{info.buttonTitle}</PrimaryButton>
                     </StyledLink>
                 </SmallColumn>
@@ -64,7 +68,9 @@ const Jobs = (props) => {
 };
 
 Jobs.propTypes = {
-    screenType: PropTypes.string.isRequired
+    screenType: PropTypes.string.isRequired,
+    data: PropTypes.array.isRequired,
+    info: PropTypes.object.isRequired,
 };
 
 export default Jobs;

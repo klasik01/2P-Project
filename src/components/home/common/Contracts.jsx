@@ -45,14 +45,14 @@ ContractCard.propTypes = {
 
 const Contracts = (props) => {
 
-    const {data = []} = props;
+    const {data = [], info = {}} = props;
 
     return (
         <Wrapper className="text-center">
             <DefaultSectionContainer isBackground>
                 <FullColumn>
                     <div className="col text-center">
-                        <PrettyHeader>Realizované zakázky</PrettyHeader>
+                        <PrettyHeader>{info.title}</PrettyHeader>
                     </div>
                 </FullColumn>
                 <FullColumn>
@@ -60,7 +60,7 @@ const Contracts = (props) => {
                         <div className="row mt-1">
                             {data.slice(0, 3).map(item =>
                                 <ContractCard
-                                    key={item.id} title={item.title} icon={'hammer'} image={image}
+                                    key={item.id} title={item.title} image={image}
                                     to={item.to + item.id}/>
                             )}
                         </div>
@@ -68,12 +68,17 @@ const Contracts = (props) => {
                 </FullColumn>
                 <FullColumn className="d-flex justify-content-center">
                     <StyledLink to="/projects">
-                        <PrimaryButton inverse className="btn-block my-2">Zobrazit všechny</PrimaryButton>
+                        <PrimaryButton inverse className="btn-block my-2">{info.buttonTitle}</PrimaryButton>
                     </StyledLink>
                 </FullColumn>
             </DefaultSectionContainer>
         </Wrapper>
     );
+};
+
+Contracts.propTypes = {
+    data: PropTypes.array.isRequired,
+    info: PropTypes.object.isRequired,
 };
 
 export default Contracts;

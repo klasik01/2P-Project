@@ -1,29 +1,115 @@
-[
-  {
-    "category": "JOB",
-    "col": 4,
-    "id": 1,
-    "icon": "truck-pickup",
-    "header": "Volná pracovní pozice",
-    "alias": "job1",
-    "link": "/jobs/job1"
-  },
-  {
-    "category": "JOB",
-    "col": 4,
-    "id": 2,
-    "icon": "truck-pickup",
-    "header": "Volná pracovní pozice",
-    "alias": "job1",
-    "link": "/jobs/job2"
-  },
-  {
-    "category": "JOB",
-    "col": 4,
-    "id": 3,
-    "icon": "truck-pickup",
-    "header": "Volná pracovní pozice",
-    "alias": "job3",
-    "link": "/jobs/job3"
-  }
-]
+{
+  "LIST": [
+    {
+      "id": 1,
+      "contract": "Pozice Dělník",
+      "description": "Lorem ipsum dolor amet contur adip isicing elit sed eiusm",
+      "img": "workerWorkerImg",
+      "icon": "",
+      "to": "/jobs/"
+    },
+    {
+      "id": 2,
+      "contract": "Pozice Mistr",
+      "description": "Lorem ipsum dolor amet contur adip isicing elit sed eiusm",
+      "img": "workerMisterImg",
+      "icon": "hammer",
+      "to": "/jobs/"
+    }
+  ],
+  "DETAIL": [
+    {
+      "id": 1,
+      "contract": "Pomocný dělník",
+      "sections": [
+        {
+          "id": "1-required",
+          "title": "Požadujeme",
+          "list": [
+            "Základní vzdělání",
+            "Praxe na obdobné pozici"
+          ]
+        },
+        {
+          "id": "1-description",
+          "title": "Náplň práce",
+          "list": [
+            "Práce na stavbách"
+          ]
+        },
+        {
+          "id": "1-benefits",
+          "title": "Nabízíme",
+          "list": [
+            "Zajímavé finanční ohodnocení",
+            "Odměny za dobře odvedenou práci",
+            "Možnost kariérního růstu"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "contract": "Stavební dělník",
+      "sections": [
+        {
+          "id": "2-required",
+          "title": "Požadujeme",
+          "list": [
+            "Základní vzdělání",
+            "Praxe na obdobné pozici"
+          ]
+        },
+        {
+          "id": "2-description",
+          "title": "Náplň práce",
+          "list": [
+            "Práce na stavbách"
+          ]
+        },
+        {
+          "id": "2-benefits",
+          "title": "Nabízíme",
+          "list": [
+            "Zajímavé finanční ohodnocení",
+            "Odměny za dobře odvedenou práci",
+            "Možnost kariérního růstu"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "contract": "Stavební dělník",
+      "sections": [
+        {
+          "id": "3-required",
+          "title": "Požadujeme",
+          "list": [
+            "Základní či střední vzdělání",
+            "Praxe na obdobné pozici min 2 roky"
+          ]
+        },
+        {
+          "id": "3-description",
+          "title": "Náplň práce",
+          "list": [
+            "Práce na stavbách",
+            "Organizace a plánování",
+            "Vedení samostatné skupiny"
+          ]
+        },
+        {
+          "id": "3-benefits",
+          "title": "Nabízíme",
+          "list": [
+            "Zajímavé finanční ohodnocení",
+            "Odměny za dobře odvedenou práci",
+            "Možnost kariérního růstu",
+            "Firemní automobil a telefon"
+          ]
+        }
+      ]
+    }
+  ]
+}

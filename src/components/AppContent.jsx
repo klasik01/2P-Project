@@ -1,8 +1,8 @@
 import React from 'react';
+import {Route, Switch, useLocation} from 'react-router-dom';
 import styled from 'styled-components';
 import TopBar from './menu/TopBar';
 import Footer from './Footer';
-import {Route, Switch} from 'react-router-dom';
 import Home from './home/Home';
 import Section from './sections/Section';
 import PageNotFound from './PageNotFound';
@@ -15,8 +15,8 @@ const Main = styled.main`
     
 `;
 
-const AppContent = (props) => {
-    const {classOnScroll} = props;
+const AppContent = ({classOnScroll}) => {
+    const {pathname} = useLocation();
 
     return (
         <AppWrapper className="d-flex flex-column min-vh-100">
@@ -28,7 +28,7 @@ const AppContent = (props) => {
                     <Route render={() => <PageNotFound/>}/>
                 </Switch>
             </Main>
-            <Footer/>
+            <Footer visible={pathname !== '/contact'}/>
         </AppWrapper>
     );
 };

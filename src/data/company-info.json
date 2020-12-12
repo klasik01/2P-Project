@@ -1,0 +1,33 @@
+{
+  "COMPANY": {
+    "name": "2P Stavební",
+    "address": {
+      "street": "Sadová",
+      "number": "240",
+      "city": "Pacov",
+      "zip": "395 01",
+      "type": "Adresa sídla firmy"
+    },
+    "residence": {
+      "street": "Hronova",
+      "number": "1078",
+      "city": "Pacov",
+      "zip": "395 01",
+      "tel1": "+420 605 075 324",
+      "email": "info@2pstavebni.cz",
+      "type": "Adresa provizorní provozovny"
+    },
+    "contact": {
+      "name": "Pavel Pinkas",
+      "tel1": "+420 774 110 224",
+      "position": "JEDNATEL",
+      "email": "pinkas@2pstavebni.cz",
+      "emailAlt": "",
+      "type": "Kontaktní osoba"
+    },
+    "links": [
+      "https://www.facebook.com/2pstavebni/",
+      "https://www.instagram.com/2pstavebni/"
+    ]
+  }
+}

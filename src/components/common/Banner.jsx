@@ -4,7 +4,7 @@ import {Col, Row} from 'reactstrap';
 import backgroundImg from '../../images/bg-8.jpg';
 import logo from '../../images/logoBrandNegativ.png';
 
-import basicData from '../../data/basic.json';
+import basicData from '../../data/website.json';
 
 const BannerWrapper = styled(Row)`
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${backgroundImg}) ;
