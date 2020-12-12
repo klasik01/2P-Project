@@ -12,7 +12,6 @@ const ContractDetail = () => {
 
     const [item, setItem] = useState({});
     const [isLoading, setIsLoading] = useState(true);
-    const [error, setError] = useState('');
 
     useEffect(() => {
         if (!id) {
@@ -25,7 +24,6 @@ const ContractDetail = () => {
             setItem(findItem);
             setIsLoading(false);
         } else {
-            setError('Invalid items');
             history.push('/projects');
             console.log('Invalid items');
         }
