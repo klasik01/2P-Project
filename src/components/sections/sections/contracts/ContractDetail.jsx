@@ -5,10 +5,11 @@ import PropTypes from 'prop-types';
 import {Table} from 'reactstrap';
 import {FullColumn} from '../../../common/BlockLayout';
 import contractsData from '../../../../data/orders.json';
+import {SRLWrapper} from 'simple-react-lightbox';
 
 const ContractDetail = () => {
     const history = useHistory();
-    const { id = false } = useParams();
+    const {id = false} = useParams();
 
     const [item, setItem] = useState({});
     const [isLoading, setIsLoading] = useState(true);
@@ -73,7 +74,17 @@ const ContractDetail = () => {
                 </div>
             </div>
             <FullColumn>
-
+                <SRLWrapper>
+                    <div className="container-fluid">
+                        <div className="d-flex flex-wrap align-self-stretch">
+                            {item.images.map(img =>
+                                <div className="d-flex p-2 align-self-stretch col">
+                                    <img src={img.url} alt={img.alt} className="img-fluid rounded"/>
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                </SRLWrapper>
             </FullColumn>
         </DefaultLayout>
     );

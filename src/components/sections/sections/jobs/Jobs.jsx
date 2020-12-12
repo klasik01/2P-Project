@@ -18,8 +18,8 @@ const Jobs = () => {
             <h2 className="py-3 font-weight-bold">{texts.par[0]}</h2>
             <div className="container-fluid">
                 <div className="d-flex flex-wrap align-self-stretch">
-                    {data.map(item =>
-                        <div className="d-flex p-2 align-self-stretch">
+                    {data.map((item, index) =>
+                        <div key={index} className="d-flex p-2 align-self-stretch">
                             <div className="card user-card">
                                 <div className="card-block">
                                     <div className="card-body">

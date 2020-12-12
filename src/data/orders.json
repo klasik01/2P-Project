@@ -51,8 +51,23 @@
       "images": [
         {
           "alt":  "popis",
-          "url": "url",
+          "url": "https://unsplash.it/600.jpg?image=251",
           "id": "identificator"
+        },
+        {
+          "alt":  "popis2",
+          "url": "https://unsplash.it/600.jpg?image=251",
+          "id": "identificator2"
+        },
+        {
+          "alt":  "popis3",
+          "url": "https://unsplash.it/600.jpg?image=251",
+          "id": "identificator3"
+        },
+        {
+          "alt":  "popis4",
+          "url": "https://unsplash.it/600.jpg?image=251",
+          "id": "identificator4"
         }
       ]
     }
