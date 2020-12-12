@@ -3,7 +3,7 @@ import {PrettyHeader} from '../../common/Typography';
 import {Container} from 'reactstrap';
 import styled from 'styled-components';
 import {DefaultSectionContainer, FullColumn} from '../../common/BlockLayout';
-import {showMaxSmall, showMinLarge} from '../../../utils/screenType';
+import {showMinLarge} from '../../../utils/screenType';
 import {TopIconBottomText} from '../../common/Card';
 import PropTypes from 'prop-types';
 
@@ -21,7 +21,6 @@ const Services = (props) => {
                         <PrettyHeader>{info.title}</PrettyHeader>
                     </div>
                 </FullColumn>
-                {!showMaxSmall(screenType) &&
                 <div className={'col'}>
                     <div className="row clearfix">
                         {data.map(item => showMinLarge(screenType) ?
@@ -42,7 +41,6 @@ const Services = (props) => {
                         )}
                     </div>
                 </div>
-                }
             </DefaultSectionContainer>
         </Wrapper>
     );
