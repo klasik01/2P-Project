@@ -21,6 +21,7 @@
     {
       "id": 1,
       "contract": "Pomocný dělník",
+      "img": "workerWorkerImg",
       "sections": [
         {
           "id": "1-required",
@@ -51,6 +52,7 @@
     {
       "id": 2,
       "contract": "Stavební dělník",
+      "img": "workerMisterImg",
       "sections": [
         {
           "id": "2-required",
@@ -81,6 +83,7 @@
     {
       "id": 3,
       "contract": "Stavební dělník",
+      "img": "workerWorkerImg",
       "sections": [
         {
           "id": "3-required",
