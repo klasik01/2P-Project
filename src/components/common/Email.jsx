@@ -3,6 +3,12 @@ import PropTypes from 'prop-types';
 import {Col, FormGroup, Input, Label, Row} from 'reactstrap';
 import {PrimaryButton} from './Button';
 
+const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+        .join('&');
+};
+
 export const EmailComponent = (props) => {
 
     const [email, setEmail] = useState('');
@@ -10,9 +16,27 @@ export const EmailComponent = (props) => {
 
     const {text: {condition, buttonTitle}} = props;
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        fetch('/', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            body: encode({'form-name': 'contact', email, message})
+        })
+            .then(() => alert('Success!'))
+            .catch(error => alert(error));
+
+    };
+
     return (
         <div className="border border-light p-3 mb-4">
-            <form action="POST" data-netlify="true">
+            <form
+                onSubmit={handleSubmit}
+                name="contact"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+            >
+                <input type="hidden" name="form-name" value="contact"/>
                 <FormGroup>
                     <Input
                         type="email"
