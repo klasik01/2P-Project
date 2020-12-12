@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import {Col, FormGroup, Input, Label, Row} from 'reactstrap';
+import {Col, Form, FormGroup, Input, Label, Row} from 'reactstrap';
 import {PrimaryButton} from './Button';
 
 const encode = (data) => {
@@ -17,7 +17,6 @@ export const EmailComponent = (props) => {
     const {text: {condition, buttonTitle}} = props;
 
     const handleSubmit = (e) => {
-        e.preventDefault();
         fetch('/', {
             method: 'POST',
             headers: {'Content-Type': 'application/x-www-form-urlencoded'},
@@ -25,18 +24,13 @@ export const EmailComponent = (props) => {
         })
             .then(() => alert('Success!'))
             .catch(error => alert(error));
-
+        e.preventDefault();
     };
 
     return (
         <div className="border border-light p-3 mb-4">
-            <form
-                onSubmit={handleSubmit}
-                name="contact"
-                netlify
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
-            >
+            <Form onSubmit={handleSubmit}>
+                <input type="hidden" name="form-name" value="contact"/>
                 <FormGroup>
                     <Input
                         type="email"
@@ -59,10 +53,6 @@ export const EmailComponent = (props) => {
                         required
                     />
                 </FormGroup>
-                <FormGroup>
-                    <div data-netlify-recaptcha="true"></div>
-                </FormGroup>
-
                 <Row form>
                     <Col md={6}>
                         <FormGroup check>
@@ -76,7 +66,7 @@ export const EmailComponent = (props) => {
                         </FormGroup>
                     </Col>
                 </Row>
-            </form>
+            </Form>
         </div>
     );
 };
