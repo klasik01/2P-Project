@@ -55,7 +55,7 @@ LeftIconRightTextCard.propTypes = {
 export const TopIconBottomText = (props) => {
     const {icon, title, paragraph, id} = props;
     return (
-        <div className="col-md-6 ">
+        <div className="col-md-4 ">
             <BlockWrapperLIRTC className="my-2 text-center">
                 <IconWrapper className="fa-stack fa-2x" color={'white'}>
                     <MyLink to={`/services#${id}`} className="text-decoration-none" color="white">

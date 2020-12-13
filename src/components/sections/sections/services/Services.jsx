@@ -7,11 +7,11 @@ import { Hr } from '../../../../theme/globalStyle';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-
 const MyLink = styled(Link)`
   color: black;
   border-radius: 0;
   border: none;
+
   :hover {
     background: ${PRIMARY};
     color: white;

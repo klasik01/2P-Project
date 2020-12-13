@@ -2,7 +2,6 @@ import React from 'react';
 import { PrettyHeader } from '../../common/Typography';
 import styled from 'styled-components';
 import { FullColumn } from '../../common/BlockLayout';
-import { showMinLarge } from '../../../utils/screenType';
 import { TopIconBottomText } from '../../common/Card';
 import PropTypes from 'prop-types';
 
@@ -26,13 +25,7 @@ const Services = (props) => {
                     </FullColumn>
                     <div className={'col'}>
                         <div className="row clearfix">
-                            {data.map(item => showMinLarge(screenType) ?
-                                <TopIconBottomText
-                                    key={item.key}
-                                    id={item.key}
-                                    title={item.title}
-                                    paragraph={item.paragraph}
-                                    icon={item.icon}/> :
+                            {data.map(item =>
                                 <TopIconBottomText
                                     id={item.key}
                                     key={item.key}
