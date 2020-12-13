@@ -6,13 +6,13 @@ import styled from 'styled-components';
 import { PrimaryButton, StyledLink } from "../../common/Button";
 
 const DefaultSection = styled.section`
-    color: white;
+    color: ${PRIMARY};
     padding: 0 20px;
-    background: ${PRIMARY};
+    background: white;
     clip-path: polygon(${props => props.polygon ? '0 10%, 100% 0, 100% 90%, 0 100%' : '0 0, 0 100%, 100% 100%, 100% 0'});
 `;
 
-const Preview = (props) => {
+const Calculate = (props) => {
 
     const {info} = props;
 
@@ -23,7 +23,7 @@ const Preview = (props) => {
                     <div className="col-md-10 offset-md-1 text-center">
                         <div className="">
                             <PrettyHeader>{info.title}</PrettyHeader>
-                            {info.text.map((item, index) => <Paragraph key={index} text={item}/>)}
+                            <Paragraph style={{fontSize: '20px'}} text={info.text}/>
                             <StyledLink to={info.ref}>
                                 <PrimaryButton inverse className="my-2">{info.buttonTitle}</PrimaryButton>
                             </StyledLink>
@@ -35,8 +35,8 @@ const Preview = (props) => {
     );
 };
 
-Preview.propTypes = {
+Calculate.propTypes = {
     info: PropTypes.object.isRequired
 };
 
-export default Preview;
+export default Calculate;

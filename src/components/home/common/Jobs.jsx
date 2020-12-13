@@ -7,8 +7,11 @@ import PropTypes from 'prop-types';
 import {showMaxSmall} from '../../../utils/screenType';
 import workerWorkerImg from '../../../images/worker-svg.svg';
 import workerMisterImg from '../../../images/worker-mister.svg';
+import { PRIMARY } from '../../../theme/colors';
 
 const JobsWrapper = styled.div`
+    color: white;
+    background: ${PRIMARY};
 `;
 
 const BlockWrapper = styled.div`
@@ -59,7 +62,7 @@ const Jobs = (props) => {
                     <HeaderTwo title={info.title}/>
                     <Paragraph text={info.text}/>
                     <StyledLink to={info.ref}>
-                        <PrimaryButton className="">{info.buttonTitle}</PrimaryButton>
+                        <PrimaryButton inverse className="">{info.buttonTitle}</PrimaryButton>
                     </StyledLink>
                 </SmallColumn>
             </DefaultSectionContainer>

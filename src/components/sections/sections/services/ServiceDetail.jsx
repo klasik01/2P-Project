@@ -4,11 +4,11 @@ import { DefaultLayout } from '../../../common/Layout';
 import PropTypes from 'prop-types';
 import { Table } from 'reactstrap';
 import { FullColumn } from '../../../common/BlockLayout';
-import contractsData from '../../../../data/orders.json';
+import servicesData from '../../../../data/services.json';
 import { SRLWrapper } from 'simple-react-lightbox';
 import get from 'get-value';
 
-const ContractDetail = () => {
+const ServiceDetail = () => {
     const history = useHistory();
     const { id = false } = useParams();
 
@@ -17,16 +17,16 @@ const ContractDetail = () => {
 
     useEffect(() => {
         if (!id) {
-            history.push('/projects');
+            history.push('/services');
         }
 
-        const findItem = get(contractsData, `DETAIL.${id}`) || false;
+        const findItem = get(servicesData, `DETAIL.${id}`) || false;
 
         if (findItem) {
             setItem(findItem);
             setIsLoading(false);
         } else {
-            history.push('/projects');
+            history.push('/services');
             console.log('Invalid items');
         }
     }, [history, id]);
@@ -46,30 +46,30 @@ const ContractDetail = () => {
                 <div className="">
                     <Table responsive hover striped>
                         <thead>
-                        <tr>
-                            <th colSpan={2}>{item.attributesHeader}</th>
-                        </tr>
+                            <tr>
+                                <th colSpan={2}>{item.attributesHeader}</th>
+                            </tr>
                         </thead>
                         <tbody>
-                        {
-                            Object.keys(item.attributes).map((attr, i) => {
-                                if (Array.isArray(item.attributes[attr])) {
-                                    return (
-                                        <tr key={i}>
-                                            <th>{attr}</th>
-                                            <td>{item.attributes[attr].join(', ')}</td>
-                                        </tr>
-                                    );
-                                } else {
-                                    return (
-                                        <tr key={i}>
-                                            <th>{attr}</th>
-                                            <td>{item.attributes[attr]}</td>
-                                        </tr>
-                                    );
-                                }
-                            })
-                        }
+                            {
+                                Object.keys(item.attributes).map((attr, i) => {
+                                    if (Array.isArray(item.attributes[attr])) {
+                                        return (
+                                            <tr key={i}>
+                                                <th>{attr}</th>
+                                                <td>{item.attributes[attr].join(', ')}</td>
+                                            </tr>
+                                        );
+                                    } else {
+                                        return (
+                                            <tr key={i}>
+                                                <th>{attr}</th>
+                                                <td>{item.attributes[attr]}</td>
+                                            </tr>
+                                        );
+                                    }
+                                })
+                            }
                         </tbody>
                     </Table>
                 </div>
@@ -91,10 +91,10 @@ const ContractDetail = () => {
     );
 };
 
-ContractDetail.propTypes = {
+ServiceDetail.propTypes = {
     header: PropTypes.string,
     text: PropTypes.string,
     data: PropTypes.object
 };
 
-export default ContractDetail;
+export default ServiceDetail;

@@ -49,7 +49,7 @@ const Contracts = (props) => {
 
     return (
         <Wrapper className="text-center">
-            <DefaultSectionContainer isBackground>
+            <DefaultSectionContainer isBackground={true}>
                 <FullColumn>
                     <div className="col text-center">
                         <PrettyHeader>{info.title}</PrettyHeader>
