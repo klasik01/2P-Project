@@ -77,8 +77,8 @@ const ContractDetail = () => {
                 <SRLWrapper>
                     <div className="container-fluid">
                         <div className="d-flex flex-wrap align-self-stretch">
-                            {item.images.map(img =>
-                                <div className="d-flex p-2 align-self-stretch col">
+                            {item.images.map((img, index) =>
+                                <div key={index} className="d-flex p-2 align-self-stretch col">
                                     <img src={img.url} alt={img.alt} className="img-fluid rounded"/>
                                 </div>
                             )}
