@@ -30,7 +30,7 @@ const Services = () => {
                 <div className="d-flex flex-wrap justify-content-center">
                     {data.map(item =>
                         <div key={item.key} className="p-2 d-flex col-md-4" id={item.key}>
-                            <MyLink to={'/services/' + item.key} className=" py-2 card card-body">
+                            <MyLink to={'/services/view/' + item.key} className=" py-2 card card-body">
                                 <div className="col">
                                     <div className="text-center">
                                         <h2 className="p-2">
