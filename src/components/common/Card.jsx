@@ -58,7 +58,7 @@ export const TopIconBottomText = (props) => {
         <div className="col-md-4 ">
             <BlockWrapperLIRTC className="my-2 text-center">
                 <IconWrapper className="fa-stack fa-2x" color={'white'}>
-                    <MyLink to={`/services#${id}`} className="text-decoration-none" color="white">
+                    <MyLink to={`/services/view/${id}`} className="text-decoration-none" color="white">
                         <MyFontAwesomeIcon className="fas fa-stack-2x" icon="circle"/>
                         <FontAwesomeIcon className="fas  fa-stack-1x" icon={icon}/>
                     </MyLink>
