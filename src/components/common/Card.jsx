@@ -1,30 +1,31 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import {PRIMARY} from '../../theme/colors';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {Link} from 'react-router-dom';
+import { PRIMARY } from '../../theme/colors';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 
 const MyLink = styled(Link)`
   color: ${props => props.color};
+
   :hover {
     color: black;
   }
 `;
 
 export const IconWrapper = styled.span`
-    color: ${props => props.color};
+  color: ${props => props.color};
 `;
 
 export const MyFontAwesomeIcon = styled(FontAwesomeIcon)`
-    color: ${PRIMARY};
+  color: ${PRIMARY};
 `;
 
 const BlockWrapperLIRTC = styled.div`
 `;
 
 export const LeftIconRightTextCard = props => {
-    const {icon, title, paragraph, className} = props;
+    const { icon, title, paragraph, className } = props;
     return (
         <div className={`col-sm-6 col-xs-12 ${className}`}>
             <BlockWrapperLIRTC className="row clearfix">
@@ -53,13 +54,13 @@ LeftIconRightTextCard.propTypes = {
 
 
 export const TopIconBottomText = (props) => {
-    const {icon, title, paragraph, id} = props;
+    const { icon, title, paragraph, id } = props;
     return (
         <div className="col-md-4 ">
             <BlockWrapperLIRTC className="my-2 text-center">
                 <IconWrapper className="fa-stack fa-2x" color={'white'}>
-                    <MyLink to={`/services/view/${id}`} className="text-decoration-none" color="white">
-                        <MyFontAwesomeIcon className="fas fa-stack-2x" icon="circle"/>
+                    <MyLink to={`/services/view/${id}`} className="text-decoration-none" color={PRIMARY}>
+                        {/*<MyFontAwesomeIcon className="fas fa-stack-2x" icon="circle"/>*/}
                         <FontAwesomeIcon className="fas  fa-stack-1x" icon={icon}/>
                     </MyLink>
                 </IconWrapper>
