@@ -16,5 +16,9 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "keywords": ["Pinkas","Pavel Pinkas","2PStavební","stavební firma","pacov"],
+  "author": "Stanislav Kasika",
+  "version": "1.0",
+  "description": "Pavel Pinkas - 2P Stavební - firemní web"
 }
