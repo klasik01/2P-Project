@@ -1,4 +1,4 @@
-export const PRIMARY = '#A83A32';
+export const PRIMARY = '#eb1c24';
 export const PRIMARY_TO = '#bf5e55';
 export const SECONDARY = '#d0cdc5';
 
@@ -19,6 +19,6 @@ export const TOPBAR_BACKGROUND_SECONDARY = '#ffffff';
 export const FOOTER_BACKGROUND_COLOR_PRIMARY = '#ffffff';
 export const FOOTER_BACKGROUND_COLOR_SECONDARY = '#000000';
 
-export const FOOTER_TEXT_1 = '#A83A32';
+export const FOOTER_TEXT_1 = PRIMARY;
 export const FOOTER_TEXT_2 = 'black';
 export const FOOTER_TEXT_3 = 'black';
