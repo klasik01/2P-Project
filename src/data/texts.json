@@ -1,0 +1,59 @@
+{
+  "ABOUT": {
+    "title": "O nás?",
+    "text": [
+      "Rozvíjející se stavební firma navazující na dlouholeté zkušenosti v oboru, která dává důraz na kvalitu a efektivní řešení staveb. Zabýváme se jak kompletní realizací pozemních staveb, tak i inženýrskou činností, samostatné dodávky výplní otvorů, odborná motáž požárních ucpávek apod. Více se dozvíte záložce služby.",
+      "Snažíme se jít s dobou a pracujeme s elektronickým stavebním deníkem, dáváme investorovi možnost kontrolovat vlastní stavbu pomocí webového rozhraní atd."
+    ],
+    "buttonTitle": "Více informací",
+    "ref": "/about"
+  },
+  "CALCULATE": {
+    "title": "Chcete nezávaznou kalkulaci?",
+    "text": "Zašlete nám žádost o zpracování cenové nabídky na email: info@2pstavebni.cz nebo použijte poptávkový formulář",
+    "buttonTitle": "Více informací",
+    "ref": "/about"
+  },
+  "PREVIEW": {
+    "title": "Kdo jsme?",
+    "text": [
+      "Rozvíjející se stavební firma navazující na dlouholeté zkušenosti v oboru, která dává důraz na kvalitu a efektivní řešení staveb. Zabýváme se jak kompletní realizací pozemních staveb, tak i inženýrskou činností, samostatné dodávky výplní otvorů, odborná motáž požárních ucpávek apod. Více se dozvíte v záložce služby.",
+      "Snažíme se jít s dobou a pracujeme s elektronickým stavebním deníkem, dáváme investorovi možnost kontrolovat vlastní stavbu pomocí webového rozhraní atd."
+    ],
+    "buttonTitle": "Více informací",
+    "ref": "/about"
+  },
+  "JOB": {
+    "title": "Hledáte zaměstnání?",
+    "text": "Máme trvalý zájem o spolupráci s novými zaměstnanci, kteří jsou odborníky ve svém oboru, chtějí se trvale rozvíjet a patřit společně s námi ke špičce stavební profese.",
+    "buttonTitle": "Seznam volných pozic",
+    "ref": "/jobs",
+    "par": [
+      "Hledáme zaměstance na tyto pozice:"
+    ]
+  },
+  "CONTRACT": {
+    "title": "Realizované zakázky",
+    "text": "",
+    "buttonTitle": "Zobrazit všechny",
+    "ref": "/projects"
+  },
+  "SERVICE": {
+    "title": "Jaké služby nabízíme?",
+    "text": "",
+    "buttonTitle": "Více informací",
+    "ref": "/services"
+  },
+  "CONTACT": {
+    "title": "Máte dotazy? Kontaktujte nás!",
+    "condition": "Souhlasím se zpracováním osobních údajů",
+    "buttonTitle": "Odeslat"
+  },
+  "PAGE_CONTACT": {
+    "header": "Kontaktujte nás",
+    "title": "",
+    "text": "Potřebujete pomoc s vaší stavbou? Rádi byste využili naše služby? Pak neváhejte a kontaktujte nás! Spojte se s našimi odborníky, kteří vám rádi pomohou a najdou nejlepší řešení podle vašich představ.",
+    "condition": "Souhlasím se zpracováním osobních údajů",
+    "buttonTitle": "Odeslat"
+  }
+}

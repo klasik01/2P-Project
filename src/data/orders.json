@@ -1,0 +1,96 @@
+{
+  "LIST": [
+    {
+      "id": 1,
+      "title": "RD Pelhřimov - 3 bytové jednotky",
+      "image": "image",
+      "to": "/projects/view/"
+    },
+    {
+      "id": 2,
+      "title": "ŽB konstrukce ve výbušném prostředí Sellier Bellot",
+      "image": "image",
+      "to": "/projects/view/"
+    },
+    {
+      "id": 3,
+      "title": "Protipožární ucpávky hala DDL Humpolec",
+      "image": "image",
+      "to": "/projects/view/"
+    },
+    {
+      "id": 4,
+      "title": "Rekonstrukce Obecního úřadu Vyklantice",
+      "image": "image",
+      "to": "/projects/view/"
+    }
+  ],
+  "DETAIL": {
+    "1": {
+      "error": "IN_PROGRESS",
+      "title": "RD Pelhřimov - 3 bytové jednotky",
+      "description": "Podrobnosti připravujeme"
+    },
+    "2": {
+      "error": "IN_PROGRESS",
+      "title": "ŽB konstrukce ve výbušném prostředí Sellier Bellot",
+      "description": "Podrobnosti připravujeme"
+    },
+    "3": {
+      "error": "IN_PROGRESS",
+      "title": "Protipožární ucpávky hala DDL Humpolec",
+      "description": "Podrobnosti připravujeme"
+    },
+    "4": {
+      "error": "IN_PROGRESS",
+      "title": "Rekonstrukce Obecního úřadu Vyklantice",
+      "description": "Podrobnosti připravujeme"
+    },
+
+    "TEMPLATE": {
+      "id": 1,
+      "title": "RD Pelhřimov - 3 bytové jednotky",
+      "image": "image",
+      "to": "/projects/view/",
+      "description": [
+        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. Mauris elementum mauris vitae tortor. Aenean vel massa quis mauris vehicula lacinia. Vivamus ac leo pretium faucibus. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. Nulla est. Aliquam erat volutpat. Pellentesque ipsum. Fusce nibh. Aliquam in lorem sit amet leo accumsan lacinia. Aenean fermentum risus id tortor. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Nullam at arcu a est sollicitudin euismod. Maecenas sollicitudin. Aenean placerat.",
+        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. Mauris elementum mauris vitae tortor. Aenean vel massa quis mauris vehicula lacinia. Vivamus ac leo pretium faucibus. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. Nulla est. Aliquam erat volutpat. Pellentesque ipsum. Fusce nibh. Aliquam in lorem sit amet leo accumsan lacinia. Aenean fermentum risus id tortor. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Nullam at arcu a est sollicitudin euismod. Maecenas sollicitudin. Aenean placerat."
+      ],
+      "attributesHeader": "Základní informace",
+      "attributes": {
+        "Finanční objem": "0,-Kč",
+        "Termín zahájení": "2019-02-02",
+        "Termín dokončení": "2019-03-01",
+        "Investor": "Někdo",
+        "Projektant": "Moje maličkost",
+        "Dodavatelé": [
+          "A",
+          "B",
+          "C"
+        ]
+      },
+      "images": [
+        {
+          "alt":  "popis",
+          "url": "https://unsplash.it/600.jpg?image=251",
+          "id": "identificator"
+        },
+        {
+          "alt":  "popis2",
+          "url": "https://unsplash.it/600.jpg?image=251",
+          "id": "identificator2"
+        },
+        {
+          "alt":  "popis3",
+          "url": "https://unsplash.it/600.jpg?image=251",
+          "id": "identificator3"
+        },
+        {
+          "alt":  "popis4",
+          "url": "https://unsplash.it/600.jpg?image=251",
+          "id": "identificator4"
+        }
+      ]
+    }
+  }
+}

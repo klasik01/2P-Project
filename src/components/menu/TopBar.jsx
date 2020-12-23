@@ -1,38 +1,70 @@
-import React from "react";
-import styled from "styled-components";
-import { NavLink, withRouter } from "react-router-dom";
-import PropTypes from "prop-types";
+import React, {useEffect, useState} from 'react';
+import {withRouter} from 'react-router-dom';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {Collapse, Container} from 'reactstrap';
+import {DropdownMenuComponent} from './DropDownMenu';
+import {buildAboutMenu, buildContactMenu, buildJobMenu, buildProjectMenu, buildServiceMenu} from './MenuStructure';
+import useScreenType, {showMinLarge} from '../../utils/screenType';
+import {getNavbarSize, setNavbarWrapperStyle} from './utils';
+import {CollapseButton, MenuNavLink, MyNav, MyNavbarBrand, MyNavBarBrandImg, TopNavigation} from './style';
+import PropTypes from 'prop-types';
+import logo from '../../images/logoBrandNegativ.png';
 
-const TopBarWrapper = styled.footer``;
+const TopBar = (props) => {
 
-function TopBar() {
-  return (
-    <TopBarWrapper>
-      <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-        <div class="container">
-          <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
-          <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-        <i class="fas fa-bars"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Portfolio</a>
-              </li>
-              <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
-              </li>
-              <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+    const [isOpen, setIsOpen] = useState(false);
+    const [aboutMenu, setAboutMenu] = useState([]);
+    const [jobMenu, setJobMenu] = useState([]);
+    const [projectMenu, setProjectMenu] = useState([]);
+    const [serviceMenu, setServiceMenu] = useState([]);
+    const [contactMenu, setContactMenu] = useState([]);
 
-    </TopBarWrapper>
-  );
-}
+    const toggle = () => setIsOpen(!isOpen);
+    const closeToggle = () => setIsOpen(false);
+
+    const {classOnScroll} = props;
+    const screenType = useScreenType();
+    const isLarge = !!getNavbarSize(classOnScroll, useScreenType());
+    const navbarWrapperStyle = () => setNavbarWrapperStyle(screenType, classOnScroll);
+
+    useEffect(() => {
+        setAboutMenu(buildAboutMenu());
+        setJobMenu(buildJobMenu());
+        setProjectMenu(buildProjectMenu());
+        setServiceMenu(buildServiceMenu());
+        setContactMenu(buildContactMenu());
+    }, []);
+
+    return (
+        <TopNavigation className={`navbar navbar-expand-lg fixed-top ${navbarWrapperStyle()}`} main={isLarge}>
+            <Container>
+                <MyNavbarBrand
+                    onClick={showMinLarge(screenType) ? () => {} : closeToggle}
+                    main={isLarge.toString()} className="" tag={MenuNavLink}
+                    to="/"><MyNavBarBrandImg className="img-fluid" src={logo}/></MyNavbarBrand>
+                <CollapseButton
+                    className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                    onClick={toggle}>
+                    <FontAwesomeIcon icon="bars" size="lg"/>
+                </CollapseButton>
+                <Collapse isOpen={isOpen} navbar>
+                    <MyNav navbar className="ml-auto px-4" main={isLarge.toString()}>
+                        <DropdownMenuComponent label={'O nás'} roles={aboutMenu} onClick={showMinLarge(screenType) ? () => {} : toggle}/>
+                        <DropdownMenuComponent label={'Naše projekty'} roles={projectMenu} onClick={showMinLarge(screenType) ? () => {} : toggle}/>
+                        <DropdownMenuComponent label={'Služby'} roles={serviceMenu} onClick={showMinLarge(screenType) ? () => {} : toggle}/>
+                        <DropdownMenuComponent label={'Zaměstnání'} roles={jobMenu} onClick={showMinLarge(screenType) ? () => {} :toggle}/>
+                        <DropdownMenuComponent label={'Kontakt'} roles={contactMenu} onClick={showMinLarge(screenType) ? () => {} : toggle}/>
+                    </MyNav>
+                </Collapse>
+            </Container>
+        </TopNavigation>
+    );
+};
+
+TopBar.propTypes = {
+    main: PropTypes.bool,
+    classOnScroll: PropTypes.bool.isRequired
+};
 
 export default withRouter(TopBar);
