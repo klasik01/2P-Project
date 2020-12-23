@@ -27,6 +27,27 @@
   ],
   "DETAIL": {
     "1": {
+      "error": "IN_PROGRESS",
+      "title": "RD Pelhřimov - 3 bytové jednotky",
+      "description": "Podrobnosti připravujeme"
+    },
+    "2": {
+      "error": "IN_PROGRESS",
+      "title": "ŽB konstrukce ve výbušném prostředí Sellier Bellot",
+      "description": "Podrobnosti připravujeme"
+    },
+    "3": {
+      "error": "IN_PROGRESS",
+      "title": "Protipožární ucpávky hala DDL Humpolec",
+      "description": "Podrobnosti připravujeme"
+    },
+    "4": {
+      "error": "IN_PROGRESS",
+      "title": "Rekonstrukce Obecního úřadu Vyklantice",
+      "description": "Podrobnosti připravujeme"
+    },
+
+    "TEMPLATE": {
       "id": 1,
       "title": "RD Pelhřimov - 3 bytové jednotky",
       "image": "image",

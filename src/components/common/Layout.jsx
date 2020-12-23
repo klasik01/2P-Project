@@ -32,7 +32,20 @@ ArticleLayout.propTypes = {
 };
 
 export const DefaultLayout = (props) => {
-    const {children, header} = props;
+    const {children, header, error} = props;
+
+    if (error) {
+        return (
+            <div>
+                <BannerHeader header={header}/>
+                <Container>
+                    <Row>
+                        <div className="text-center p-3 text-danger font-weight-bold">{error}</div>
+                    </Row>
+                </Container>
+            </div>
+        );
+    }
 
     return (
         <div>
@@ -43,7 +56,6 @@ export const DefaultLayout = (props) => {
                 </Row>
             </Container>
         </div>
-
     );
 };
 
@@ -51,6 +63,7 @@ DefaultLayout.propTypes = {
     children: PropTypes.oneOfType([
         PropTypes.arrayOf(PropTypes.node),
         PropTypes.node
-    ]).isRequired,
+    ]),
     header: PropTypes.string.isRequired,
+    error: PropTypes.string,
 };

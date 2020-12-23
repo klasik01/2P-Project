@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { FullColumn } from '../../common/BlockLayout';
 import { TopIconBottomText } from '../../common/Card';
 import PropTypes from 'prop-types';
-import { PrimaryButton, StyledLink } from "../../common/Button";
+import { PrimaryButton, StyledLink } from '../../common/Button';
 
 const DefaultSection = styled.section`
   padding: 0 20px;

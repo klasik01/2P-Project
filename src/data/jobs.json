@@ -52,7 +52,7 @@
     {
       "id": 2,
       "contract": "Stavební dělník",
-      "img": "workerMisterImg",
+      "img": "workerWorkerImg",
       "sections": [
         {
           "id": "2-required",
@@ -82,8 +82,8 @@
     },
     {
       "id": 3,
-      "contract": "Stavební dělník",
-      "img": "workerWorkerImg",
+      "contract": "Stavební mistr",
+      "img": "workerMisterImg",
       "sections": [
         {
           "id": "3-required",

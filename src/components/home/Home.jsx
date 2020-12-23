@@ -20,7 +20,7 @@ const Home = () => {
 
     const [contracts] = useState(contractsData['LIST']);
     const [jobs] = useState(jobsData['LIST']);
-    const [services] = useState(servicesData);
+    const [services] = useState(servicesData['LIST']);
     const [texts] = useState(textsData);
 
     const screenType = useScreenType();

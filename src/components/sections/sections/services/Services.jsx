@@ -21,7 +21,7 @@ const MyLink = styled(Link)`
 `;
 
 const Services = () => {
-    const [data] = useState(servicesData);
+    const [data] = useState(servicesData['LIST']);
     const [text] = useState(textsData['SERVICE']);
 
     return (

@@ -8,8 +8,8 @@ import {Col, Row} from 'reactstrap';
 import data from '../../../data/company-info.json';
 import textsData from '../../../data/texts.json';
 import {FOOTER_TEXT_1, FOOTER_TEXT_2} from '../../../theme/colors';
-import {EmailComponent} from "../../common/Email";
-import {SocialIcons} from "../../common/SocialIcons";
+import {EmailComponent} from '../../common/Email';
+import {SocialIcons} from '../../common/SocialIcons';
 
 const ItemHeader = styled.h1`
   color: ${FOOTER_TEXT_1};
@@ -47,7 +47,7 @@ const Contact = () => {
     const [companyData] = useState(data['COMPANY']);
     const [contactData] = useState(textsData['PAGE_CONTACT']);
 
-    const {residence, address, contact, links} = companyData;
+    const {residence, address, contact, links, nextContacts } = companyData;
 
     return (
         <ArticleLayout header={contactData.header} footer="">
@@ -61,8 +61,17 @@ const Contact = () => {
                     <ItemInfoRow bold>{contact.email}</ItemInfoRow>
                     <ItemInfoRow bold>{contact.tel1}</ItemInfoRow>
                     <ItemInfoRow bold>{contact.emailAlt}</ItemInfoRow>
-
                     <Hr/>
+                    { nextContacts.map(item => {
+                        return (
+                            <>
+                                <ItemHeader>{item.type}</ItemHeader>
+                                <ItemInfoRow>{item.name}</ItemInfoRow>
+                                <ItemInfoRow>{item.position}</ItemInfoRow>
+                                <Hr/>
+                            </>
+                        );
+                    })}
                     <SocialIcons data={links}/>
                     <Hr/>
                     <EmailComponent text={contactData}/>

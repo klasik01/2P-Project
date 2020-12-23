@@ -27,12 +27,17 @@ const ContractDetail = () => {
             setIsLoading(false);
         } else {
             history.push('/projects');
-            console.log('Invalid items');
         }
     }, [history, id]);
 
     if (isLoading) {
         return <div>Loading...</div>;
+    }
+
+    if (item.error === 'IN_PROGRESS') {
+        return (
+            <DefaultLayout header={item.title} error={item.description}/>
+        );
     }
 
     return (
