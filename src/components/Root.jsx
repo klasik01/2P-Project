@@ -14,7 +14,7 @@ const Root = () => (
     <SimpleReactLightbox>
         <Router history={history}>
             <Helmet>
-                <title>2K Stavební</title>
+                <title>2P Stavební</title>
                 <meta name="description" content="2P Stavební web" />
                 <meta name="keywords" content="Pinkas,2PStavební,stavební firma,pacov" />
             </Helmet>
