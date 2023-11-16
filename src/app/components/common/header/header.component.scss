@@ -1,0 +1,21 @@
+.navbar {
+  position: fixed; // Připnutí na vrch stránky
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: background-color 0.3s ease, padding 0.3s ease; // Animace pro změnu stylu
+  color: black;
+
+  &-scrolled {
+    background-color: red !important;
+    padding: 5px 10px; // Zmenšení o 10px
+  }
+
+  .nav-link {
+    color: black;
+
+    &:hover {
+      color: grey;
+    }
+  }
+}
