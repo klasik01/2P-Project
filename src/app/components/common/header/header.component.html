@@ -9,7 +9,7 @@
     <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item" *ngFor="let item of menuItems">
-          <a class="nav-link" [routerLink]="item.link">{{ item.name }}</a>
+          <a class="nav-link" [routerLink]="item.link" (click)="toggleNavbarCollapse()">{{ item.name | translate }}</a>
         </li>
       </ul>
     </div>

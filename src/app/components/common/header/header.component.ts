@@ -2,6 +2,7 @@ import {Component, HostListener} from '@angular/core';
 import {NgbCollapse, NgbDropdown, NgbDropdownMenu, NgbDropdownToggle} from "@ng-bootstrap/ng-bootstrap";
 import {RouterLink, RouterModule} from "@angular/router";
 import {NgClass, NgForOf} from "@angular/common";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-header',
@@ -15,7 +16,8 @@ import {NgClass, NgForOf} from "@angular/common";
     NgbDropdown,
     NgbDropdownToggle,
     NgbDropdownMenu,
-    RouterModule
+    RouterModule,
+    TranslateModule
   ],
   styleUrl: './header.component.scss'
 })
